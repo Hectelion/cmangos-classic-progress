@@ -1,0 +1,1219 @@
+Private Sub ActivateEvent()
+    Application.EnableEvents = True
+End Sub
+Sub Generate()
+    Call GenerateScripts
+End Sub
+Private Sub Order(SheetName As String)
+'
+    Dim vArr
+    IndexName = SheetName & "Index"
+
+    lrow = ThisWorkbook.Worksheets(SheetName).Cells.Find(What:="*", After:=[A1], SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+    lColumn = ThisWorkbook.Worksheets(SheetName).UsedRange.Column + ThisWorkbook.Worksheets(SheetName).UsedRange.Columns.Count - 1
+    vArr = Split(ThisWorkbook.Worksheets(SheetName).Cells(1, lColumn).Address(True, False), "$")
+    Col_Letter = vArr(0)
+    
+    ThisWorkbook.Worksheets(SheetName).Sort.SortFields.Clear
+    ThisWorkbook.Worksheets(SheetName).Sort.SortFields.Add Key:=Range( _
+        IndexName), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    With ThisWorkbook.Worksheets(SheetName).Sort
+        .SetRange Range("A1:" & Col_Letter & lrow)
+        .Header = xlYes
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    
+End Sub
+Private Sub OrderStandardScriptA()
+'
+'
+    Dim vArr
+
+    lrow = ThisWorkbook.Worksheets("Standard_Script").Cells.Find(What:="*", After:=[A1], SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+    lColumn = ThisWorkbook.Worksheets("Standard_Script").UsedRange.Column + ThisWorkbook.Worksheets("Standard_Script").UsedRange.Columns.Count - 1
+    vArr = Split(ThisWorkbook.Worksheets("Standard_Script").Cells(1, lColumn).Address(True, False), "$")
+    Col_Letter = vArr(0)
+
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Add Key:=Range( _
+        "F2:F" & lrow), SortOn:=xlSortOnValues, Order:=xlDescending, DataOption:= _
+        xlSortNormal
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Add Key:=Range( _
+        "G2:G" & lrow), SortOn:=xlSortOnValues, Order:=xlDescending, DataOption:= _
+        xlSortNormal
+    With ActiveWorkbook.Worksheets("Standard_Script").Sort
+        .SetRange Range("A1:" & Col_Letter & lrow)
+        .Header = xlYes
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+
+End Sub
+Private Sub OrderStandardScriptB()
+'
+'
+    Dim vArr
+
+    lrow = ThisWorkbook.Worksheets("Standard_Script").Cells.Find(What:="*", After:=[A1], SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+    lColumn = ThisWorkbook.Worksheets("Standard_Script").UsedRange.Column + ThisWorkbook.Worksheets("Standard_Script").UsedRange.Columns.Count - 1
+    vArr = Split(ThisWorkbook.Worksheets("Standard_Script").Cells(1, lColumn).Address(True, False), "$")
+    Col_Letter = vArr(0)
+
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Add Key:=Range( _
+        "F2:F" & lrow), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    ActiveWorkbook.Worksheets("Standard_Script").Sort.SortFields.Add Key:=Range( _
+        "G2:G" & lrow), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    With ActiveWorkbook.Worksheets("Standard_Script").Sort
+        .SetRange Range("A1:" & Col_Letter & lrow)
+        .Header = xlYes
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+
+End Sub
+Private Sub GenerateStringCondition(SheetName As String)
+    
+    Dim myStringArray(20) As String
+    Dim KeyField As String
+    
+    ElementsRowCap = 100
+    
+    IndexName = SheetName & "Index"
+    WorkingTableName = Range(IndexName).Cells(1, 1).Value
+    If SheetName = "event" Then
+        DBTableName = "game_" & SheetName
+    Else
+        If (SheetName = "gossip_menu") Or (SheetName = "spawn_group") Or (SheetName = "conditions") Then
+            DBTableName = SheetName
+        Else
+            DBTableName = SheetName & "_template"
+        End If
+    End If
+
+    indexRow = 0
+    indexRow2 = 0
+    TotElements = Application.WorksheetFunction.CountA(Range(IndexName))
+    WKCreateRow = Application.WorksheetFunction.CountA(Range("WKTAB_Create"))
+    WKDropRow = Application.WorksheetFunction.CountA(Range("WKTAB_Drop"))
+    
+    myStringArray(0) = ""
+    myStringArray(1) = ""
+    myStringArray(2) = ""
+    myStringArray(3) = ""
+    myStringArray(4) = ""
+    myStringArray(5) = ""
+    myStringArray(6) = ""
+    myStringArray(7) = ""
+    myStringArray(8) = ""
+    myStringArray(9) = ""
+    myStringArray(10) = ""
+    myStringArray(11) = ""
+    myStringArray(12) = ""
+    myStringArray(13) = ""
+    myStringArray(14) = ""
+    myStringArray(15) = ""
+    myStringArray(16) = ""
+    myStringArray(17) = ""
+    myStringArray(18) = ""
+    myStringArray(19) = ""
+    
+    
+    For Each cell In Range(IndexName)
+        
+        If cell.Value <> "" Then
+            
+            indexRow = indexRow + 1
+        
+            If indexRow > 1 Then
+            
+                If ThisWorkbook.Worksheets(SheetName).Cells(indexRow, 3) = Range("PatchA").Value Then
+                    
+                    indexRow2 = indexRow2 + 1
+                    indexArray = ((indexRow2 - 1) \ ElementsRowCap) + 1
+                    
+                    If (indexRow2 > 1) And ((indexRow2 - 1) Mod ElementsRowCap > 0) Then
+                        myStringArray(indexArray) = myStringArray(indexArray) & ", "
+                    End If
+            
+                    myStringArray(indexArray) = myStringArray(indexArray) & "(" & cell.Value & ")"
+                    
+                End If
+            
+            End If
+            
+        End If
+    
+    Next
+    
+    DropString = "DROP TEMPORARY TABLE IF EXISTS " & WorkingTableName & ";"
+    CreateString = "CREATE TEMPORARY TABLE " & WorkingTableName & " (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');"
+    WKCreateRow = WKCreateRow + 1
+    WKDropRow = WKDropRow + 1
+    ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = DropString
+    WKCreateRow = WKCreateRow + 1
+    ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = CreateString
+    ThisWorkbook.Worksheets("WKTab_Script").Cells(WKDropRow, 2).Value = DropString
+    
+    
+    
+    For indexRow = 1 To indexArray
+        
+        myStringArray(indexRow) = "INSERT INTO " & WorkingTableName & " Values " & myStringArray(indexRow) & ";"
+
+        WKCreateRow = WKCreateRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = myStringArray(indexRow)
+    
+    Next
+    
+    WKCreateRow = WKCreateRow + 1
+    ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = " "
+    WKDropRow = WKDropRow + 1
+    ThisWorkbook.Worksheets("WKTab_Script").Cells(WKDropRow, 2).Value = " "
+    
+End Sub
+Private Sub ElaborateSheet(SheetName As String)
+    
+    IndexName = SheetName & "Index"
+    TotElements = WorksheetFunction.CountIf(ThisWorkbook.Worksheets(SheetName).Range("C:C"), Range("PatchA").Value)
+    
+    WKCreateRow = Application.WorksheetFunction.CountA(Range("WKTAB_Create"))
+    WKDropRow = Application.WorksheetFunction.CountA(Range("WKTAB_Drop"))
+    
+    If TotElements > 0 Then
+        Call GenerateStringCondition(SheetName)
+    End If
+    
+End Sub
+Private Function ChangeVarList(GroupName As String, Script As String) As String
+    Dim VarList As String
+    Dim UVarList As String
+    
+    For Each WS In ThisWorkbook.Worksheets
+        If Right(WS.Cells(1, 1).Value, 4) = "List" Then
+            VarList = WS.Cells(1, 1).Value
+            UVarList = "%" & UCase(VarList) & "%"
+            
+            If Not Range("WKTAB_Drop").Find(VarList) Is Nothing Then
+                Script = Replace(Script, UVarList, "(SELECT entry FROM " & VarList & ")")
+            Else
+                If GroupName <> VarList Then
+                    While InStrRev(Script, UVarList) > 0
+                        Script = Left(Script, InStrRev(Script, " and ", InStrRev(Script, UVarList) - 1, 1) - 1)
+                    Wend
+                End If
+            End If
+        End If
+    Next
+
+           
+    If Not Range("WKTAB_Drop").Find("%ItemListClone%") Is Nothing Then
+        Script = Replace(Script, "%ITEMCLONE%", "(SELECT entry FROM ItemListClone)")
+    Else
+        While InStrRev(Script, "%ITEMCLONE%") > 0
+            Script = Left(Script, InStrRev(Script, " and ", InStrRev(Script, "%ITEMCLONE%") - 1, 1) - 1)
+        Wend
+    End If
+    
+    ChangeVarList = Script
+
+End Function
+Private Sub GenerateScripts()
+
+    Dim Script As String
+    Dim GroupName As String
+    
+    PatchA = Range("PatchA").Value
+    PatchB = Range("PatchB").Value
+    
+    Range("WKTAB_Create").ClearContents
+    Range("WKTAB_Drop").ClearContents
+    ElaborateSheet ("creature")
+    ElaborateSheet ("gameobject")
+    ElaborateSheet ("item")
+    ElaborateSheet ("quest")
+    ElaborateSheet ("pool")
+    ElaborateSheet ("spawn_group")
+    ElaborateSheet ("event")
+    ElaborateSheet ("reference_loot")
+    ElaborateSheet ("gossip_menu")
+    ElaborateSheet ("spell")
+    ElaborateSheet ("conditions")
+
+' Clone of Itemlist
+    If Not Range("WKTAB_Drop").Find("ItemList") Is Nothing Then
+        WKCreateRow = Application.WorksheetFunction.CountA(Range("WKTAB_Create"))
+        WKDropRow = Application.WorksheetFunction.CountA(Range("WKTAB_Drop"))
+        WKCreateRow = WKCreateRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = " "
+        WKCreateRow = WKCreateRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = "DROP TEMPORARY TABLE IF EXISTS ItemListClone;"
+        WKCreateRow = WKCreateRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKCreateRow, 1).Value = "CREATE TEMPORARY TABLE ItemListClone SELECT entry FROM ItemList;"
+        WKDropRow = WKDropRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKDropRow, 2).Value = " "
+        WKDropRow = WKDropRow + 1
+        ThisWorkbook.Worksheets("WKTab_Script").Cells(WKDropRow, 2).Value = "DROP TEMPORARY TABLE IF EXISTS ItemListClone;"
+    End If
+    
+    If ThisWorkbook.Worksheets("WKTab_Script").Cells(1, 1).Value = "" Then
+        lrow = 0
+    Else
+        lrow = ThisWorkbook.Worksheets("WKTab_Script").Cells.Find(What:="*", After:=[A1], SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+    End If
+    irow = 0
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Writing Script B                                                                                                                                '
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    Open ThisWorkbook.Path & "\Patch_" & PatchB & "\Patch-" & PatchB & "B.sql" For Output As #1
+    
+' Create Working Tables keys for the patch
+    Print #1, ""
+    
+    For Each cell In Range("WKTAB_Create")
+        If irow < lrow Then
+            Print #1, cell.Value
+        End If
+        irow = irow + 1
+    Next
+    
+    Print #1, ""
+    
+    Print #1, ""
+    
+    Print #1, ""
+    
+' Create Select scripts for saving data before Delete
+   'BG
+    BGIndex = 2
+    BGRow = 2
+    BG_ID_String = "("
+    BG_Map_String = "("
+    While ThisWorkbook.Worksheets("BG").Cells(BGRow, 1).Value <> ""
+        If Range("PatchA").Value = ThisWorkbook.Worksheets("BG").Cells(BGRow, 4).Value Then
+            BGIndex = BGIndex + 1
+            BG_ID_String = BG_ID_String & ThisWorkbook.Worksheets("BG").Cells(BGRow, 1).Value
+            BG_Map_String = BG_Map_String & ThisWorkbook.Worksheets("BG").Cells(BGRow, 2).Value
+            If ThisWorkbook.Worksheets("BG").Cells(BGRow + 1, 4).Value = Range("PatchA").Value Then
+                BG_ID_String = BG_ID_String & ", "
+                BG_Map_String = BG_Map_String & ", "
+            Else
+                BG_ID_String = BG_ID_String & ")"
+                BG_Map_String = BG_Map_String & ")"
+            End If
+        End If
+        BGRow = BGRow + 1
+    Wend
+
+    If BGIndex > 2 Then
+        
+        FilenameBG = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_"
+        FilenameBG = Replace(FilenameBG, "\", "/")
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "battleground_template")
+        Print #1, "SELECT * FROM battleground_template WHERE id in " & BG_ID_String & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "battlemaster_entry")
+        Print #1, "SELECT * FROM battlemaster_entry WHERE bg_template in " & BG_ID_String & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "battleground_events")
+        Print #1, "SELECT * FROM battleground_events WHERE map in " & BG_Map_String & EndScriptSelect
+        
+        Print #1, ""
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "creature_battleground")
+        Print #1, "SELECT * FROM creature_battleground WHERE guid IN (select guid FROM creature WHERE map in " & BG_Map_String & ")" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "creature_movement_bg")
+        Print #1, "SELECT * FROM creature_movement WHERE id in (Select guid from creature where map in " & BG_Map_String & ")" & EndScriptSelect
+
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "creature_bg")
+        Print #1, "SELECT * FROM creature WHERE map in " & BG_Map_String & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "gameobject_battleground")
+        Print #1, "SELECT * FROM gameobject_battleground WHERE guid IN (select guid FROM gameobject WHERE map in " & BG_Map_String & ")" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "game_event_gameobject_bg")
+        Print #1, "SELECT * FROM game_event_gameobject WHERE guid in (Select guid from gameobject where map in " & BG_Map_String & ")" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "spawn_group_spawn_bg")
+        Print #1, "SELECT * FROM spawn_group_spawn WHERE guid in (Select guid from creature where map in " & BG_Map_String & ")" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "gameobject_bg")
+        Print #1, "SELECT * FROM gameobject WHERE map in " & BG_Map_String & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "pool_template_obj_bg")
+        Print #1, "SELECT * from pool_template WHERE entry IN (SELECT pool_entry from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & "))" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "pool_gameobject_bg")
+        Print #1, "SELECT * from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & ")" & EndScriptSelect
+
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "pool_template_cre_bg")
+        Print #1, "SELECT * from pool_template WHERE entry IN (SELECT pool_entry from pool_creature WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & "))" & EndScriptSelect
+        
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FilenameBG & "pool_creature_bg")
+        Print #1, "SELECT * from pool_creature WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & EndScriptSelect
+
+        
+    End If
+   '-
+    Print #1, ""
+    
+    Print #1, ""
+    
+    Call OrderStandardScriptB
+    irow = 2
+    While ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ""
+        If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 9).Value = "x" Then
+            GoTo NextSelectKey
+        End If
+        GroupName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value
+        TableName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 2).Value
+        ExtName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 5).Value
+        TextScript = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 8).Value
+        FileName = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_" & TableName
+        FileName = Replace(FileName, "\", "/")
+        If ExtName <> "" Then
+            FileName = FileName & "_" & ExtName
+        End If
+        EndScriptSelect = Replace(Range("EndScriptSelect").Value, "%FILE%", FileName)
+        If Not Range("WKTAB_Drop").Find(ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value) Is Nothing Then
+            Script = "SELECT * FROM " & TableName & " WHERE " & TextScript
+
+            Script = ChangeVarList(GroupName, Script)
+            
+            Script = Script & EndScriptSelect
+            If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ThisWorkbook.Worksheets("Standard_Script").Cells(irow - 1, 1).Value Then
+                Print #1, ""
+                Print #1, ""
+            End If
+            Print #1, Script
+        End If
+NextSelectKey:
+        irow = irow + 1
+    Wend
+    
+    Print #1, ""
+    
+' Clearing Map
+    indexRow = 0
+    indexRow2 = 0
+    MyString = ""
+    
+    For Each cell In Range("mapIndex")
+        
+        If cell.Value <> "" Then
+            
+            indexRow = indexRow + 1
+        
+            If indexRow > 1 Then
+            
+                If ThisWorkbook.Worksheets("Map").Cells(indexRow, 3) = Range("PatchA").Value Then
+                    
+                    indexRow2 = indexRow2 + 1
+                    
+                    If (indexRow2 > 1) Then
+                        MyString = MyString & ", "
+                    End If
+            
+                    MyString = MyString & cell.Value
+                    
+                End If
+            
+            End If
+        
+        Else
+        
+            Exit For
+            
+        End If
+    
+    Next
+    
+    If indexRow2 > 0 Then
+
+        MyString = "(" & MyString & ")"
+        
+        Print #1, "/*Clearing Map Creature*/"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupFormation"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM spawn_group_formation where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0))" & MapFilename
+Rem        Print #1, "Delete FROM spawn_group_formation where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0));"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)) AND TYPE = 0" & MapFilename
+Rem        Print #1, "Delete FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)) AND TYPE = 0;"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+    
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM creature_spawn_entry WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM creature_spawn_entry WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureMovement"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM creature_movement WHERE id IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM creature_movement WHERE id IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureLinking"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM creature_linking WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM creature_linking WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0))" & MapFilename
+Rem        Print #1, "DELETE FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0));"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM creature_addon WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM creature_addon WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "Select * from creature where map in " & MyString & " AND ID = 0" & MapFilename
+Rem        Print #1, "Delete from creature where map in " & MyString & " AND ID = 0;"
+        
+        
+        Print #1, "/*Clearing Map Gameobject*/"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)) AND TYPE = 1" & MapFilename
+Rem        Print #1, "Delete FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)) AND TYPE = 1;"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+    
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM gameobject_spawn_entry WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM gameobject_spawn_entry WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0))" & MapFilename
+Rem        Print #1, "DELETE FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0));"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "SELECT * FROM gameobject_addon WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+Rem        Print #1, "DELETE FROM gameobject_addon WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+        Print #1, "Select * from gameobject where map in " & MyString & " AND ID = 0" & MapFilename
+Rem        Print #1, "Delete from gameobject where map in " & MyString & " AND ID = 0;"
+        
+    End If
+    
+    Print #1, ""
+    
+' Adding Custom-Select scripts for saving data before Delete
+    CustomScriptFile = ThisWorkbook.Path & "\Patch_" & PatchB & "\CustomScript-" & PatchB & "B.sql"
+    If Dir(CustomScriptFile) <> "" Then
+        Open CustomScriptFile For Input As #3
+        CustomScript = ""
+Rem        Do Until EOF(3) Or (InStr(1, CustomScript, "DELETE", 1) > 0) Or (InStr(1, CustomScript, "UPDATE", 1) > 0)
+        Do Until EOF(3)
+            Print #1, CustomScript
+            Line Input #3, CustomScript
+        Loop
+    End If
+    
+    Print #1, ""
+    
+    Print #1, ""
+    
+    Print #1, ""
+    
+    
+    
+    
+' Create Delete scripts
+
+  'BG
+      If BGIndex > 2 Then
+        
+        Print #1, "DELETE FROM battleground_template WHERE id in " & BG_ID_String & ";"
+        Print #1, "DELETE FROM battlemaster_entry WHERE bg_template in " & BG_ID_String & ";"
+        Print #1, "DELETE FROM battleground_events WHERE map in " & BG_Map_String & ";"
+        Print #1, "DELETE FROM game_event_gameobject WHERE guid in (SELECT guid from gameobject WHERE map in " & BG_Map_String & ")" & ";"
+        Print #1, "DELETE FROM spawn_group_spawn WHERE guid in (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        Print #1, "DELETE FROM creature_movement WHERE id in (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        
+        Print #1, "DELETE from pool_template WHERE entry IN (SELECT pool_entry from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & "))" & ";"
+        Print #1, "DELETE from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & ")" & ";"
+        Print #1, "DELETE from pool_template WHERE entry IN (SELECT pool_entry from pool_creature WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & "))" & ";"
+        Print #1, "DELETE from pool_gameobject WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        
+        Print #1, ""
+        
+    End If
+
+    irow = 2
+    While ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ""
+        If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 9).Value = "x" Then
+            GoTo NextDeleteKey
+        End If
+        GroupName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value
+        TableName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 2).Value
+        ExtName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 5).Value
+        TextScript = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 8).Value
+        If Not Range("WKTAB_Drop").Find(ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value) Is Nothing Then
+            Script = "DELETE FROM " & TableName & " WHERE " & TextScript
+            
+            Script = ChangeVarList(GroupName, Script)
+            
+            Script = Script & ";"
+            If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ThisWorkbook.Worksheets("Standard_Script").Cells(irow - 1, 1).Value Then
+                Print #1, ""
+                Print #1, ""
+            End If
+            
+            If (BGIndex > 2) Then
+            
+                If (TableName = "creature") Then
+                
+                    Print #1, "DELETE FROM creature_battleground WHERE guid IN (select guid FROM creature WHERE map in " & BG_Map_String & ")" & ";"
+                    Print #1, "DELETE FROM creature WHERE map in " & BG_Map_String & ";"
+                
+                End If
+                
+                If (TableName = "gameobject") Then
+                
+                    Print #1, "DELETE FROM gameobject_battleground WHERE guid IN (select guid FROM gameobject WHERE map in " & BG_Map_String & ")" & ";"
+                    Print #1, "DELETE FROM gameobject WHERE map in " & BG_Map_String & ";"
+                                
+                End If
+            
+            End If
+            
+            Print #1, Script
+        End If
+NextDeleteKey:
+        irow = irow + 1
+    Wend
+    
+    Print #1, ""
+    Print #1, ""
+
+
+
+' Clearing Map
+    indexRow = 0
+    indexRow2 = 0
+    MyString = ""
+    
+    For Each cell In Range("mapIndex")
+        
+        If cell.Value <> "" Then
+            
+            indexRow = indexRow + 1
+        
+            If indexRow > 1 Then
+            
+                If ThisWorkbook.Worksheets("Map").Cells(indexRow, 3) = Range("PatchA").Value Then
+                    
+                    indexRow2 = indexRow2 + 1
+                    
+                    If (indexRow2 > 1) Then
+                        MyString = MyString & ", "
+                    End If
+            
+                    MyString = MyString & cell.Value
+                    
+                End If
+            
+            End If
+        
+        Else
+        
+            Exit For
+            
+        End If
+    
+    Next
+    
+    If indexRow2 > 0 Then
+
+        MyString = "(" & MyString & ")"
+        
+        Print #1, "/*Clearing Map Creature*/"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupFormation"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM spawn_group_formation where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0))" & MapFilename
+        Print #1, "Delete FROM spawn_group_formation where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0));"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)) AND TYPE = 0" & MapFilename
+        Print #1, "Delete FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)) AND TYPE = 0;"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM spawn_group_spawn WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+    
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM creature_spawn_entry WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM creature_spawn_entry WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureMovement"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM creature_movement WHERE id IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM creature_movement WHERE id IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureLinking"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM creature_linking WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM creature_linking WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0))" & MapFilename
+        Print #1, "DELETE FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0));"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM pool_creature WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM creature_addon WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM creature_addon WHERE guid IN (Select guid from creature where map in " & MyString & " AND ID = 0);"
+                
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "Select * from creature where map in " & MyString & " AND ID = 0" & MapFilename
+        Print #1, "Delete from creature where map in " & MyString & " AND ID = 0;"
+        
+        
+        Print #1, "/*Clearing Map Gameobject*/"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)) AND TYPE = 1" & MapFilename
+        Print #1, "Delete FROM spawn_group where id in (SELECT id FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)) AND TYPE = 1;"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM spawn_group_spawn WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+    
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM gameobject_spawn_entry WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM gameobject_spawn_entry WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0))" & MapFilename
+        Print #1, "DELETE FROM pool_template WHERE entry IN (SELECT pool_entry FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0));"
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM pool_gameobject WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "SELECT * FROM gameobject_addon WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0)" & MapFilename
+        Print #1, "DELETE FROM gameobject_addon WHERE guid IN (Select guid from gameobject where map in " & MyString & " AND ID = 0);"
+
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("EndScriptSelect").Value, "%FILE%", MapFilename)
+Rem        Print #1, "Select * from gameobject where map in " & MyString & " AND ID = 0" & MapFilename
+        Print #1, "Delete from gameobject where map in " & MyString & " AND ID = 0;"
+        
+    End If
+
+Rem    Print #1, ""
+
+
+' Adding endless Custom scripts
+Rem    If Dir(CustomScriptFile) <> "" Then
+Rem        Do Until EOF(3)
+Rem            Print #1, CustomScript
+Rem            Line Input #3, CustomScript
+Rem        Loop
+Rem    End If
+
+    Print #1, ""
+    
+    Print #1, ""
+    
+    Print #1, ""
+    
+' Dropping Working Tables keys for the patch
+    irow = 0
+    For Each cell In Range("WKTAB_Drop")
+        If irow < lrow Then
+            Print #1, cell.Value
+        End If
+        irow = irow + 1
+    Next
+    
+    Print #1, ""
+       
+
+' Closing with final script for patch update
+    Print #1, "/*Update game_event Patch*/"
+    Print #1, "Delete FROM game_event WHERE entry = 200;"
+    Print #1, "INSERT INTO `game_event` (`entry`, `schedule_type`, `occurence`, `length`, `holiday`, `linkedTo`, `description`) VALUES (200, 0, 5184000, " & PatchB & ", 0, 0, 'Server Patch');"
+    
+    Print #1, ""
+    
+    Close #1
+    
+    If Dir(CustomScriptFile) <> "" Then
+        Close #3
+    End If
+
+    
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+' Writing Script A                                                                                                                                '
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    If Dir(ThisWorkbook.Path & "\Patch_" & PatchA & "\") = "" Then
+        Exit Sub
+    End If
+    
+    irow = 0
+    Open ThisWorkbook.Path & "\Patch_" & PatchA & "\Patch-" & PatchA & "A.sql" For Output As #2
+    
+' Loading Map
+    If MyString <> "" Then
+        
+        Print #2, "/*Loading Map Gameobject*/"
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "gameobject")
+Rem        Print #2, "-- Delete from gameobject where map in " & MyString & " AND ID = 0;"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "gameobject_addon")
+Rem        Print #2, "-- Delete from gameobject_addon WHERE guid IN (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolGameobject"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "pool_gameobject")
+Rem        Print #2, "-- Delete from pool_gameobject WHERE guid IN (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "pool_template")
+Rem        Print #2, "-- Delete from pool_template WHERE entry IN (SELECT pool_entry FROM pool_gameobject WHERE guid IN  (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0));"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "spawn_group_spawn")
+Rem        Print #2, "-- Delete from spawn_group_spawn WHERE guid IN (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_obj"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "spawn_group")
+Rem        Print #2, "-- Delete from spawn_group where id in (SELECT id from spawn_group_spawn WHERE guid IN (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0)) AND TYPE = 1;"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapGameobjectSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "gameobject_spawn_entry")
+Rem        Print #2, "-- Delete from gameobject_spawn_entry WHERE guid IN (SELECT guid FROM gameobject WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        
+        Print #2, "/*Loading Map Creature*/"
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "creature")
+Rem        Print #2, "-- Delete from creature where map in " & MyString & " AND ID = 0;"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureAddon"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "creature_addon")
+Rem        Print #2, "-- Delete from creature_addon WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureLinking"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "creature_linking")
+Rem        Print #2, "-- Delete from creature_linking WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolCreature"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "pool_creature")
+Rem        Print #2, "-- Delete from pool_creature WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapPoolTemplate_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "pool_template")
+Rem        Print #2, "-- Delete from pool_template WHERE entry IN (SELECT pool_entry FROM pool_creature WHERE guid IN  (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0));"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupSpawn_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "spawn_group_spawn")
+Rem        Print #2, "-- Delete from spawn_group_spawn WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroup_cre"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "spawn_group")
+Rem        Print #2, "-- Delete from spawn_group where id in (SELECT id from spawn_group_spawn WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0)) AND TYPE = 0;"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapSpawnGroupFormation"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "spawn_group_formation")
+Rem        Print #2, "-- Delete from spawn_group_formation where id in (SELECT id from spawn_group_spawn WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0));"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureSpawnEntry"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "creature_spawn_entry")
+Rem        Print #2, "-- Delete from creature_spawn_entry WHERE guid IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+        
+        MapFilename = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_MapCreatureMovement"
+        MapFilename = Replace(MapFilename, "\", "/")
+        MapFilename = Replace(Range("ScriptLoad").Value, "%FILE%", MapFilename)
+        MapFilename = Replace(MapFilename, "%TABLENAME%", "creature_movement")
+Rem        Print #2, "-- Delete from creature_movement WHERE id IN (SELECT guid FROM creature WHERE map in " & MyString & " AND ID = 0);"
+        Print #2, MapFilename
+                
+    End If
+    
+    Print #2, ""
+    
+' Create Working Tables keys for the patch
+    For Each cell In Range("WKTAB_Create")
+        If irow < lrow Then
+            Print #2, cell.Value
+        End If
+        irow = irow + 1
+    Next
+    
+    Print #2, ""
+    
+    Print #2, ""
+    
+    Print #2, ""
+    
+' Create Delete-Load  scripts
+    Call OrderStandardScriptA
+
+    irow = 2
+    While ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ""
+        If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 9).Value = "x" Then
+            GoTo NextLoadKey
+        End If
+        GroupName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value
+        TableName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 2).Value
+        ExtName = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 5).Value
+        TextScript = ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 8).Value
+        FileName = ThisWorkbook.Path & "/DataSaved/Patch-" & PatchB & "B_" & TableName
+        FileName = Replace(FileName, "\", "/")
+        If ExtName <> "" Then
+            FileName = FileName & "_" & ExtName
+        End If
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FileName)
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", TableName)
+        If Not Range("WKTAB_Drop").Find(ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value) Is Nothing Then
+            Script = "-- DELETE FROM " & TableName & " WHERE " & TextScript
+            
+            Script = ChangeVarList(GroupName, Script)
+            
+            Script = Script & ";"
+            
+            If ThisWorkbook.Worksheets("Standard_Script").Cells(irow, 1).Value <> ThisWorkbook.Worksheets("Standard_Script").Cells(irow - 1, 1).Value Then
+                Print #2, ""
+                Print #2, ""
+            End If
+
+        
+            If (BGIndex > 2) Then
+                ScriptLoadPrev = ScriptLoad
+            
+                If (TableName = "creature") Then
+                
+Rem                    Print #2, "-- DELETE FROM creature WHERE map in " & BG_Map_String & ";"
+                    ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "creature_bg")
+                    ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "creature")
+                    Print #2, ScriptLoad
+                    
+Rem                    Print #2, "-- DELETE FROM creature_battleground WHERE guid IN (select guid FROM creature WHERE map in " & BG_Map_String & ")" & ";"
+                    ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "creature_battleground")
+                    ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "creature_battleground")
+                    Print #2, ScriptLoad
+                
+                End If
+                
+                If (TableName = "gameobject") Then
+                
+Rem                    Print #2, "-- DELETE FROM gameobject WHERE map in " & BG_Map_String & ";"
+                    ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "gameobject_bg")
+                    ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "gameobject")
+                    Print #2, ScriptLoad
+                    
+Rem                    Print #2, "-- DELETE FROM gameobject_battleground WHERE guid IN (select guid FROM gameobject WHERE map in " & BG_Map_String & ")" & ";"
+                    ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "gameobject_battleground")
+                    ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "gameobject_battleground")
+                    Print #2, ScriptLoad
+                                
+                End If
+                
+                ScriptLoad = ScriptLoadPrev
+            
+            End If
+            
+            Print #2, Script
+            Print #2, ScriptLoad
+        End If
+NextLoadKey:
+        irow = irow + 1
+    Wend
+    
+    Print #2, ""
+    Print #2, ""
+    
+   'BG
+    If BGIndex > 2 Then
+        
+Rem        Print #2, "-- DELETE FROM battleground_template WHERE id in " & BG_ID_String & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "battleground_template")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "battleground_template")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE FROM battlemaster_entry WHERE bg_template in " & BG_ID_String & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "battlemaster_entry")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "battlemaster_entry")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE FROM battleground_events WHERE map in " & BG_Map_String & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "battleground_events")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "battleground_events")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE FROM game_event_gameobject WHERE guid in (SELECT guid from gameobject WHERE map in " & BG_Map_String & ")" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "game_event_gameobject_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "game_event_gameobject")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE FROM spawn_group_spawn WHERE guid in (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "spawn_group_spawn_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "spawn_group_spawn")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE FROM creature_movement WHERE id in (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "creature_movement_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "creature_movement")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & ")" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "pool_gameobject_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "pool_gameobject")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE from pool_template WHERE entry IN (SELECT pool_entry from pool_gameobject WHERE guid IN (SELECT guid from gameobject WHERE map in " & BG_Map_String & "))" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "pool_template_obj_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "pool_template")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE from pool_creature WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & ")" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "pool_creature_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "pool_creature")
+        Print #2, ScriptLoad
+        
+Rem        Print #2, "-- DELETE from pool_template WHERE entry IN (SELECT pool_entry from pool_creature WHERE guid IN (SELECT guid from creature WHERE map in " & BG_Map_String & "))" & ";"
+        ScriptLoad = Replace(Range("ScriptLoad").Value, "%FILE%", FilenameBG & "pool_template_cre_bg")
+        ScriptLoad = Replace(ScriptLoad, "%TABLENAME%", "pool_template")
+        Print #2, ScriptLoad
+        
+        Print #2, ""
+        
+    End If
+   '-
+    
+    Print #2, ""
+    Print #2, ""
+    
+' Adding Custom scripts
+    CustomScriptFile = ThisWorkbook.Path & "\Patch_" & PatchA & "\CustomScript-" & PatchA & "A.sql"
+    If Dir(CustomScriptFile) <> "" Then
+        Open CustomScriptFile For Input As #4
+        CustomScript = ""
+        Do Until EOF(4)
+            Print #2, CustomScript
+            Line Input #4, CustomScript
+        Loop
+        Close #4
+    End If
+    
+    Print #2, ""
+    
+    Print #2, ""
+    
+    Print #2, ""
+    
+' Dropping Working Tables keys for the patch
+    irow = 0
+    For Each cell In Range("WKTAB_Drop")
+        If irow < lrow Then
+            Print #2, cell.Value
+        End If
+        irow = irow + 1
+    Next
+    
+    Print #2, ""
+    
+' Closing with final script for patch update
+    Print #2, "/*Update game_event Patch*/"
+    Print #2, "Delete FROM game_event WHERE entry = 200;"
+    Print #2, "INSERT INTO `game_event` (`entry`, `schedule_type`, `occurence`, `length`, `holiday`, `linkedTo`, `description`) VALUES (200, 0, 5184000, " & PatchA & ", 0, 0, 'Server Patch');"
+    
+    Print #2, ""
+    
+    Close #2
+
+End Sub
+Sub ReportSkippableTables()
+
+Dim lCounter    As Long
+Dim CountSkip   As Long
+Dim oFile       As Object
+Dim oFSO        As Object
+Dim oFolder     As Object
+Dim oFiles      As Object
+Dim NameFilter  As String
+
+TotScripts = WorksheetFunction.CountA(ThisWorkbook.Worksheets("Standard_Script").Range("B:B"))
+
+Dim arr() As String
+    
+
+Set oFSO = CreateObject("Scripting.FileSystemObject")
+Set oFolder = oFSO.GetFolder(ThisWorkbook.Path & "\DataSaved\")
+Set oFiles = oFolder.Files
+
+NameFilter = "Patch-" & Range("PatchB").Value & "B"
+
+If oFiles.Count = 0 Then Exit Sub
+
+lCounter = 0
+CountSkip = 0
+For Each oFile In oFiles
+    FileName = Replace(oFile.Name, oFolder.Name, "")
+    If Left(FileName, 7 + Len(Range("PatchB").Value)) = NameFilter Then
+        lCounter = lCounter + 1
+        For i = 1 To TotScripts
+            If FileLen(oFile) = 0 Then
+                NameFile = NameFilter & "_" & ThisWorkbook.Worksheets("Standard_Script").Cells(i, 2).Value
+                If ThisWorkbook.Worksheets("Standard_Script").Cells(i, 5).Value <> "" Then
+                    NameFile = NameFile & "_" & ThisWorkbook.Worksheets("Standard_Script").Cells(i, 5).Value & ".csv"
+                Else
+                    NameFile = NameFile & ".csv"
+                End If
+                If FileName = NameFile Then
+                    ThisWorkbook.Worksheets("Standard_Script").Cells(i, 9).Value = "x"
+                    CountSkip = CountSkip + 1
+                    Exit For
+                End If
+            End If
+        Next i
+    End If
+Next
+
+info = MsgBox(CountSkip & " of " & lCounter & " scripts flagged for skip", vbInformation, "Check Script to Skip")
+
+End Sub
