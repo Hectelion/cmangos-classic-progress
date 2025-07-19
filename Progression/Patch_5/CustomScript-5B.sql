@@ -53,6 +53,10 @@ SELECT * FROM creature_template where entry = 10216 INTO OUTFILE "C:/mangos/run/
 -- SELECT * FROM fishing_loot_template INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_fishing_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Profession*/
+SELECT * FROM gossip_menu_option WHERE option_text LIKE "%Profession%" INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -124,6 +128,10 @@ Delete from gameobject_loot_template where entry in (1711, 1735, 2284, 17496);
 
 /*Fishing*/
 -- Delete FROM fishing_loot_template;
+
+
+/*Profession*/
+Delete FROM gossip_menu_option WHERE option_text LIKE "%Profession%";
 
 
 
