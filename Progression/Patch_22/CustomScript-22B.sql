@@ -17,6 +17,10 @@ SELECT * from waypoint_path_name  where pathid = 349 INTO OUTFILE "c:/mangos/run
 SELECT * from scripted_event_id WHERE id = 8608 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-22B_scripted_event_id_8608.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Battlemaster*/
+SELECT * FROM gossip_menu_option WHERE option_text LIKE "%join the battle%" or option_text LIKE "%battlemaster%" or option_text LIKE "%battleground%" INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-22B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -37,6 +41,10 @@ Delete from waypoint_path_name  where pathid = 349;
 
 /*event_wildhammer_message*/
 Delete from scripted_event_id WHERE id = 8608;
+
+
+/*Battlemaster*/
+Delete FROM gossip_menu_option WHERE option_text LIKE "%join the battle%" or option_text LIKE "%battlemaster%" or option_text LIKE "%battleground%";
 
 
 
