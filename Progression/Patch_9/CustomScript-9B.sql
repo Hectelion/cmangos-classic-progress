@@ -21,7 +21,7 @@ SELECT * FROM dbscripts_on_event WHERE id = 264 INTO OUTFILE "c:/mangos/run/Prog
 /*gossip_menu*/ -- Ravenhold, professions train
 SELECT * FROM gossip_menu WHERE condition_id IN (363, 368, 374, 379, 382, 393, 399, 403, 407) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-9B_gossip_menu_custom.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM gossip_menu_option WHERE condition_id IN (196) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-9B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
--- SELECT * FROM gossip_menu_option WHERE action_script_id IN (5, 43501, 68101, 68201, 68501, 68601, 68801, 68901, 69101, 69201, 69301, 69401, 69701, 69801, 698101, 72101, 195101, 212101, 284901, 1026501, 1285001, 1285101, 1285201, 1285301, 1285401, 1285501, 1285601, 1285701, 1285801, 1285901, 1286301, 1286801, 1286901, 1287201, 1287301, 1287401, 1287501) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-9B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM gossip_menu_option WHERE option_text LIKE "Make% Inn%" OR option_text LIKE "What can% Inn%" or option_text LIKE "The Inn" or option_text LIKE "%guild%" INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-9B_gossip_menu_option_custom2.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Piter Verance*/
@@ -119,7 +119,7 @@ Delete FROM dbscripts_on_event WHERE id = 264;
 /*gossip_menu*/ -- Ravenhold, professions train
 Delete FROM gossip_menu WHERE condition_id IN (363, 368, 374, 379, 382, 393, 399, 403, 407);
 Delete FROM gossip_menu_option WHERE condition_id IN (196);
--- Delete FROM gossip_menu_option WHERE action_script_id IN (5, 43501, 68101, 68201, 68501, 68601, 68801, 68901, 69101, 69201, 69301, 69401, 69701, 69801, 698101, 72101, 195101, 212101, 284901, 1026501, 1285001, 1285101, 1285201, 1285301, 1285401, 1285501, 1285601, 1285701, 1285801, 1285901, 1286301, 1286801, 1286901, 1287201, 1287301, 1287401, 1287501);
+Delete FROM gossip_menu_option WHERE option_text LIKE "Make% Inn%" OR option_text LIKE "What can% Inn%" or option_text LIKE "The Inn" or option_text LIKE "%guild%";
 
 
 /*Piter Verance*/
