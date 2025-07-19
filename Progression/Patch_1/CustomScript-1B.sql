@@ -33,6 +33,10 @@ SELECT * FROM creature_linking WHERE guid IN (36692, 60816) INTO OUTFILE "C:/man
 SELECT * FROM npc_vendor_template WHERE entry IN (201, 218) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_npc_vendor_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Fly*/
+SELECT * FROM gossip_menu_option WHERE option_text LIKE "Show me %fly%" or option_text LIKE "%handler%" or option_text LIKE "%gryph%" or option_text LIKE "%rider%" INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -89,6 +93,10 @@ Delete FROM creature_linking WHERE guid IN (36692, 60816);
 
 /*npc_vendor_template*/
 Delete FROM npc_vendor_template WHERE entry IN (201, 218);
+
+
+/*Fly*/
+Delete FROM gossip_menu_option WHERE option_text LIKE "Show me %fly%" or option_text LIKE "%handler%" or option_text LIKE "%gryph%" or option_text LIKE "%rider%";
 
 
 /*Trial of the Sea Lion*/
