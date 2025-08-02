@@ -23,7 +23,7 @@
 
 Private Sub Worksheet_Change(ByVal Target As Range)
     
-    	If Not Intersect(Target, ThisWorkbook.Worksheets("Generate").Range("PatchB")) Is Nothing Then
+    If Not Intersect(Target, ThisWorkbook.Worksheets("Generate").Range("PatchB")) Is Nothing Then
     
         ThisWorkbook.Worksheets("Standard_Script").Range("SkipList").ClearContents
         ThisWorkbook.Worksheets("Standard_Script").Range("SkipList").Cells(1, 1).Value = "Skip"
