@@ -20,7 +20,7 @@ SELECT * FROM creature_ai_scripts WHERE floor(id/100) = 4607 INTO OUTFILE "C:/ma
 
 
 /*gameobject_loot_template*/
-Select * from gameobject_loot_template where entry in (1711, 1735, 2284, 17496) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
+Select * from gameobject_loot_template where entry in (1711, 1735, 2284, 17441, 17496, 17518, 17520, 17534, 17537) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Crawler*/
@@ -111,7 +111,7 @@ Delete FROM creature_ai_scripts WHERE floor(id/100) = 4607;
 
 
 /*gameobject_loot_template*/
-Delete from gameobject_loot_template where entry in (1711, 1735, 2284, 17496);
+Delete from gameobject_loot_template where entry in (1711, 1735, 2284, 17441, 17496, 17518, 17520, 17534, 17537);
 
 
 /*npc_vendor_template*/
@@ -150,6 +150,10 @@ Update creature_template set VendorTemplateId = 0 where entry = 4453 and VendorT
 /*Gubber Blump*/
 Update creature_template set GossipMenuId = 0 where entry = 10216 and GossipMenuId = 2562;
 -- Delete FROM gossip_menu_option WHERE menu_id = 2562;
+
+
+/*Crawler*/
+Update creature_template set lootid = 0 where entry = 6250;
 
 
 
