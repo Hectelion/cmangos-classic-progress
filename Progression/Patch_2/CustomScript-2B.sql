@@ -13,7 +13,7 @@ SELECT * from scripted_event_id WHERE id = 3938 INTO OUTFILE "C:/mangos/run/Prog
 
 
 /*waypoint_path*/
-SELECT * from waypoint_path WHERE pathid = 19018 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_waypoint_path_19018.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * from waypoint_path WHERE pathid in (2917, 3693, 19018) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Xabraxxis*/
@@ -66,7 +66,7 @@ Delete from scripted_event_id WHERE id = 3938;
 
 
 /*waypoint_path*/
-Delete from waypoint_path WHERE pathid = 19018;
+Delete from waypoint_path WHERE pathid in (2917, 3693, 19018);
 
 
 /*Xabraxxis*/
