@@ -95,3 +95,7 @@ Update creature_template set AIName = "EventAI" where entry = 4607;
 /*Wizzle Brassbolts*/
 Update creature_template set VendorTemplateId = 133 where entry = 4453;
 
+
+/*Crawler*/
+Update creature_template set lootid = entry where entry = 6250;
+
