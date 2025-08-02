@@ -20,6 +20,10 @@ SELECT * FROM creature WHERE guid IN (2290592, 2290593) INTO OUTFILE "c:/mangos/
 SELECT * FROM scripted_event_id WHERE id = 5140 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-16B_scripted_event_id_5140.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*King of the Foulweald*/
+SELECT * FROM dbscripts_on_event WHERE id = 6721 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-16B_dbscripts_on_event_6721.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -43,6 +47,10 @@ Delete FROM creature WHERE guid IN (2290592, 2290593);
 
 /*Down's Gambit*/
 Delete FROM scripted_event_id WHERE id = 5140;
+
+
+/*King of the Foulweald*/
+Delete FROM dbscripts_on_event WHERE id = 6721;
 
 
 
