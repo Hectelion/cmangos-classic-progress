@@ -1,0 +1,4222 @@
+ConditionsList;Comments;Patch
+1399;Player Has Aura: 30238 (Lordaeron's Blessing), EffectIndex: 1;31
+1337;NOT Player Has Learned Spell: 28222 (Icy Scale Breastplate);30
+1338;NOT Player Has Learned Spell: 28223 (Icy Scale Gauntlets);30
+1339;NOT Player Has Learned Spell: 28224 (Icy Scale Bracers);30
+1340;NOT Player Has Learned Spell: 28219 (Polar Tunic);30
+1341;NOT Player Has Learned Spell: 28220 (Polar Gloves);30
+1342;NOT Player Has Learned Spell: 28221 (Polar Bracers);30
+1343;NOT Player Has Learned Spell: 28242 (Icebane Breastplate);30
+1344;NOT Player Has Learned Spell: 28243 (Icebane Gauntlets);30
+1345;NOT Player Has Learned Spell: 28244 (Icebane Bracers);30
+1346;NOT Player Has Learned Spell: 28209 (Glacial Wrists);30
+1347;NOT Player Has Learned Spell: 28205 (Glacial Gloves);30
+1348;NOT Player Has Learned Spell: 28208 (Glacial Cloak);30
+1350;NOT Player Has Learned Spell: 28207 (Glacial Vest);30
+1358;(Has Minimum Rank Exalted With Faction ID: 529 (Argent Dawn) AND NOT Player Has Learned Spell: 28222 Icy Scale Breastplate);30
+1359;(Has Minimum Rank Exalted With Faction ID: 529 (Argent Dawn) AND NOT Player Has Learned Spell: 28219 Polar Tunic);30
+1360;(Has Minimum Rank Exalted With Faction ID: 529 (Argent Dawn) AND NOT Player Has Learned Spell: 28242 Icebane Breastplate);30
+1361;(Has Minimum Rank Exalted With Faction ID: 529 (Argent Dawn) AND NOT Player Has Learned Spell: 28208 Glacial Cloak);30
+1362;(Has Minimum Rank Exalted With Faction ID: 529 (Argent Dawn) AND NOT Player Has Learned Spell: 28207 Glacial Vest);30
+1363;Player Has Less Than 1 of Item ID 22719 (Omarion's Handbook) in Inventory/Bank;30
+1364;Quest ID 9233 (Omarion's Handbook) NOT Taken AND NOT Rewarded;30
+1365;(Player Has Less Than 1 of Item ID 22719 Omarion's Handbook in Inventory/Bank AND Quest ID 9233 Omarion's Handbook NOT Taken AND NOT Rewarded);30
+1366;((Player Has Less Than 1 of Item ID 22719 Omarion's Handbook in Inventory/Bank AND Quest ID 9233 Omarion's Handbook NOT Taken AND NOT Rewarded) AND Has Minimum Rank Revered With Faction ID: 529 Argent Dawn);30
+2300;Player Has 1 or more of Item ID 22727 (Frame of Atiesh) in Inventory;30
+2301;NOT Player Has 1 or more of Item ID 22727 (Frame of Atiesh) in Inventory;30
+9000;Player Has 1 or more of Item ID 22691 (Corrupted Ashbringer) in Inventory;30
+9124;Quest ID 9378 (The Dread Citadel - Naxxramas) Rewarded;30
+75;Player Has Less Than 1 of Item ID 22754 (Eternal Quintessence) in Inventory/Bank;29
+76;((Quest ID 6824 Hands of the Enemy Rewarded AND Has Minimum Rank Revered With Faction ID: 749 Hydraxian Waterlords) AND Player Has Less Than 1 of Item ID 22754 Eternal Quintessence in Inventory/Bank);29
+3745;Player Has 8 or more of Item ID 22484 (Necrotic Rune) in Inventory;29
+6089;Event ID 89 (Scourge Invasion - Boss in instance activation) Active;29
+8000;Quest ID 8946 (Proof of Life) Rewarded;28
+8001;Quest ID 8961 (Three Kings of Flame) Rewarded;28
+8002;Quest ID 8962 (Components of Importance) Rewarded;28
+8003;Quest ID 8963 (Components of Importance) Rewarded;28
+8004;Quest ID 8964 (Components of Importance) Rewarded;28
+8005;Quest ID 8965 (Components of Importance) Rewarded;28
+8006;(Quest ID 8962 Components of ImportanceRewarded OR Quest ID 8963 Components of Importance Rewarded);28
+8007;Quest ID 8996 (Return to Bodley) Rewarded;28
+8008;Quest ID 8998 (Back to the Beginning) Rewarded;28
+8009;Quest ID 8997 (Back to the Beginning) Rewarded;28
+8010;(Quest ID 8998 Back to the Beginning Rewarded OR Quest ID 8997 Back to the Beginning Rewarded);28
+8011;Quest ID 8966 (The Left Piece of Lord Valthalak's Amulet) Taken;28
+8012;Quest ID 8967 (The Left Piece of Lord Valthalak's Amulet) Taken;28
+8013;Quest ID 8968 (The Left Piece of Lord Valthalak's Amulet) Taken;28
+8014;Quest ID 8969 (The Left Piece of Lord Valthalak's Amulet) Taken;28
+8015;Quest ID 8966 (The Left Piece of Lord Valthalak's Amulet) Rewarded;28
+8016;Quest ID 8967 (The Left Piece of Lord Valthalak's Amulet) Rewarded;28
+8017;Quest ID 8968 (The Left Piece of Lord Valthalak's Amulet) Rewarded;28
+8018;Quest ID 8969 (The Left Piece of Lord Valthalak's Amulet) Rewarded;28
+8019;(Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded);28
+8020;(Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded);28
+8021;(Quest ID 8968 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8968 The Left Piece of Lord Valthalak's Amulet Rewarded);28
+8022;(Quest ID 8969 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8969 The Left Piece of Lord Valthalak's Amulet Rewarded);28
+8023;((Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded) OR (Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded));28
+8024;Quest ID 8996 (The Left Piece of Lord Valthalak's Amulet) NOT Rewarded;28
+8025;(((Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded) OR (Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded)) AND Quest ID 8996 The Left Piece of Lord Valthalak's Amulet NOT Rewarded);28
+8026;Quest ID 9015 (The Challenge) Rewarded;28
+8027;Quest ID 8989 (The Right Piece of Lord Valthalak's Amulet) NOT Rewarded;28
+8028;Quest ID 8990 (The Right Piece of Lord Valthalak's Amulet) NOT Rewarded;28
+8029;Quest ID 8991 (The Right Piece of Lord Valthalak's Amulet) NOT Rewarded;28
+8030;Quest ID 8992 (The Right Piece of Lord Valthalak's Amulet) NOT Rewarded;28
+8031;(Quest ID 8989 The Right Piece of Lord Valthalak's Amulet NOT Rewarded AND Quest ID 8990 The Right Piece of Lord Valthalak's Amulet NOT Rewarded);28
+8032;(Quest ID 9015 The Challenge Rewarded AND (Quest ID 8989 The Right Piece of Lord Valthalak's Amulet NOT Rewarded AND Quest ID 8990 The Right Piece of Lord Valthalak's Amulet NOT Rewarded));28
+8033;Quest ID 8989 (The Right Piece of Lord Valthalak's Amulet) Taken;28
+8034;Quest ID 8990 (The Right Piece of Lord Valthalak's Amulet) Taken;28
+8035;Quest ID 8991 (The Right Piece of Lord Valthalak's Amulet) Taken;28
+8036;Quest ID 8992 (The Right Piece of Lord Valthalak's Amulet) Taken;28
+8037;Player NOT Has 1 or more of Item ID 22048 (Lord Valthalak's Amulet) in Inventory;28
+8038;Player NOT Has 1 or more of Item ID 21984 (Left Piece of Lord Valthalak's Amulet) in Inventory;28
+8039;Player NOT Has 1 or more of Item ID 22047 (Top Piece of Lord Valthalak's Amulet) in Inventory;28
+8040;Player NOT Has 1 or more of Item ID 22046 (Right Piece of Lord Valthalak's Amulet) in Inventory;28
+8041;Player NOT Has 1 or more of Item ID 22050 (Brazier of Beckoning) in Inventory;28
+8042;Player NOT Has 1 or more of Item ID 22049 (Brazier of Beckoning) in Inventory;28
+8043;Player NOT Has 1 or more of Item ID 22052 (Brazier of Beckoning) in Inventory;28
+8044;Player NOT Has 1 or more of Item ID 22051 (Brazier of Beckoning) in Inventory;28
+8045;Player NOT Has 1 or more of Item ID 22056 (Brazier of Beckoning) in Inventory;28
+8046;(Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8989 The Right Piece of Lord Valthalak's Amulet Taken);28
+8047;(Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8990 The Right Piece of Lord Valthalak's Amulet Taken);28
+8048;(Quest ID 8968 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8991 The Right Piece of Lord Valthalak's Amulet Taken);28
+8049;(Quest ID 8969 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8992 The Right Piece of Lord Valthalak's Amulet Taken);28
+8050;(Player NOT Has 1 or more of Item ID 22050 Brazier of Beckoning in Inventory AND (Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8990 The Right Piece of Lord Valthalak's Amulet Taken));28
+8051;(Player NOT Has 1 or more of Item ID 22049 Brazier of Beckoning in Inventory AND (Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8989 The Right Piece of Lord Valthalak's Amulet Taken));28
+8052;(Player NOT Has 1 or more of Item ID 22052 Brazier of Beckoning in Inventory AND (Quest ID 8969 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8992 The Right Piece of Lord Valthalak's Amulet Taken));28
+8053;(Player NOT Has 1 or more of Item ID 22051 Brazier of Beckoning in Inventory AND (Quest ID 8968 The Left Piece of Lord Valthalak's Amulet Taken OR Quest ID 8991 The Right Piece of Lord Valthalak's Amulet Taken));28
+8054;Quest ID 8995 (Mea Culpa, Lord Valthalak) Taken;28
+8056;(Quest ID 8995 Mea Culpa, Lord Valthalak Taken AND Quest ID 8996 Return to Bodley NOT Rewarded);28
+8057;(Player NOT Has 1 or more of Item ID 22048 Lord Valthalak's Amulet in Inventory AND Quest ID 8995 Mea Culpa, Lord Valthalak Taken);28
+8058;((Quest ID 9015 The Challenge Rewarded Rewarded AND (Quest ID 8989 The Right Piece of Lord Valthalak's Amulet NOT Rewarded AND Quest ID 8990 The Right Piece of Lord Valthalak's Amulet NOT Rewarded)) AND Player NOT Has 1 or more of Item ID 22047 Top Piece of Lord Valthalak's Amulet in Inventory);28
+8059;(Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded);28
+8061;((Quest ID 8989 The Right Piece of Lord Valthalak's Amulet NOT Rewarded AND Quest ID 8990 The Right Piece of Lord Valthalak's Amulet NOT Rewarded) AND (Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded));28
+8062;(Player NOT Has 1 or more of Item ID 21984 Left Piece of Lord Valthalak's Amulet in Inventory AND ((Quest ID 8989 The Right Piece of Lord Valthalak's Amulet NOT Rewarded AND Quest ID 8990 The Right Piece of Lord Valthalak's Amulet NOT Rewarded) AND (Quest ID 8966 The Left Piece of Lord Valthalak's Amulet Rewarded OR Quest ID 8967 The Left Piece of Lord Valthalak's Amulet Rewarded)));28
+8922;Target is affected by Aura ID 27420 - Ectoplasmic Distiller;28
+8923;Quest ID 8924 (Hunting for Ectoplasm) Taken;28
+8924;Target is affected by Aura ID 27420 (Ectoplasmic Distiller) AND Quest ID 8924 (Hunting for Ectoplasm) Taken;28
+59;Quest ID 8555 (The Charge of the Dragonflights) Rewarded;27
+60;Player Has 1 or more of Item ID 20949 (Magical Ledger) in Inventory;27
+61;Player Has Less Than 1 of Item ID 20949 (Magical Ledger) in Inventory/Bank;27
+62;(Player Has Less Than 1 of Item ID 20949 Magical Ledger in Inventory/Bank AND Quest ID 8555 The Charge of the Dragonflights Rewarded);27
+78;NOT Player Has Learned Spell: 26086 (Felcloth Bag);27
+79;Player Has Learned Spell: 26086 (Felcloth Bag);27
+80;(Has Skill ID 197 Tailoring, Minimum Skill Value 280 AND NOT Player Has Learned Spell: 26086 Felcloth Bag);27
+81;(Has Skill ID 197 Tailoring, Minimum Skill Value 280 AND Player Has Learned Spell: 26086 Felcloth Bag);27
+97;Quest ID 8620 (The Only Prescription) Taken;27
+122;Player Has Less Than 1 of Item ID 21106 (Draconic for Dummies) in Inventory/Bank;27
+123;Player Has Less Than 1 of Item ID 21107 (Draconic for Dummies) in Inventory/Bank;27
+124;Player Has Less Than 1 of Item ID 21109 (Draconic for Dummies) in Inventory/Bank;27
+149;(Quest ID 8620 The Only Prescription Taken AND Player Has Less Than 1 of Item ID 21106 Draconic for Dummies in Inventory/Bank);27
+150;(Quest ID 8620 The Only Prescription Taken AND Player Has Less Than 1 of Item ID 21107 Draconic for Dummies in Inventory/Bank);27
+151;(Quest ID 8620 The Only Prescription Taken AND Player Has Less Than 1 of Item ID 21109 Draconic for Dummies in Inventory/Bank);27
+225;Quest ID 8599 (Love Song for Narain) Rewarded;27
+226;Quest ID 8597 (Draconic for Dummies) Taken;27
+227;(Quest ID 8599 Love Song for Narain Rewarded AND Quest ID 8597 Draconic for Dummies Taken);27
+358;Quest ID 8738 (Hive'Regal Scout Report) Taken;27
+359;Player Has Less Than 1 of Item ID 21160 (Hive'Regal Scout Report) in Inventory/Bank;27
+360;(Quest ID 8738 Hive'Regal Scout Report Taken AND Player Has Less Than 1 of Item ID 21160 Hive'Regal Scout Report in Inventory/Bank);27
+990;Player Has Less Than 1 of Item ID 21130 (Diary of Weavil) in Inventory/Bank;27
+991;(Quest ID 8620 The Only Prescription Taken AND Player Has Less Than 1 of Item ID 21130 Diary of Weavil in Inventory/Bank);27
+1101;Quest ID 8534 Hive'Zora Scout Report Taken;27
+1102;Player Has Less Than 1 of Item ID 21158 (Hive'Zora Scout Report) in Inventory/Bank;27
+1103;(Quest ID 8534 Hive'Zora Scout Report Taken AND Player Has Less Than 1 of Item ID 21158 Hive'Zora Scout Report in Inventory/Bank);27
+1109;Quest ID 8739 (Hive'Ashi Scout Report) Taken;27
+1110;Player Has Less Than 1 of Item ID 21161 (Hive'Ashi Scout Report) in Inventory/Bank;27
+1111;(Quest ID 8739 Hive'Ashi Scout Report Taken AND Player Has Less Than 1 of Item ID 21161 Hive'Ashi Scout Report in Inventory/Bank);27
+1112;Quest ID 8698 (Ring of the Gathering Storm) Rewarded;27
+1113;Player Has Less Than 1 of Item ID 21399 (Ring of the Gathering Storm) in Inventory/Bank;27
+1114;(Quest ID 8698 Ring of the Gathering Storm Rewarded AND Player Has Less Than 1 of Item ID 21399 Ring of the Gathering Storm in Inventory/Bank);27
+1115;Quest ID 8702 (Ring of Unspoken Names) Rewarded;27
+1116;Player Has Less Than 1 of Item ID 21417 (Ring of Unspoken Names) in Inventory/Bank;27
+1117;(Quest ID 8702 Ring of Unspoken Names Rewarded AND Player Has Less Than 1 of Item ID 21417 Ring of Unspoken Names in Inventory/Bank);27
+1118;Quest ID 8704 (Signet of the Unseen Path) Rewarded;27
+1119;Player Has Less Than 1 of Item ID 21402 (Signet of the Unseen Path) in Inventory/Bank;27
+1120;(Quest ID 8704 Signet of the Unseen Path Rewarded AND Player Has Less Than 1 of Item ID 21402 Signet of the Unseen Path in Inventory/Bank);27
+1121;Quest ID 8556 (Signet of Unyielding Strength) Rewarded;27
+1122;Player Has Less Than 1 of Item ID 21393 (Signet of Unyielding Strength) in Inventory/Bank;27
+1123;(Quest ID 8556 Signet of Unyielding Strength Rewarded AND Player Has Less Than 1 of Item ID 21393 Signet of Unyielding Strength in Inventory/Bank);27
+1127;Quest ID 8697 (Ring of Infinite Wisdom) Rewarded;27
+1128;Quest ID 8703 (Ring of Eternal Justice) Rewarded;27
+1129;Quest ID 8701 (Band of Veiled Shadows) Rewarded;27
+1130;Quest ID 8699 (Band of Vaulted Secrets) Rewarded;27
+1131;Quest ID 8700 (Band of Unending Life) Rewarded;27
+1132;Player Has Less Than 1 of Item ID 21411 (Ring of Infinite Wisdom) in Inventory/Bank;27
+1133;Player Has Less Than 1 of Item ID 21396 (Ring of Eternal Justice) in Inventory/Bank;27
+1134;Player Has Less Than 1 of Item ID 21405 (Band of Veiled Shadows) in Inventory/Bank;27
+1135;Player Has Less Than 1 of Item ID 21414 (Band of Vaulted Secrets) in Inventory/Bank;27
+1136;Player Has Less Than 1 of Item ID 21408 (Band of Unending Life) in Inventory/Bank;27
+1137;(Player Has Less Than 1 of Item ID 21408 Band of Unending Life in Inventory/Bank AND Quest ID 8700 Band of Unending Life Rewarded);27
+1138;(Player Has Less Than 1 of Item ID 21414 Band of Vaulted Secrets in Inventory/Bank AND Quest ID 8699 Band of Vaulted Secrets Rewarded);27
+1139;(Player Has Less Than 1 of Item ID 21405 Band of Veiled Shadows in Inventory/Bank AND Quest ID 8701 Band of Veiled Shadows Rewarded);27
+1140;(Player Has Less Than 1 of Item ID 21396 Ring of Eternal Justice in Inventory/Bank AND Quest ID 8703 Ring of Eternal Justice Rewarded);27
+1141;(Player Has Less Than 1 of Item ID 21411 Ring of Infinite Wisdom in Inventory/Bank AND Quest ID 8697 Ring of Infinite Wisdom Rewarded);27
+1150;Player Has Aura: 25688 (Narain!), EffectIndex: 0;27
+1166;Quest ID 8751 (The Protector of Kalimdor) Rewarded;27
+1167;Quest ID 8756 (The Qiraji Conqueror) Rewarded;27
+1168;Quest ID 8761 (The Grand Invoker) Rewarded;27
+1169;(Quest ID 8751 The Protector of Kalimdor Rewarded OR Quest ID 8756 The Qiraji Conqueror Rewarded);27
+1170;(Quest ID 8761 The Grand Invoker Rewarded OR (Quest ID 8751 The Protector of Kalimdor Rewarded OR Quest ID 8756 The Qiraji Conqueror Rewarded));27
+1395;Quest ID 8730 (Nefarius's Corruption) Taken;27
+1396;(Quest ID 8730 (Nefarius's Corruption) Taken AND ScriptDev: InstanceConditionID Value: 1);27
+1397;(Quest ID 8730 (Nefarius's Corruption) Taken AND ScriptDev: InstanceConditionID Value: 2);27
+1398;Player Has 1 or more of Item ID 20402 (Agent of Nozdormu) in Inventory;27
+2035;Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2036;Game Event 121 (AQ War Effort Phase 2 Transportation) Active;27
+2038;War Effort Days Left Value = 0 AND Game Event 121 (AQ War Effort Phase 2 Transportation) Active;27
+2040;All Heavy Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2043;All Thorium Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2046;All Copper Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2049;All Iron Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2052;All Rainbow Fin Albacore Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2055;All Spotted Yellowtail Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2058;All Roast Raptor Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2061;All Purple Lotus Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2064;All Arthas' Tears Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2067;All Stranglekelp Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2070;All Runecloth Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2073;All Silk Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2076;All Linen Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2079;All Light Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2082;All Medium Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2085;All Thick Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2088;All Tin Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2091;All Mithril Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2094;All Copper Bars Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2097;All Purple Lotus Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2099;Game Event 123 (AQ War Effort Phase 4 10 Hour War) Active;27
+2100;Game Event 124 (AQ War Effort Phase 5 Done) Active;27
+2101;Game Event 123 (AQ War Effort Phase 4 10 Hour War) or 124 (AQ War Effort Phase 5 Done) Active;27
+2105;All Firebloom Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2108;All Peacebloom Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2111;All Thick Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2114;All Rugged Leather Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2117;All Runecloth Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2120;All Mageweave Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2123;All Wool Bandages Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2126;All Spotted Yellowtail Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2129;All Baked Salmon Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2132;All Lean Wolf Steaks Collected AND Game Event 120 (AQ War Effort Phase 1 Item collection) Active;27
+2134;(All Thorium Bars Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Copper Bars Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2135;(All Spotted Yellowtail Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Roast Raptor Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2136;(All Stranglekelp Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Runecloth Bandages Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2137;(All Light Leather Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Medium Leather Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2138;All Alliance Resources Collected;27
+2139;(All Heavy Leather Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Tin Bars Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2140;(All Purple Lotus Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Firebloom Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2141;(All Rugged Leather Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Runecloth Bandages Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2142;(All Spotted Yellowtail Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active AND All Baked Salmon Collected AND Game Event 120 AQ War Effort Phase 1 Item collection Active);27
+2143;All Horde Resources Collected;27
+2144;NOT All Alliance Resources Collected;27
+2145;Game Event 120 AQ War Effort Phase 1 Item collection Active AND NOT All Alliance Resources Collected;27
+2146;NOT All Horde Resources Collected;27
+2147;Game Event 120 AQ War Effort Phase 1 Item collection Active AND NOT All Horde Resources Collected;27
+3812;Quest ID 8578 (Scrying Goggles? No Problem!) Rewarded;27
+3813;Quest ID 8587 (Return to Narain) Rewarded;27
+3814;Quest ID 8620 (The Only Prescription) Rewarded;27
+3815;3 quests rewarded (The Only Prescription, Return to Narain, Scrying Goggles? No Problem!);27
+3816;Quest ID 8730 (Nefarius's Corruption) Rewarded;27
+3817;Quest ID 8741 (The Champion Returns) Rewarded;27
+3818;Quest ID 8729 (The Wrath of Neptulon) Rewarded;27
+3819;3 quests rewarded (Nefarius's Corruption, The Champion Returns, The Wrath of Neptulon);27
+4001;Quest ID 8731 (Field Duty) Taken;27
+4002;Quest ID 8507 (Field Duty) Taken;27
+314;Quest ID 8304 (Dearest Natalia) Taken;26
+889;NOT Player Has Aura: 24748 (Twilight Cultist Disguise), EffectIndex: 0;26
+890;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND NOT Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0);26
+891;Player Has Aura: 24748 (Twilight Cultist Disguise), EffectIndex: 0;26
+892;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0);26
+893;Player Has Aura: 24782 (Twilight Cultist Disguise), EffectIndex: 0;26
+894;((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has Aura: 24782 Twilight Cultist Disguise, EffectIndex: 0);26
+895;Player Has 1 or more of Item ID 20416 (Crest of Beckoning: Fire) in Inventory;26
+896;Player Has 1 or more of Item ID 20419 (Crest of Beckoning: Stone) in Inventory;26
+897;Player Has 1 or more of Item ID 20418 (Crest of Beckoning: Thunder) in Inventory;26
+898;Player Has 1 or more of Item ID 20420 (Crest of Beckoning: Water) in Inventory;26
+899;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has 1 or more of Item ID 20416 Crest of Beckoning: Fire in Inventory);26
+900;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has 1 or more of Item ID 20419 Crest of Beckoning: Stone in Inventory);26
+901;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has 1 or more of Item ID 20418 Crest of Beckoning: Thunder in Inventory);26
+902;(Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has 1 or more of Item ID 20420 Crest of Beckoning: Water in Inventory);26
+903;Player Has 1 or more of Item ID 20432 (Signet of Beckoning: Fire) in Inventory;26
+904;Player Has 1 or more of Item ID 20435 (Signet of Beckoning: Stone) in Inventory;26
+905;Player Has 1 or more of Item ID 20433 (Signet of Beckoning: Thunder) in Inventory;26
+906;Player Has 1 or more of Item ID 20436 (Signet of Beckoning: Water) in Inventory;26
+907;((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20432 Signet of Beckoning: Fire in Inventory);26
+908;((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20435 Signet of Beckoning: Stone in Inventory);26
+909;((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20433 Signet of Beckoning: Thunder in Inventory);26
+910;((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20436 Signet of Beckoning: Water in Inventory);26
+911;Player Has 1 or more of Item ID 20447 (Scepter of Beckoning: Fire) in Inventory;26
+912;Player Has 1 or more of Item ID 20449 (Scepter of Beckoning: Stone) in Inventory;26
+913;Player Has 1 or more of Item ID 20448 (Scepter of Beckoning: Thunder) in Inventory;26
+914;Player Has 1 or more of Item ID 20450 (Scepter of Beckoning: Water) in Inventory;26
+915;(((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has Aura: 24782 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20447 Scepter of Beckoning: Fire in Inventory);26
+916;(((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has Aura: 24782 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20449 Scepter of Beckoning: Stone in Inventory);26
+917;(((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has Aura: 24782 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20448 Scepter of Beckoning: Thunder in Inventory);26
+918;(((Player Has Aura: 24746 Twilight Cultist Disguise, EffectIndex: 0 AND Player Has Aura: 24748 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has Aura: 24782 Twilight Cultist Disguise, EffectIndex: 0) AND Player Has 1 or more of Item ID 20450 Scepter of Beckoning: Water in Inventory);26
+1020;Quest ID 8283 (Wanted - Deathclasp, Terror of the Sands) Taken;26
+1367;Player Has 1 or more of Item ID 20453 (Geologist's Transcription Kit) in Inventory;26
+3733;Quest ID 8277 (Deadly Desert Venom) Rewarded;26
+8063;Quest ID 8285 (The Deserter) Taken;26
+241;Player Has 1 or more of Item ID 19727 (Blood Scythe) in Inventory;25
+259;Quest ID 8227 (Nat's Measuring Tape) Rewarded;25
+261;NOT Player Has Learned Spell: 24266 (Gurubashi Mojo Madness);25
+262;(Has Skill ID 171 Alchemy, Minimum Skill Value 300 AND NOT Player Has Learned Spell: 24266 Gurubashi Mojo Madness);25
+269;NOT Player Has Learned Spell: 3451 (Mighty Troll's Blood Potion);25
+272;(Has Skill ID 171 Alchemy, Minimum Skill Value 180 AND NOT Player Has Learned Spell: 3451 Mighty Troll's Blood Potion);25
+679;Player Has Less Than 1 of Item ID 19812 (Rune of the Dawn) in Inventory/Bank;25
+681;(Quest ID 5213 The Active Agent Rewarded AND Player Has Less Than 1 of Item ID 19812 Rune of the Dawn in Inventory/Bank);25
+682;((Quest ID 5213 The Active Agent Rewarded AND Player Has Less Than 1 of Item ID 13209 Seal of the Dawn in Inventory/Bank) AND Player Has Less Than 1 of Item ID 19812 Rune of the Dawn in Inventory/Bank);25
+683;((Quest ID 5213 The Active Agent Rewarded AND Player Has Less Than 1 of Item ID 19812 Rune of the Dawn in Inventory/Bank) AND Player Has Less Than 1 of Item ID 13209 Seal of the Dawn in Inventory/Bank);25
+6018;Event ID 18 (Call to Arms: Alterac Valley!) Active;25
+6019;Event ID 19 (Call to Arms: Warsong Gulch!) Active;25
+6020;Event ID 20 (Call to Arms: Arathi Basin!) Active;25
+6029;Zul'Gurub - Edge of Madness (Gri'lek);25
+6030;Zul'Gurub - Edge of Madness (Hazza'rah);25
+6031;Zul'Gurub - Edge of Madness (Renataki);25
+6032;Zul'Gurub - Edge of Madness (Wushoolay);25
+6035;Event ID 15 (Stranglethorn Fishing Extravaganza) Active;25
+6036;Event ID 34 (Stranglethorn Fishing Extravaganza - Turn-in) Active;25
+19998;any classic Battleground Emissary Event Active;25
+215;Quest ID 7786 (Thunderaan the Windseeker) Rewarded;24
+249;Quest ID 7761 (Blackhand's Command) Rewarded;24
+306;Player Has 1 or more of Item ID 18563 (Bindings of the Windseeker) in Inventory;24
+307;Player Has 1 or more of Item ID 18564 (Bindings of the Windseeker) in Inventory;24
+308;Quest ID 7785 (Examine the Vessel) Rewarded;24
+309;Player Has Less Than 1 of Item ID 19016 (Vessel of Rebirth) in Inventory/Bank;24
+310;NOT (Quest ID 7785 Examine the Vessel Rewarded);24
+311;(Player Has 1 or more of Item ID 18563 Bindings of the Windseeker in Inventory OR Player Has 1 or more of Item ID 18564 Bindings of the Windseeker in Inventory);24
+312;(Player Has Less Than 1 of Item ID 19016 Vessel of Rebirth in Inventory/Bank AND NOT (Quest ID 7785 Examine the Vessel Rewarded));24
+313;((Player Has 1 or more of Item ID 18563 Bindings of the Windseeker in Inventory OR Player Has 1 or more of Item ID 18564 Bindings of the Windseeker in Inventory) AND (Player Has Less Than 1 of Item ID 19016 Vessel of Rebirth in Inventory/Bank AND NOT (Quest ID 7785 Examine the Vessel Rewarded)));24
+872;Event ID 4 (Darkmoon Faire (Elwynn Forest) - July 2020 - Darkmoon Faire Open) Active;24
+873;Event ID 5 (Darkmoon Faire (Mulgore) - June 2020 - Darkmoon Faire Open) Active;24
+874;(Event ID 5 Darkmoon Faire (Mulgore) - June 2020 - Darkmoon Faire Open Active OR Event ID 4 Darkmoon Faire (Elwynn Forest) - July 2020 - Darkmoon Faire Open Active);24
+98;Quest ID 7734 (Improved Quality) Rewarded;23
+99;Quest ID 7733 (Improved Quality) Rewarded;23
+100;Quest ID 7734 (Improved Quality) Taken;23
+101;Quest ID 7733 (Improved Quality) Taken;23
+102;(Quest ID 7734 Improved Quality Rewarded OR Quest ID 7734 Improved Quality Taken);23
+103;(Quest ID 7733 Improved Quality Rewarded OR Quest ID 7733 Improved Quality Taken);23
+174;NOT Player Has Learned Spell: 23486 (Dimensional Ripper - Everlook);23
+175;NOT Player Has Learned Spell: 23489 (Ultrasafe Transporter - Gadgetzan);23
+185;(Player Has Learned Spell: 20219 Gnomish Engineer AND NOT Player Has Learned Spell: 23489 Ultrasafe Transporter - Gadgetzan);23
+187;(Player Has Learned Spell: 20222 Goblin Engineer AND NOT Player Has Learned Spell: 23486 Dimensional Ripper - Everlook);23
+191;(Has Skill ID 202 Engineering, Minimum Skill Value 260 AND (Player Has Learned Spell: 20219 Gnomish Engineer AND NOT Player Has Learned Spell: 23489 Ultrasafe Transporter - Gadgetzan));23
+192;(Has Skill ID 202 Engineering, Minimum Skill Value 260 AND (Player Has Learned Spell: 20222 Goblin Engineer AND NOT Player Has Learned Spell: 23486 Dimensional Ripper - Everlook));23
+1021;Quest ID 7721 (Fuel for the Zapping) Rewarded;23
+1022;Quest ID 7003 (Zapped Giants) Rewarded;23
+1023;(Quest ID 7721 Fuel for the Zapping Rewarded AND Quest ID 7003 Zapped Giants Rewarded);23
+1614;Quest 'Zukk'ash Report' is rewarded;23
+1615;Quest 'Rise of the Silithid' or 'Zukk'ash Report' is rewarded;23
+1638;Has Dimensional Ripper - Everlook;23
+1639;Has Ultrasafe Transporter: Gadgetzan;23
+115;Quest ID 7624 (Ulathek the Traitor) Taken;22
+9040;Quest ID 7601 (What Niby Commands) NOT Taken AND NOT Rewarded;22
+9041;(Player ClassMask: 256 AND Quest ID 7601 What Niby Commands NOT Taken AND NOT Rewarded);22
+42;Quest ID 7508 (The Forging of Quel'Serrar) Available;21
+44;Quest ID 7848 (Attunement to the Core) Rewarded;21
+48;Quest ID 7482 (Elven Legends) Taken;21
+49;Quest ID 7481 (Elven Legends) Taken;21
+114;Player Has 1 or more of Item ID 18250 (Gordok Shackle Key) in Inventory;21
+188;Quest ID 7481 (Elven Legends) Rewarded;21
+189;Quest ID 7482 (Elven Legends) Rewarded;21
+190;(Quest ID 7482 Elven Legends Rewarded OR Quest ID 7481 Elven Legends Rewarded);21
+244;Player Has Learned Spell: 22704 (Field Repair Bot 74A);21
+245;NOT Player Has Learned Spell: 22704 (Field Repair Bot 74A);21
+248;(Has Skill ID 202 Engineering, Minimum Skill Value 300 AND NOT Player Has Learned Spell: 22704 Field Repair Bot 74A);21
+921;Quest ID 5518 (The Gordok Ogre Suit) Rewarded;21
+922;NOT Player Has Learned Spell: 22813 (Gordok Ogre Suit);21
+923;NOT Player Has Learned Spell: 22815 (Gordok Ogre Suit);21
+924;(Quest ID 5518 The Gordok Ogre Suit Rewarded AND NOT Player Has Learned Spell: 22813 Gordok Ogre Suit);21
+925;(Quest ID 5518 The Gordok Ogre Suit Rewarded AND NOT Player Has Learned Spell: 22815 Gordok Ogre Suit);21
+926;(Has Skill ID 197 Tailoring, Minimum Skill Value 275 AND (Quest ID 5518 The Gordok Ogre Suit Rewarded AND NOT Player Has Learned Spell: 22813 Gordok Ogre Suit));21
+927;(Has Skill ID 165 Leatherworking, Minimum Skill Value 275 AND (Quest ID 5518 The Gordok Ogre Suit Rewarded AND NOT Player Has Learned Spell: 22815 Gordok Ogre Suit));21
+928;Player Has Aura: 22736 (Gordok Ogre Suit), EffectIndex: 0;21
+1050;Quest ID 8685 (Mistwalker the Elder) NOT Taken AND NOT Rewarded;21
+37;Player Has 1 or more of Item ID 21211 (Pouch of Reindeer Dust) in Inventory;20
+45;Quest ID 8867 (Lunar Fireworks) Rewarded;20
+46;Player Has Less Than 1 of Item ID 21711 (Lunar Festival Invitation) in Inventory/Bank;20
+47;(Quest ID 8867 Lunar Fireworks Rewarded AND Player Has Less Than 1 of Item ID 21711 Lunar Festival Invitation in Inventory/Bank);20
+95;Quest ID 558 (Jaina's Autograph) Taken;20
+113;Player Has Less Than 1 of Item ID 18642 (Jaina's Autograph) in Inventory;20
+147;(Quest ID 558 Jaina's Autograph Taken AND Player Has Less Than 1 of Item ID 18642 Jaina's Autograph in Inventory);20
+162;Event ID 12 (Hallow's End) Active;20
+164;(Holiday 324 Active AND NOT Player Has Aura: 24755 (Tricked or Treated), EffectIndex: 0);20
+171;NOT Player Has Learned Spell: 10841 (Heavy Mageweave Bandage);20
+172;NOT Player Has Learned Spell: 18629 (Runecloth Bandage);20
+173;NOT Player Has Learned Spell: 18630 (Heavy Runecloth Bandage);20
+182;(Has Skill ID 129 First Aid, Minimum Skill Value 240 AND NOT Player Has Learned Spell: 10841 Heavy Mageweave Bandage);20
+183;(Has Skill ID 129 First Aid, Minimum Skill Value 260 AND NOT Player Has Learned Spell: 18629 Runecloth Bandage);20
+184;(Has Skill ID 129 First Aid, Minimum Skill Value 290 AND NOT Player Has Learned Spell: 18630 Heavy Runecloth Bandage);20
+193;(Player Level >= 40 AND (Has Skill ID 129 First Aid, Minimum Skill Value 240 AND NOT Player Has Learned Spell: 10841 Heavy Mageweave Bandage));20
+194;(Player Level >= 40 AND (Has Skill ID 129 First Aid, Minimum Skill Value 260 AND NOT Player Has Learned Spell: 18629 Runecloth Bandage));20
+195;(Player Level >= 40 AND (Has Skill ID 129 First Aid, Minimum Skill Value 290 AND NOT Player Has Learned Spell: 18630 Heavy Runecloth Bandage));20
+238;Event ID 2 (Feast of Winter Veil) Active;20
+285;Quest ID 925 (Cairne's Hoofprint) Taken;20
+286;Player Has Less Than 1 of Item ID 18643 (Cairne's Hoofprint) in Inventory/Bank;20
+287;(Quest ID 925 Cairne's Hoofprint Taken AND Player Has Less Than 1 of Item ID 18643 Cairne's Hoofprint in Inventory/Bank);20
+500;Event ID 8 (Love is in the Air) Active;20
+501;Game Event 8 (Love is in the Air) NOT Active;20
+502;Player Has Aura: 26682 (Perfume), EffectIndex: 0;20
+503;Player Has Aura: 26681 (Cologne), EffectIndex: 0;20
+507;(Event ID 8 Love is in the Air Active AND NOT Player Has Aura: 26898, EffectIndex: 0);20
+508;(Event ID 8 Love is in the Air Active AND Player Has Aura: 26898, EffectIndex: 0);20
+510;(Event ID 8 Active AND Player Has Aura: 26681 Cologne, EffectIndex: 0);20
+511;NOT Player Has Aura: 26681 (Cologne), EffectIndex: 0;20
+512;NOT Player Has Aura: 26682 (Perfume), EffectIndex: 0;20
+513;Player Has 1 or more of Item ID 21815 (Love Token) in Inventory/Bank;20
+514;Player Has Less Than 1 of Item ID 21815 (Love Token) in Inventory/Bank;20
+516;((Event ID 8 Active AND Player Has Aura: 26681 Cologne, EffectIndex: 0) AND Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank);20
+517;((NOT Player Has Aura: 26898 Heartbroken, EffectIndex: 0 AND Source of Condition Has Aura: 27741 Love is in the Air, EffectIndex: 0) AND ((Event ID 8 Active AND Player Has Aura: 26681 Cologne, EffectIndex: 0) AND Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank));20
+518;(Event ID 8 Love is in the Air Active AND Player Has Aura: 26680, EffectIndex: 0);20
+519;(Event ID 8 Active AND NOT Player Has Aura: 26681 Cologne, EffectIndex: 0);20
+520;(Event ID 8 Active AND NOT Player Has Aura: 26682 Perfume, EffectIndex: 0);20
+521;(Event ID 8 Active AND Player Has Aura: 26682 Perfume, EffectIndex: 0);20
+522;(Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank AND (Event ID 8 Active AND Player Has Aura: 26682 Perfume, EffectIndex: 0));20
+523;((NOT Player Has Aura: 26898 Heartbroken, EffectIndex: 0 AND Source of Condition Has Aura: 27741 Love is in the Air, EffectIndex: 0) AND (Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank AND (Event ID 8 Active AND Player Has Aura: 26682 Perfume, EffectIndex: 0)));20
+524;(Event ID 8 Active AND Player Has Less Than 1 of Item ID 21815 Love Token in Inventory/Bank);20
+525;(Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0);20
+526;(Event ID 8 Active AND (Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0));20
+527;(Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank AND (Event ID 8 Active AND (Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0)));20
+528;((NOT Player Has Aura: 26898 Heartbroken, EffectIndex: 0 AND Source of Condition Has Aura: 27741 Love is in the Air, EffectIndex: 0) AND (Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank AND (Event ID 8 Active AND (Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0))));20
+529;NOT ((Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0));20
+530;(Event ID 8 Active AND NOT ((Player Has Aura: 26682 Perfume, EffectIndex: 0 OR Player Has Aura: 26681 Cologne, EffectIndex: 0)));20
+535;((Event ID 8 Love is in the Air Active AND NOT Player Has Aura: 26898, EffectIndex: 0) AND NPC Gender: Female);20
+536;((Event ID 8 Love is in the Air Active AND NOT Player Has Aura: 26898, EffectIndex: 0) AND NPC Gender: Male);20
+538;(((NOT Player Has Aura: 26898 Heartbroken, EffectIndex: 0 AND Source of Condition Has Aura: 27741 Love is in the Air, EffectIndex: 0) AND ((Event ID 8 Active AND Player Has Aura: 26681 Cologne, EffectIndex: 0) AND Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank)) AND NPC Gender: Female);20
+539;(((NOT Player Has Aura: 26898 Heartbroken, EffectIndex: 0 AND Source of Condition Has Aura: 27741 Love is in the Air, EffectIndex: 0) AND (Player Has 1 or more of Item ID 21815 Love Token in Inventory/Bank AND (Event ID 8 Active AND Player Has Aura: 26682 Perfume, EffectIndex: 0))) AND NPC Gender: Male);20
+541;((Event ID 8 Active AND NOT Player Has Aura: 26681 Cologne, EffectIndex: 0) AND NPC Gender: Female);20
+542;((Event ID 8 Active AND NOT Player Has Aura: 26682 Perfume, EffectIndex: 0) AND NPC Gender: Male);20
+544;Quest ID 8353 (Chicken Clucking for a Mint) Taken;20
+545;Quest ID 8354 (Chicken Clucking for a Mint) Taken;20
+546;Quest ID 8357 (Dancing for Marzipan) Taken;20
+547;Quest ID 8360 (Dancing for Marzipan) Taken;20
+548;Quest ID 8356 (Flexing for Nougat) Taken;20
+549;Quest ID 8359 (Flexing for Nougat) Taken;20
+550;Quest ID 8355 (Incoming Gumdrop) Taken;20
+551;Quest ID 8358 (Incoming Gumdrop) Taken;20
+1029;Quest ID 8718 (Bladeswift the Elder) NOT Taken AND NOT Rewarded;20
+1030;Quest ID 8720 (Skygleam the Elder) NOT Taken AND NOT Rewarded;20
+1031;Quest ID 8654 (Primestone the Elder) NOT Taken AND NOT Rewarded;20
+1032;Quest ID 8681 (Thunderhorn the Elder) NOT Taken AND NOT Rewarded;20
+1033;Quest ID 8686 (High Mountain the Elder) NOT Taken AND NOT Rewarded;20
+1034;Quest ID 8717 (Moonwarden the Elder) NOT Taken AND NOT Rewarded;20
+1035;Quest ID 8678 (Proudhorn the Elder) NOT Taken AND NOT Rewarded;20
+1036;Quest ID 8680 (Windtotem the Elder) NOT Taken AND NOT Rewarded;20
+1037;Quest ID 8723 (Nightwind the Elder) NOT Taken AND NOT Rewarded;20
+1038;Quest ID 8672 (Stonespire the Elder) NOT Taken AND NOT Rewarded;20
+1039;Quest ID 8677 (Darkhorn the Elder) NOT Taken AND NOT Rewarded;20
+1040;Quest ID 8652 (Graveborn the Elder) NOT Taken AND NOT Rewarded;20
+1041;Quest ID 8651 (Ironband the Elder) NOT Taken AND NOT Rewarded;20
+1042;Quest ID 8714 (Moonstrike the Elder) NOT Taken AND NOT Rewarded;20
+1043;Quest ID 8648 (Darkcore the Elder) NOT Taken AND NOT Rewarded;20
+1044;Quest ID 8670 (Runetotem the Elder) NOT Taken AND NOT Rewarded;20
+1045;Quest ID 8636 (Rumblerock the Elder) NOT Taken AND NOT Rewarded;20
+1046;Quest ID 8650 (Snowcrown the Elder) NOT Taken AND NOT Rewarded;20
+1047;Quest ID 8688 (Windrun the Elder) NOT Taken AND NOT Rewarded;20
+1048;Quest ID 8722 (Meadowrun the Elder) NOT Taken AND NOT Rewarded;20
+1049;Quest ID 8645 (Obsidian the Elder) NOT Taken AND NOT Rewarded;20
+1051;Quest ID 8724 (Morningdew the Elder) NOT Taken AND NOT Rewarded;20
+1052;Quest ID 8635 (Splitrock the Elder) NOT Taken AND NOT Rewarded;20
+1053;Quest ID 8866 (Bronzebeard the Elder) NOT Taken AND NOT Rewarded;20
+1054;Quest ID 8649 (Stormbrow the Elder) NOT Taken AND NOT Rewarded;20
+1055;Quest ID 8673 (Bloodhoof the Elder) NOT Taken AND NOT Rewarded;20
+1056;Quest ID 8653 (Goldwell the Elder) NOT Taken AND NOT Rewarded;20
+1057;Quest ID 8619 (Morndeep the Elder) NOT Taken AND NOT Rewarded;20
+1058;Quest ID 8642 (Silvervein the Elder) NOT Taken AND NOT Rewarded;20
+1059;Quest ID 8644 (Stonefort the Elder) NOT Taken AND NOT Rewarded;20
+1060;Quest ID 8679 (Grimtotem the Elder) NOT Taken AND NOT Rewarded;20
+1061;Quest ID 8643 (Highpeak the Elder) NOT Taken AND NOT Rewarded;20
+1062;Quest ID 8682 (Skyseer the Elder) NOT Taken AND NOT Rewarded;20
+1063;Quest ID 8726 (Brightspear the Elder) NOT Taken AND NOT Rewarded;20
+1064;Quest ID 8725 (Riversong the Elder) NOT Taken AND NOT Rewarded;20
+1065;Quest ID 8721 (Starweave the Elder) NOT Taken AND NOT Rewarded;20
+1066;Quest ID 8719 (Bladesing the Elder) NOT Taken AND NOT Rewarded;20
+1067;Quest ID 8684 (Dreamseer the Elder) NOT Taken AND NOT Rewarded;20
+1068;Quest ID 8676 (Wildmane the Elder) NOT Taken AND NOT Rewarded;20
+1069;Quest ID 8683 (Dawnstrider the Elder) NOT Taken AND NOT Rewarded;20
+1070;Quest ID 8646 (Hammershout the Elder) NOT Taken AND NOT Rewarded;20
+1071;Quest ID 8674 (Winterhoof the Elder) NOT Taken AND NOT Rewarded;20
+1072;Quest ID 8715 (Bladeleaf the Elder) NOT Taken AND NOT Rewarded;20
+1073;Quest ID 8671 (Ragetotem the Elder) NOT Taken AND NOT Rewarded;20
+1074;Quest ID 8727 (Farwhisper the Elder) NOT Taken AND NOT Rewarded;20
+1075;Quest ID 8713 (Starsong the Elder) NOT Taken AND NOT Rewarded;20
+1076;Quest ID 8647 (Bellowrage the Elder) NOT Taken AND NOT Rewarded;20
+1077;Quest ID 8716 (Starglade the Elder) NOT Taken AND NOT Rewarded;20
+1078;Quest ID 8675 (Skychaser the Elder) NOT Taken AND NOT Rewarded;20
+1368;Quest ID 8311 (Hallow's End Treats for Jesper!) Rewarded;20
+1369;Quest ID 8312 (Hallow's End Treats for Spoops!) Rewarded;20
+1372;Quest ID 1657 (Stinking Up Southshore) Rewarded;20
+1477;Event ID 10 (Children's Week ) Active;20
+10229;Quest ID 911 (Gateway to the Frontier) Rewarded;20
+10230;Quest ID 910 (Down at the Docks) Rewarded;20
+10231;Quest ID 1800 (Lordaeron Throne Room) Rewarded;20
+10232;(Quest ID 911 Gateway to the Frontier Rewarded AND Quest ID 910 Down at the Docks Rewarded AND Quest ID 1800 Lordaeron Throne Room Rewarded);20
+10233;Quest ID 1687 (Spooky Lighthouse) Rewarded;20
+10234;Quest ID 1558 (The Stonewrought Dam) Rewarded;20
+10235;Quest ID 1479 (The Bough of the Eternals) Rewarded;20
+10236;(Quest ID 1687 Spooky Lighthouse Rewarded AND Quest ID 1558 The Stonewrought Dam Rewarded AND Quest ID 1479 The Bough of the Eternals Rewarded);20
+67;Quest ID 6805 (Stormers and Rumblers) Rewarded;19
+68;Quest ID 6824 (Hands of the Enemy) Rewarded;19
+70;(Quest ID 6824 Hands of the Enemy Rewarded AND Has Maximum Rank Honored With Faction ID: 749 Hydraxian Waterlords);19
+72;Player Has Less Than 1 of Item ID 17333 (Aqual Quintessence) in Inventory/Bank;19
+73;((Quest ID 6824 Hands of the Enemy Rewarded AND Has Maximum Rank Honored With Faction ID: 749 Hydraxian Waterlords) AND Player Has Less Than 1 of Item ID 17333 Aqual Quintessence in Inventory/Bank);19
+74;(Quest ID 6824 Hands of the Enemy Rewarded AND Has Minimum Rank Revered With Faction ID: 749 Hydraxian Waterlords);19
+210;Quest ID 4242 (Abandoned Hope) Rewarded;19
+871;Quest ID 4224 (The True Masters) Taken;19
+1517;Quest ID 6566 (What the Wind Carries) Taken;19
+3780;Quest ID 6570 (Emberstrife) Taken;19
+3781;Player Has Less Than 1 of Item ID 16787 (Amulet of Draconic Subversion) in Inventory/Bank;19
+3782;(Quest ID 6570 Emberstrife Taken AND Player Has Less Than 1 of Item ID 16787 Amulet of Draconic Subversion in Inventory/Bank);19
+281;Quest ID 5742 (Redemption) Taken;18
+290;Quest ID 5862 (Scarlet Subterfuge) Rewarded;18
+291;Quest ID 5944 (In Dreams) Rewarded;18
+292;Quest ID 5862 (Scarlet Subterfuge) Taken;18
+294;NOT (Quest ID 5944 In Dreams Rewarded);18
+295;(Quest ID 5862 Scarlet Subterfuge Rewarded AND NOT (Quest ID 5944 In Dreams Rewarded));18
+296;(Quest ID 5862 Scarlet Subterfuge Taken OR (Quest ID 5862 Scarlet Subterfuge Rewarded AND NOT (Quest ID 5944 In Dreams Rewarded)));18
+297;(NOT Player Has Aura: 17961 Scarlet Illusion, EffectIndex: 0 AND (Quest ID 5862 Scarlet Subterfuge Taken OR (Quest ID 5862 Scarlet Subterfuge Rewarded AND NOT (Quest ID 5944 In Dreams Rewarded))));18
+356;Player Has 1 or more of Item ID 17203 Sulfuron Ingot in Inventory;18
+9;Quest ID 4941 (Eitrigg's Wisdom) Taken;17
+63;Player Has 1 or more of Item ID 12219 (Unadorned Seal of Ascension) in Inventory;17
+214;Quest ID 6383 (The Ashenvale Hunt) Rewarded;17
+288;Quest ID 5126 (Lorax's Tale) Taken;17
+684;Quest ID 4771 (Dawn's Gambit) Rewarded;17
+685;Player Has Less Than 1 of Item ID 12368 (Dawn's Gambit) in Inventory/Bank;17
+686;(Quest ID 4771 Dawn's Gambit Rewarded AND Player Has Less Than 1 of Item ID 12368 Dawn's Gambit in Inventory/Bank);17
+1124;Player Has Less Than 1 of Item ID 12563 (Warlord Goretooth's Command) in Inventory/Bank;17
+1126;(Player Level >= 55 AND Player Has Less Than 1 of Item ID 12563 Warlord Goretooth's Command in Inventory/Bank);17
+2984;Quest ID 5047 (Finkle Einhorn, At Your Service!) Rewarded;17
+56;Quest ID 5727 (Hidden Enemies) Taken AND NOT Completed;16
+93;Quest ID 5216 (Target: Felstone Field) Rewarded;16
+145;(Quest ID 5216 Target: Felstone Field Rewarded AND Player Has Less Than 1 of Item ID 13370 Vitreous Focuser in Inventory/Bank);16
+213;Quest ID 5384 (Kirtonos the Herald) Rewarded;16
+266;Quest ID 6164 (Augustus' Receipt Book) Rewarded;16
+277;Quest ID 5237 (Mission Accomplished!) Rewarded;16
+278;Quest ID 5238 (Mission Accomplished!) Rewarded;16
+279;(Player Has Less Than 1 of Item ID 13370 Vitreous Focuser in Inventory/Bank AND Quest ID 5237 Mission Accomplished! Rewarded);16
+280;(Player Has Less Than 1 of Item ID 13370 Vitreous Focuser in Inventory/Bank AND Quest ID 5238 Mission Accomplished! Rewarded);16
+325;Quest ID 5529 (Plagued Hatchlings) Rewarded;16
+601;Player Has 1 or more of Item ID 15044 (Barrel of Plagueland Termites) in Inventory;16
+602;Quest ID 5902 (A Plague Upon Thee) Taken;16
+603;Quest ID 5904 (A Plague Upon Thee) Taken;16
+604;(Quest ID 5902 A Plague Upon Thee Taken OR Quest ID 5904 A Plague Upon Thee Taken);16
+605;(Player Has 1 or more of Item ID 15044 Barrel of Plagueland Termites in Inventory AND (Quest ID 5902 A Plague Upon Thee Taken OR Quest ID 5904 A Plague Upon Thee Taken));16
+606;Equal or More than 1 of Entry: 12339 (Vaelan's Gift);16
+1373;Quest ID 6022 (To Kill With Purpose) Rewarded;16
+1374;Quest ID 6042 (Un-Life's Little Annoyances) Rewarded;16
+1375;Quest ID 6133 (The Ranger Lord's Behest) Rewarded;16
+1376;(Quest ID 6042 Un-Life's Little Annoyances Rewarded AND Quest ID 6022 To Kill With Purpose Rewarded);16
+1377;((Quest ID 6042 Un-Life's Little Annoyances Rewarded AND Quest ID 6022 To Kill With Purpose Rewarded) AND Quest ID 6133 The Ranger Lord's Behest Rewarded);16
+1378;Quest ID 6135 (Duskwing, Oh How I Hate Thee?) Rewarded;16
+1379;Quest ID 6136 (The Corpulent One) Rewarded;16
+1380;(Quest ID 6136 The Corpulent One Rewarded AND Quest ID 6135 Duskwing, Oh How I Hate Thee? Rewarded);16
+3734;Quest ID 5230 (Return to the Bulwark) Rewarded;16
+3735;Quest ID 5232 (Return to the Bulwark) Rewarded;16
+3736;Quest ID 5234 (Return to the Bulwark) Rewarded;16
+3737;Quest ID 5236 (Return to the Bulwark) Rewarded;16
+3738;Quest ID 5217 (Return to Chillwind Camp) Rewarded;16
+3739;Quest ID 5220 (Return to Chillwind Camp) Rewarded;16
+3740;Quest ID 5223 (Return to Chillwind Camp) Rewarded;16
+3741;Quest ID 5226 (Return to Chillwind Camp) Rewarded;16
+3742;(Quest ID 5232 Return to the Bulwark Rewarded OR Quest ID 5220 Return to Chillwind Camp Rewarded);16
+3743;(Quest ID 5234 Return to the Bulwark Rewarded OR Quest ID 5223 Return to Chillwind Camp Rewarded);16
+3744;(Quest ID 5236 Return to the Bulwark Rewarded OR Quest ID 5226 Return to Chillwind Camp Rewarded);16
+65;Quest ID 3528 (The God Hakkar) Rewarded;15
+152;Quest ID 5513 (Mantles of the Dawn) Rewarded;15
+153;Quest ID 5507 (Mantles of the Dawn) Rewarded;15
+154;Quest ID 5504 (Mantles of the Dawn) Rewarded;15
+155;(Quest ID 5513 Mantles of the Dawn Rewarded OR Quest ID 5507 Mantles of the Dawn Rewarded);15
+156;(Quest ID 5504 Mantles of the Dawn Rewarded OR (Quest ID 5513 Mantles of the Dawn Rewarded OR Quest ID 5507 Mantles of the Dawn Rewarded));15
+157;Quest ID 5524 (Chromatic Mantle of the Dawn) Rewarded;15
+158;Quest ID 5521 (Chromatic Mantle of the Dawn) Rewarded;15
+159;Quest ID 5517 (Chromatic Mantle of the Dawn) Rewarded;15
+160;(Quest ID 5524 Chromatic Mantle of the Dawn Rewarded OR Quest ID 5521 Chromatic Mantle of the Dawn Rewarded);15
+161;(Quest ID 5517 Chromatic Mantle of the Dawn Rewarded OR (Quest ID 5524 Chromatic Mantle of the Dawn Rewarded OR Quest ID 5521 Chromatic Mantle of the Dawn Rewarded));15
+408;Quest ID 2768 (Divino-matic Rod) Taken;15
+409;(Quest ID 2768 Divino-matic Rod Taken AND Source of Condition's Last Waypoint == 8);15
+832;Quest ID 2936 (The Spider God) Taken;15
+1599;NOT (Quest ID 2768 Divino-matic Rod Taken);15
+1600;(NOT (Quest ID 2768 Divino-matic Rod Taken) AND Source of Condition's Last Waypoint == 8);15
+39;Quest ID 5721 (The Battle of Darrowshire) Taken;14
+77;Has Skill ID 197 (Tailoring), Minimum Skill Value 280;14
+90;Player Has Less Than 1 of Item ID 12846 (Argent Dawn Commission) in Inventory;14
+106;Quest ID 5401 (Argent Dawn Commission) Rewarded;14
+109;Quest ID 5405 (Argent Dawn Commission) Rewarded;14
+110;Quest ID 5503 (Argent Dawn Commission) Rewarded;14
+121;Player Has Less Than 1 of Item ID 13370 (Vitreous Focuser) in Inventory/Bank;14
+141;(Quest ID 5401 Argent Dawn Commission Rewarded OR Quest ID 5405 Argent Dawn Commission Rewarded);14
+142;(Quest ID 5503 Argent Dawn Commission Rewarded OR (Quest ID 5401 Argent Dawn Commission Rewarded OR Quest ID 5405 Argent Dawn Commission Rewarded));14
+143;(Quest ID 5401 Argent Dawn Commission Rewarded OR Quest ID 5405 Argent Dawn Commission Rewarded OR Quest ID 5503 Argent Dawn Commission Rewarded);14
+167;Has Skill ID 129 (First Aid), Minimum Skill Value 290;14
+207;Player Has 1 or more of Item ID 12384 (Cache of Mau'ari) in Inventory;14
+208;Player Has 1 or more of Item ID 13370 (Vitreous Focuser) in Inventory;14
+211;Quest ID 5121 (High Chief Winterfall) Taken;14
+212;Quest ID 5251 (The Archivist) Rewarded;14
+217;Quest ID 8464 (Winterfall Activity) Rewarded;14
+224;Quest ID 5056 (Shy-Rotam) Taken;14
+243;Has Skill ID 202 (Engineering), Minimum Skill Value 300;14
+247;Skill level of Skill ID 202 (Engineering) Below level 300;14
+256;Quest ID 975 (Cache of Mau'ari) Rewarded;14
+257;Player Has 1 or more of Item ID 12384 (Cache of Mau'ari) in Inventory/Bank;14
+258;(Quest ID 975 Cache of Mau'ari Rewarded AND Player Has 1 or more of Item ID 12384 Cache of Mau'ari in Inventory/Bank);14
+260;Has Skill ID 171 (Alchemy), Minimum Skill Value 300;14
+283;Quest ID 3909 (The Videre Elixir) Taken;14
+343;Player Has less of 1 Item ID 12384 (Cache of Mau'ari) in Inventory/Bank;14
+344;(Quest ID 975 Cache of Mau'ari Rewarded AND Player Has less of 1 Item ID 12384 Cache of Mau'ari in Inventory/Bank);14
+411;Quest ID 5211 (Defenders of Darrowshire) Taken;14
+560;(Quest ID 5401 Argent Dawn Commission Rewarded OR Quest ID 5405 Argent Dawn Commission Rewarded OR Quest ID 5503 Argent Dawn Commission Rewarded AND Player Has Less Than 1 of Item ID 12846 Argent Dawn Commission in Inventory);14
+677;Quest ID 5213 (The Active Agent) Rewarded;14
+678;Player Has Less Than 1 of Item ID 13209 (Seal of the Dawn) in Inventory/Bank;14
+680;(Quest ID 5213 The Active Agent Rewarded AND Player Has Less Than 1 of Item ID 13209 Seal of the Dawn in Inventory/Bank);14
+803;Quest ID 4985 (The Wildlife Suffers Too) Rewarded;14
+804;Quest ID 5247 (Fragments of the Past) Taken;14
+805;Quest ID 5245 (Troubled Spirits of Kel'Theril) Rewarded;14
+965;Quest ID 3785 (Morrowgrain Research) Rewarded;14
+974;Quest ID 3786 (Morrowgrain Research) Rewarded;14
+988;Quest ID 5121 (High Chief Winterfall) Rewarded;14
+989;(Quest ID 5121 High Chief Winterfall Taken OR Quest ID 5121 High Chief Winterfall Rewarded);14
+1336;Quest ID 5058 (Mrs. Dalson's Diary) Rewarded;14
+1352;Has Skill ID 165 (Leatherworking), Minimum Skill Value 300;14
+1353;(Has Minimum Rank Revered With Faction ID: 529 Argent Dawn AND Has Skill ID 165 Leatherworking, Minimum Skill Value 300);14
+1354;Has Skill ID 164 (Blacksmithing), Minimum Skill Value 300;14
+1355;(Has Minimum Rank Revered With Faction ID: 529 Argent Dawn AND Has Skill ID 164 Blacksmithing, Minimum Skill Value 300);14
+1356;Has Skill ID 197 (Tailoring), Minimum Skill Value 300;14
+1357;(Has Minimum Rank Revered With Faction ID: 529 Argent Dawn AND Has Skill ID 197 Tailoring, Minimum Skill Value 300);14
+1526;Quest ID 4866 (Mother's Milk) Taken;14
+1528;(Player Has Aura: 16468 Mother's Milk, EffectIndex: 0 AND Quest ID 4866 Mother's Milk Taken);14
+3728;Quest ID 4976 (Returning the Cleansed Orb) Rewarded;14
+3729;Quest ID 4962 (Shard of a Felhound) Rewarded;14
+3730;(Quest ID 4962 Shard of a Felhound Rewarded AND Quest ID 4976 Returning the Cleansed Orb Rewarded);14
+3731;Quest ID 4963 (Shard of an Infernal) Rewarded;14
+3732;(Quest ID 4963 Shard of an Infernal Rewarded AND Quest ID 4976 Returning the Cleansed Orb Rewarded);14
+4000;Winterfall Ambusher in Range;14
+5035;Player Level >= 56;14
+5036;Player Level >= 58;14
+9023;Quest 'It's a Secret to Everybody' is rewarded;14
+9039;Quest ID 4741 (Wild Guardians) Rewarded;14
+9045;Quest ID 5248 (Tormented By the Past) Rewarded;14
+5;Quest ID 4101 (Cleansing Felwood) Rewarded;13
+6;Quest ID 4102 (Cleansing Felwood) Rewarded;13
+7;Quest ID 4321 (Making Sense of It) Rewarded;13
+12;Quest ID 6627 (Test of Lore) Taken;13
+31;Quest ID 4321 (Making Sense of It) NOT Taken AND NOT Rewarded;13
+51;Quest ID 3441 (Divine Retribution) Taken AND NOT Completed;13
+53;Quest ID 4285 (The Northern Pylon) Taken;13
+54;Quest ID 4287 (The Eastern Pylon) Taken;13
+55;Quest ID 4288 (The Western Pylon) Taken;13
+92;Quest ID 3454 (The Torch of Retribution) Rewarded;13
+96;Quest ID 4261 (Ancient Spirit) Taken;13
+118;Player Has Less Than 1 of Item ID 10515 (Torch of Retribution) in Inventory/Bank;13
+119;Player Has Less Than 1 of Item ID 11445 (Flute of the Ancients) in Inventory/Bank;13
+131;(Quest ID 4101 Cleansing Felwood Rewarded AND Player Has Less Than 1 of Item ID 11511 Cenarion Beacon in Inventory/Bank);13
+132;(Quest ID 4102 Cleansing Felwood Rewarded AND Player Has Less Than 1 of Item ID 11511 Cenarion Beacon in Inventory/Bank);13
+144;(Quest ID 3454 The Torch of Retribution Rewarded AND Player Has Less Than 1 of Item ID 10515 Torch of Retribution in Inventory/Bank);13
+148;(Quest ID 4261 Ancient Spirit Taken AND Player Has Less Than 1 of Item ID 11445 Flute of the Ancients in Inventory/Bank);13
+166;Has Skill ID 129 (First Aid), Minimum Skill Value 260;13
+169;Player Has Learned Spell: 20219 (Gnomish Engineer);13
+170;Player Has Learned Spell: 20222 (Goblin Engineer);13
+178;Has Skill ID 202 (Engineering), Minimum Skill Value 260;13
+205;Quest ID 3801 (Dark Iron Legacy) Taken;13
+216;Quest ID 8460 (Timbermaw Ally) Rewarded;13
+253;Quest ID 4296 (Tablet of the Seven) Taken;13
+254;Player Has Less Than 1 of Item ID 11470 (Tablet Transcript) in Inventory/Bank;13
+255;(Quest ID 4296 Tablet of the Seven Taken AND Player Has Less Than 1 of Item ID 11470 Tablet Transcript in Inventory/Bank);13
+263;Quest ID 3628 (You Are Rakh'likh, Demon) Taken AND NOT Completed;13
+264;Player Has 1 or more of Item ID 10757 (Ward of the Defiler) in Inventory;13
+265;(Quest ID 3628 You Are Rakh'likh, Demon Taken AND NOT Completed AND Player Has 1 or more of Item ID 10757 Ward of the Defiler in Inventory);13
+274;Quest ID 6628 (Test of Lore) Taken;13
+276;(Quest ID 6628 Test of Lore Taken AND NOT Player Has Aura: 6767 Mark of Shame, EffectIndex: 0);13
+282;Quest ID 3702 (The Smoldering Ruins of Thaurissan) Taken;13
+300;Quest ID 4083 (The Spectral Chalice) Rewarded;13
+301;NOT Player Has Learned Spell: 14891 (Smelt Dark Iron);13
+302;(Has Skill ID 186 Mining, Minimum Skill Value 230 AND NOT Player Has Learned Spell: 14891 Smelt Dark Iron);13
+303;(Quest ID 4083 The Spectral Chalice Rewarded AND (Has Skill ID 186 Mining, Minimum Skill Value 230 AND NOT Player Has Learned Spell: 14891 Smelt Dark Iron));13
+304;NOT (Quest ID 4083 The Spectral Chalice Rewarded);13
+305;((Has Skill ID 186 Mining, Minimum Skill Value 230 AND NOT Player Has Learned Spell: 14891 Smelt Dark Iron) AND NOT (Quest ID 4083 The Spectral Chalice Rewarded));13
+332;Quest ID 5202 (A Strange Red Key) Rewarded;13
+333;Quest ID 5203 (Rescue From Jaedenar) Rewarded;13
+844;Quest ID 4136 (Ribbly Screwspigot) Taken AND NOT Rewarded;13
+848;NOT (Quest ID 4136 Ribbly Screwspigot Taken AND NOT Rewarded);13
+919;Has Skill ID 197 Tailoring, Minimum Skill Value 275;13
+920;Has Skill ID 165 Leatherworking, Minimum Skill Value 275;13
+948;Quest ID 4004 (The Princess Saved?) Rewarded;13
+949;Quest ID 4363 (The Princess's Surprise) Rewarded;13
+950;(Quest ID 4004 The Princess Saved? Rewarded OR Quest ID 4363 The Princess's Surprise Rewarded);13
+1009;Quest ID 1029 (Raene's Cleansing) Rewarded;13
+1010;Player Level >= 51;13
+1098;Quest ID 4001 (What Is Going On?) Taken;13
+1099;Quest ID 4342 (Kharan's Tale) Taken;13
+1125;Player Level >= 55;13
+1145;Quest ID 4289 (The Apes of Un'Goro) Rewarded;13
+1146;Quest ID 4290 (The Fare of Lar'korwi) Rewarded;13
+1148;Player Has Less Than 1 of Item ID 11482 (Crystal Pylon User's Manual) in Inventory;13
+1149;(Player Has Less Than 1 of Item ID 11482 Crystal Pylon User's Manual in Inventory AND Quest ID 4321 Making Sense of It Rewarded);13
+1518;Quest ID 2801 (A Tale of Sorrow) Taken;13
+1519;Quest ID 2784 (Fall From Grace) Taken;13
+1520;(Quest ID 2801 A Tale of Sorrow Taken OR Quest ID 2784 Fall From Grace Taken);13
+1521;Quest ID 2701 (Heroes of Old) Taken;13
+1522;Quest ID 2702 (Heroes of Old) Taken;13
+1523;(Quest ID 2701 Heroes of Old Taken OR Quest ID 2702 Heroes of Old Taken);13
+1607;Quest 'March of the Silithid' (Alliance) is rewarded;13
+1608;Quest 'March of the Silithid' (Horde) is rewarded;13
+1609;Quest 'March of the Silithid' (Horde or Alliance) is rewarded;13
+5024;Player Level <= 52;13
+5025;(Player Level >= 40 AND Player Level <= 52);13
+5027;Player Level <= 51;13
+5028;(Player Level >= 41 AND Player Level <= 51);13
+5030;Player Level <= 55;13
+5031;(Player Level >= 44 AND Player Level <= 55);13
+5032;Player Level >= 52;13
+9042;Player Has Less Than 1 of Item ID 5462 (Dartol's Rod of Transformation) in Inventory/Bank;13
+9043;Quest ID 1046 (Raene's Cleansing) NOT Rewarded;13
+9044;(Quest ID 1029 Raene's Cleansing Rewarded AND Player Has Less Than 1 of Item ID 5462 Dartol's Rod of Transformation in Inventory/Bank);13
+10994;Quest ID 3639 (Show Your Work) Rewarded;13
+10995;Quest ID 3641 (Show Your Work) Rewarded;13
+10996;Quest ID 3643 (Show Your Work) Rewarded;13
+10998;(Quest ID 3643 Show Your Work Rewarded OR Quest ID 3641 Show Your Work Rewarded);13
+10999;NOT Player Has Learned Spell: 20219 (Gnomish Engineer);13
+11000;NOT Player Has Learned Spell: 20222 (Goblin Engineer);13
+11001;NOT Player Has Learned Spell: 20219 (Gnomish Engineer) AND NOT Player Has Learned Spell: 20222 (Goblin Engineer);13
+11002;Quest ID 3639 (Show Your Work) Rewarded OR (Quest ID 3643 Show Your Work Rewarded OR Quest ID 3641 Show Your Work Rewarded);13
+11003;(NOT Player Has Learned Spell: 20219 Gnomish Engineer AND NOT Player Has Learned Spell: 20222 Goblin Engineer) AND (Quest ID 3639 Show Your Work Rewarded OR (Quest ID 3643 Show Your Work Rewarded OR Quest ID 3641 Show Your Work Rewarded));13
+11004;((NOT Player Has Learned Spell: 20219 Gnomish Engineer AND NOT Player Has Learned Spell: 20222 Goblin Engineer) AND (Quest ID 3639 Show Your Work Rewarded OR (Quest ID 3643 Show Your Work Rewarded OR Quest ID 3641 Show Your Work Rewarded))) AND Has Skill ID 202 Engineering, Minimum Skill Value 200;13
+20224;Quest ID 3454 (The Torch of Retribution) Taken;13
+8;Player Has 1 or more of Item ID 10455 (Chained Essence of Eranikus) in Inventory;12
+52;Quest ID 3566 (Rise, Obsidion!) Taken;12
+165;Has Skill ID 129 (First Aid), Minimum Skill Value 240;12
+252;Quest ID 3377 (Prayer to Elune) Taken AND NOT Completed;12
+299;Has Skill ID 186 (Mining), Minimum Skill Value 230;12
+324;Quest ID 5052 (Blood Shards of Agamaggan) Rewarded;12
+674;Quest ID 5535 (Spiritual Unrest) Rewarded;12
+675;Quest ID 5536 (A Land Filled with Hatred) Rewarded;12
+676;(Quest ID 5535 Spiritual Unrest Rewarded AND Quest ID 5536 A Land Filled with Hatred Rewarded);12
+966;Quest ID 3382 (A Crew Under Fire) Taken;12
+1088;Quest ID 3129 (Weapons of Spirit) Rewarded;12
+1165;Quest ID 3122 (Return to Witch Doctor Uzer'i) Rewarded;12
+1381;Creature of Entry 8391 (Lathoric the Black) Found Alive Within 80y of Source;12
+1382;Creature of Entry 8421 (Dorius) Found Alive Within 10y of Source;12
+1383;Creature of Entry 8400 (Obsidion) Found Alive Within 80y of Source;12
+1384;NOT (Creature of Entry 8400 Obsidion Found Alive Within 80y of Source);12
+1385;(Creature of Entry 8391 Lathoric the Black Found Alive Within 80y of Source OR Creature of Entry 8421 Found Alive Within 10y of Source);12
+1386;(NOT (Creature of Entry 8400 Found Alive Within 80y of Source) OR (Creature of Entry 8391 Found Alive Within 80y of Source OR Creature of Entry 8421 Dorius Found Alive Within 10y of Source));12
+1601;Quest ID 3449 (Arcane Runes) Taken;12
+1602;Quest ID 3449 (Arcane Runes) Rewarded;12
+1603;Quest ID 3449 (Arcane Runes) Taken OR Quest ID 3449 (Arcane Runes) Rewarded;12
+3483;Quest ID 3461 (Return to Tymor) NOT Rewarded;12
+3713;Quest ID 4450 (Ledger from Tanaris) Taken;12
+3714;Player Has Less Than 1 of Item ID 11727 (Goodsteel Ledger) in Inventory/Bank;12
+3715;(Player Has Less Than 1 of Item ID 11727 Goodsteel Ledger in Inventory/Bank AND Quest ID 4450 Ledger from Tanaris Taken);12
+5021;Player Level <= 46;12
+5022;(Player Level >= 37 AND Player Level <= 46);12
+5033;Player Level >= 50;12
+9022;Has Tailoring at 230 or above;12
+20313;Quest ID 3181 (The Horn of the Beast) NOT Taken AND NOT Rewarded;12
+1;Player Has 1 or more of Item ID 9279 (White Punch Card) in Inventory;11
+2;Player Has 1 or more of Item ID 9281 (Red Punch Card) in Inventory;11
+29;Player Has Less Than 1 of Item ID 9279 (White Punch Card) in Inventory;11
+30;Player Has Less Than 1 of Item ID 9281 (Red Punch Card) in Inventory;11
+35;Player Has 1 or more of Item ID 9280 (Yellow Punch Card) in Inventory;11
+36;Player Has 1 or more of Item ID 9282 (Blue Punch Card) in Inventory;11
+43;Quest ID 2662 (Noggenfogger Elixir) Rewarded;11
+50;Quest ID 2278 (The Platinum Discs) Taken;11
+66;3 Shadowforge Ambusher spawned;11
+89;Creature of Entry 7172 (Lore Keeper of Norgannon) Found Alive Within 80y of Source;11
+223;Quest ID 1846 (Dragonmaw Shinbones) Taken;11
+319;Player Has Less Than 1 of Item ID 7231 (Astor's Letter of Introduction) in Inventory/Bank;11
+320;Quest ID 1886 (The Deathstalkers) Taken;11
+321;(Quest ID 1886 The Deathstalkers Taken AND Player Has Less Than 1 of Item ID 7231 Astor's Letter of Introduction in Inventory/Bank);11
+671;(Has Skill ID 202 Engineering, Minimum Skill Value 140 AND Player Has 1 or more of Item ID 9280 Yellow Punch Card in Inventory);11
+672;(Player Has Less Than 1 of Item ID 14639 Schematic: Minor Recombobulator in Inventory/Bank AND (Has Skill ID 202 Engineering, Minimum Skill Value 140 AND Player Has 1 or more of Item ID 9280 Yellow Punch Card in Inventory));11
+1024;Quest ID 2458 (Deep Cover) Rewarded;11
+1091;Quest ID 2381 (Plundering the Plunderers) Taken;11
+1104;Player Has 1 or more of Item ID 9327 (Security DELTA Data Access Card) in Inventory;11
+1106;(Player Has 1 or more of Item ID 9280 Yellow Punch Card in Inventory AND Player Has Less Than 1 of Item ID 14639 Schematic: Minor Recombobulator in Inventory/Bank);11
+1107;((Player Has 1 or more of Item ID 9280 Yellow Punch Card in Inventory AND Player Has Less Than 1 of Item ID 14639 Schematic: Minor Recombobulator in Inventory/Bank) AND Player Has 1 or more of Item ID 9327 Security DELTA Data Access Card in Inventory);11
+1108;(((Player Has 1 or more of Item ID 9280 Yellow Punch Card in Inventory AND Player Has Less Than 1 of Item ID 14639 Schematic: Minor Recombobulator in Inventory/Bank) AND Player Has 1 or more of Item ID 9327 Security DELTA Data Access Card in Inventory) AND Has Skill ID 202 Engineering, Minimum Skill Value 160);11
+1142;NOT Player Has Learned Spell: 3959 (Discombobulator Ray);11
+1143;(NOT Player Has Learned Spell: 3959 Discombobulator Ray AND Player Has 1 or more of Item ID 9327 Security DELTA Data Access Card in Inventory);11
+1144;((NOT Player Has Learned Spell: 3959 Discombobulator Ray AND Player Has 1 or more of Item ID 9327 Security DELTA Data Access Card in Inventory) AND Has Skill ID 202 Engineering, Minimum Skill Value 160);11
+1228;Quest ID 2843 (Gnomer-gooooone!) Rewarded;11
+1387;Quest ID 2200 (Back to Uldaman) Taken;11
+1388;Quest ID 2200 (Back to Uldaman) Rewarded;11
+1389;Quest ID 2204 (Restoring the Necklace) Rewarded;11
+1390;Player Has Less Than 1 of Item ID 7667 (Talvash's Phial of Scrying) in Inventory/Bank;11
+1391;NOT (Quest ID 2204 Restoring the Necklace Rewarded);11
+1392;(Quest ID 2200 Back to Uldaman Taken OR Quest ID 2200 Back to Uldaman Rewarded);11
+1393;(NOT (Quest ID 2204 Restoring the Necklace Rewarded) AND (Quest ID 2200 Back to Uldaman Taken OR Quest ID 2200 Back to Uldaman Rewarded));11
+1394;((NOT (Quest ID 2204 Restoring the Necklace Rewarded) AND (Quest ID 2200 Back to Uldaman Taken OR Quest ID 2200 Back to Uldaman Rewarded)) AND Player Has Less Than 1 of Item ID 7667 Talvash's Phial of Scrying in Inventory/Bank);11
+1610;Quest 'Rise of the Silithid' (Alliance) is rewarded;11
+1611;Quest 'Rise of the Silithid' is rewarded;11
+1612;Quest 'Rise of the Silithid' (4267) or 'Rise of the Silithid' (162) is rewarded;11
+1613;Quest 'Rise of the Silithid' (Horde) is rewarded;11
+2034;Player Has 1 or more of Item ID 9173 (Goblin Transponder) in Inventory;11
+2460;Quest ID 2460 (The Shattered Salute) Taken;11
+3802;Quest ID 2198 (The Shattered Necklace) Taken;11
+3803;Quest ID 2198 (The Shattered Necklace) NOT Rewarded;11
+3804;(Quest ID 2198 The Shattered Necklace NOT Rewarded AND Quest ID 2198 The Shattered Necklace Taken);11
+3805;Quest ID 2283 (Necklace Recovery) Taken;11
+3806;Quest ID 2283 (Necklace Recovery) NOT Rewarded;11
+3808;(Quest ID 2283 Necklace Recovery NOT Rewarded AND Quest ID 2283 Necklace Recovery Taken);11
+3809;((Quest ID 2283 Necklace Recovery NOT Rewarded AND Quest ID 2283 Necklace Recovery Taken) OR (Quest ID 2198 NOT Rewarded AND Quest ID 2198 Taken));11
+3810;Player Has Less Than 1 of Item ID 7666 in Inventory/Bank;11
+3811;(Player Has Less Than 1 of Item ID 7666 in Inventory/Bank AND ((Quest ID 2283 NOT Rewarded AND Quest ID 2283 Taken) OR (Quest ID 2198 The Shattered Necklace NOT Rewarded AND Quest ID 2198 The Shattered Necklace Taken)));11
+3820;Quest ID 2761 (Smelt On, Smelt Off) Rewarded;11
+3821;Quest ID 2762 (The Great Silver Deceiver) Rewarded;11
+3822;Quest ID 2763 (The Art of the Imbue) Rewarded;11
+3823;(Quest ID 2763 The Art of the Imbue Rewarded AND Quest ID 2762 The Great Silver Deceiver Rewarded);11
+3824;Quest ID 2771 (A Good Head On Your Shoulders) Rewarded;11
+3825;Quest ID 2772 (The World At Your Feet) Rewarded;11
+3826;Quest ID 2773 (The Mithril Kid) Rewarded;11
+3827;(Quest ID 2773 The Mithril Kid Rewarded AND Quest ID 2772 The World At Your Feet Rewarded);11
+3831;Quest ID 648 (Rescue OOX-17/TN!) Rewarded;11
+3832;Quest ID 836 (Rescue OOX-09/HL!) Rewarded;11
+3833;Quest ID 2767 (Rescue OOX-22/FE!) Rewarded;11
+3834;(Quest ID 2767 Rescue OOX-22/FE! Rewarded OR Quest ID 836 Rescue OOX-09/HL! Rewarded);11
+5018;Player Level <= 45;11
+5019;(Player Level >= 34 AND Player Level <= 45);11
+5026;Player Level >= 41;11
+5029;Player Level >= 44;11
+5763;Player has done Quest The Touch of Zanzil;11
+5764;Player Has Less Than 1 of Item ID 8432 (Eau de Mixilpixil) in Inventory;11
+5765;Player has done Quest The Touch of Zanzil and dont have item Eau d' Mixilpixil;11
+9011;Quest ID 2608 (The Touch of Zanzil) Taken;11
+9012;Quest ID 594 (Message in a Bottle) NOT Taken AND NOT Rewarded;11
+9031;Quest ID 2945 (Grime-Encrusted Ring) NOT Taken AND NOT Rewarded;11
+9032;Quest ID 203 (The Second Rebellion) Rewarded;11
+9033;Quest ID 204 (Bad Medicine) Rewarded;11
+9034;(Quest ID 203 The Second Rebellion Rewarded) AND (Quest ID 204 Bad Medicine Rewarded);11
+10997;Has Skill ID 202 Engineering, Minimum Skill Value 225;11
+20225;Quest ID 1190 (Keeping Pace) Taken;11
+20226;Quest ID 1194 (Rizzle's Schematics) Available;11
+20227;(Quest ID 1194 Rizzle's Schematics Available OR Quest ID 1190 Keeping Pace Taken);11
+41;Quest ID 1324 (The Missing Diplomat) Rewarded;10
+179;Player Level >= 40;10
+180;Quest ID 6681 (The Manor, Ravenholdt) NOT Taken AND NOT Rewarded;10
+196;(Quest ID 6681 The Manor, Ravenholdt NOT Taken AND NOT Rewarded AND (Player ClassMask: 8 AND Player Level >= 24));10
+267;Has Skill ID 171 (Alchemy), Minimum Skill Value 180;10
+363;Has Skill ID 171 (Alchemy), Minimum Skill Value 200;10
+368;Has Skill ID 164 (Blacksmithing), Minimum Skill Value 200;10
+374;Has Skill ID 197 (Tailoring), Minimum Skill Value 200;10
+379;Has Skill ID 165 (Leatherworking), Minimum Skill Value 200;10
+382;Has Skill ID 333 (Enchanting), Minimum Skill Value 200;10
+393;Has Skill ID 202 (Engineering), Minimum Skill Value 200;10
+399;Has Skill ID 129 (First Aid), Minimum Skill Value 200;10
+403;Has Skill ID 185 (Cooking), Minimum Skill Value 200;10
+407;Has Skill ID 356 (Fishing), Minimum Skill Value 200;10
+1089;Quest ID 1269 (Lieutenant Paval Reethe) Rewarded;10
+5015;Player Level <= 38;10
+5016;(Player Level >= 29 AND Player Level <= 38);10
+5020;Player Level >= 37;10
+9030;Quest ID 1480 (The Corrupter) NOT Taken AND NOT Rewarded;10
+270;NOT Player Has Learned Spell: 13028 (Goldthorn Tea);9
+271;(Has Skill ID 185 Cooking, Minimum Skill Value 175 AND NOT Player Has Learned Spell: 13028 Goldthorn Tea);9
+9016;Quest ID 1783 (The Tome of Divinity) Taken;9
+9017;Quest ID 1784 (The Tome of Divinity) Taken;9
+9018;(Quest ID 1783 The Tome of Divinity Taken) OR (Quest ID 1784 The Tome of Divinity Taken);9
+9019;Quest ID 1786 (The Tome of Divinity) Taken;9
+9020;Quest ID 1787 (The Tome of Divinity) Taken;9
+9021;(Quest ID 1786 The Tome of Divinity Taken) OR (Quest ID 1787 The Tome of Divinity Taken);9
+9100;Quest ID 1642 (The Tome of Divinity) NOT Taken AND NOT Rewarded;9
+9101;Player Has Less Than 1 of Item ID 6775 Tome of Divinity in Inventory/Bank;9
+9102;(Player Has Less Than 1 of Item ID 6775 Tome of Divinity in Inventory/Bank AND Quest ID 1642 The Tome of Divinity NOT Taken AND NOT Rewarded);9
+9103;Quest ID 1646 (The Tome of Divinity) NOT Taken AND NOT Rewarded;9
+9104;Player Has Less Than 1 of Item ID 6916 (Tome of Divinity) in Inventory/Bank;9
+9105;(Player Has Less Than 1 of Item ID 6916 Tome of Divinity in Inventory/Bank AND Quest ID 1646 The Tome of Divinity NOT Taken AND NOT Rewarded);9
+461;Player Has Less Than 1 of Item ID 14639 (Schematic: Minor Recombobulator) in Inventory/Bank;8
+1086;Quest ID 862 (Dig Rat Stew) Rewarded;8
+204;Equal or More than 1 of Entry: 412 (Stitches <Gift from the Embalmer>);6
+268;Has Skill ID 185 (Cooking), Minimum Skill Value 175;6
+322;Event ID 35 (Winter Season Fishing) Active;6
+323;Event ID 36 (Summer Season Fishing) Active;6
+362;Has Skill ID 171 (Alchemy), Minimum Skill Value 125;6
+364;(Has Skill ID 171 Alchemy, Minimum Skill Value 125 AND Horde Player);6
+365;(Has Skill ID 171 Alchemy, Minimum Skill Value 125 AND Alliance Player);6
+367;Has Skill ID 164 (Blacksmithing), Minimum Skill Value 125;6
+373;Has Skill ID 197 (Tailoring), Minimum Skill Value 125;6
+375;(Has Skill ID 197 Tailoring, Minimum Skill Value 125 AND Horde Player);6
+376;(Has Skill ID 197 Tailoring, Minimum Skill Value 125 AND Alliance Player);6
+378;Has Skill ID 165 Leatherworking, Minimum Skill Value 125;6
+381;Has Skill ID 333 (Enchanting), Minimum Skill Value 125;6
+392;Has Skill ID 202 (Engineering), Minimum Skill Value 125;6
+398;Has Skill ID 129 (First Aid), Minimum Skill Value 125;6
+402;Has Skill ID 185 (Cooking), Minimum Skill Value 125;6
+406;Has Skill ID 356 (Fishing), Minimum Skill Value 125;6
+812;Quest ID 1141 (The Family and the Fishing Pole) Rewarded;6
+813;Quest ID 1141 (The Family and the Fishing Pole) Taken;6
+814;(Quest ID 1141 The Family and the Fishing Pole Rewarded OR Quest ID 1141 The Family and the Fishing Pole Taken);6
+831;(Has Minimum Rank Exalted With Faction ID: 68 Undercity AND Player RaceMask: 162);6
+851;((Has Minimum Rank Exalted With Faction ID: 68 Undercity AND Player RaceMask: 162) OR Player RaceMask: 16);6
+1105;Has Skill ID 202 (Engineering), Minimum Skill Value 160;6
+5011;Player Level <= 32;6
+5012;(Player Level >= 24 AND Player Level <= 32);6
+5013;(Player Level >= 24 AND Player Level <= 32);6
+5017;Player Level >= 34;6
+239;Player Has 1 or more of Item ID 12765 (Secret Note #1) in Inventory;5
+240;Player Has 1 or more of Item ID 12766 (Secret Note #2) in Inventory;5
+462;Has Skill ID 202 (Engineering), Minimum Skill Value 140;5
+552;Player Has Less Than 1 of Item ID 5877 (Cracked Silithid Carapace) in Inventory;5
+553;Quest ID 1147 (The Swarm Grows) Rewarded;5
+554;Quest ID 1147 (The Swarm Grows) Taken;5
+555;(Quest ID 1147 The Swarm Grows Rewarded OR Quest ID 1147 The Swarm Grows Taken);5
+556;(Player Has Less Than 1 of Item ID 5877 Cracked Silithid Carapace in Inventory AND (Quest ID 1147 The Swarm Grows Rewarded OR Quest ID 1147 The Swarm Grows Taken));5
+5004;Player Level <= 26;5
+5005;(Player Level >= 17 AND Player Level <= 26);5
+5009;Player Level <= 30;5
+5010;(Player Level >= 22 AND Player Level <= 30);5
+5014;Player Level >= 29;5
+316;Quest ID 6981 (The Glowing Shard) Taken;4
+64;Quest ID 993 (A Lost Master) Rewarded;13
+168;Player Level >= 24;3
+181;(Player ClassMask: 8 AND Player Level >= 24);3
+5006;Player Level <= 24;3
+5007;(Player Level >= 17 AND Player Level <= 24);3
+5008;Player Level >= 22;3
+9029;Quest ID 897 (The Harvester) NOT Taken AND NOT Rewarded;3
+10;Quest ID 30 (Trial of the Sea Lion) Taken;2
+11;Quest ID 272 (Trial of the Sea Lion) Taken;2
+315;Quest ID 1094 (Further Instructions) Rewarded;2
+326;Player Level <= 19;2
+357;(Quest ID 30 Trial of the Sea Lion Taken OR Quest ID 272 Trial of the Sea Lion Taken);2
+941;Quest ID 899 (Consumed by Hatred) Rewarded;2
+942;Quest ID 4921 (Lost in Battle) Rewarded;2
+943;(Quest ID 4921 Lost in Battle Rewarded AND Quest ID 899 Consumed by Hatred Rewarded);2
+1011;Player Level >= 20;2
+1090;Quest ID 1999 (Tools of the Trade) Taken;2
+1092;Quest ID 2118 (Plagued Lands) Taken;2
+1093;Player Has Less Than 1 of Item ID 7586 Tharnariun's Hope in Inventory/Bank;2
+1094;(Quest ID 2118 Plagued Lands Taken AND Player Has Less Than 1 of Item ID 7586 Tharnariun's Hope in Inventory/Bank);2
+1095;Quest ID 4021 (Counterattack!) Taken;2
+1096;Player Has Less Than 1 of Item ID 11227 (Piece of Krom'zar's Banner) in Inventory/Bank;2
+1097;(Quest ID 4021 Counterattack! Taken AND Player Has Less Than 1 of Item ID 11227 Piece of Krom'zar's Banner in Inventory/Bank);2
+1147;Quest ID 4921 (Lost in Battle) Taken;2
+1222;Quest ID 949 (The Twilight Camp) not rewarded;2
+1223;Quest ID 950 (Return to Onu) not rewarded;2
+3750;Guarded Thunder Ale Barrel;2
+3751;Distract Jarven - Quest Bitter Rivals taken;2
+5000;Player Level >= 17;2
+5001;Player Level >= 13;2
+5002;Player Level <= 20;2
+5003;(Player Level >= 13 AND Player Level <= 20);2
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
