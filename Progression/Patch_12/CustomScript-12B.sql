@@ -16,13 +16,13 @@ SELECT * FROM transports WHERE entry IN (20808, 164871, 175080, 176495) INTO OUT
 
 /*gameobject_loot_template*/
 -- SELECT * FROM gameobject_loot_template WHERE entry IN (11103, 11213, 11281, 11282, 13961, 13965, 13966, 13970) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
-SELECT * FROM gameobject_loot_template WHERE entry IN (11103, 11213, 13961, 13965, 13966, 13970) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM gameobject_loot_template WHERE entry IN (2971, 11103, 11213, 13961, 13965, 13966, 13970) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*waypoint_path*/
-SELECT * FROM waypoint_path WHERE pathid IN (2, 10, 8284, 11016) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM waypoint_path WHERE pathid IN (2, 10, 3693, 8284, 11016) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
 /*waypoint_path_name*/
-SELECT * FROM waypoint_path_name WHERE pathid IN (2, 10, 8284, 11016) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_waypoint_path_name_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM waypoint_path_name WHERE pathid IN (2, 10, 3693, 8284, 11016) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_waypoint_path_name_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 
@@ -31,7 +31,7 @@ SELECT * FROM dbscripts_on_relay WHERE id IN (9006, 9996, 9997, 9998) INTO OUTFI
 
 
 /*dbscripts_on_event*/
-SELECT * FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3938, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*dbscripts_on_creature_movement*/
@@ -40,6 +40,13 @@ SELECT * FROM dbscripts_on_creature_movement WHERE id IN (1233, 828401, 828402, 
 
 /*gossip_menu_option*/
 -- SELECT * FROM gossip_menu_option WHERE action_menu_id IN (6865, 50088, 50092, 50121, 50224) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
+
+
+/*event_purify_food*/
+SELECT * from scripted_event_id WHERE id = 3938 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-12B_scripted_event_id_3938.csv" fields terminated by ',' lines terminated by '\n';
+
+
+
 
 
 
@@ -97,11 +104,14 @@ Delete FROM transports WHERE entry IN (20808, 164871, 175080, 176495);
 
 /*gameobject_loot_template*/
 -- Delete FROM gameobject_loot_template WHERE entry IN (11103, 11213, 11281, 11282, 13961, 13965, 13966, 13970);
-Delete FROM gameobject_loot_template WHERE entry IN (11103, 11213, 13961, 13965, 13966, 13970);
+Delete FROM gameobject_loot_template WHERE entry IN (2971, 11103, 11213, 13961, 13965, 13966, 13970);
 
 
 /*waypoint_path*/
-Delete FROM waypoint_path WHERE pathid IN (2, 10, 8284, 11016);
+Delete FROM waypoint_path WHERE pathid IN (2, 10, 3693, 8284, 11016);
+/*waypoint_path_name*/
+Delete FROM waypoint_path_name WHERE pathid IN (2, 10, 3693, 8284, 11016);
+
 
 
 /*dbscripts_on_relay*/
@@ -109,7 +119,7 @@ Delete FROM dbscripts_on_relay WHERE id IN (9006, 9996, 9997, 9998);
 
 
 /*dbscripts_on_event*/
-Delete FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288);
+Delete FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3938, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288);
 
 
 /*dbscripts_on_creature_movement*/
@@ -118,6 +128,13 @@ Delete FROM dbscripts_on_creature_movement WHERE id IN (1233, 828401, 828402, 82
 
 /*gossip_menu_option*/
 -- Delete FROM gossip_menu_option WHERE action_menu_id IN (6865, 50088, 50092, 50121, 50224);
+
+
+/*event_purify_food*/
+Delete from scripted_event_id WHERE id = 3938;
+
+
+
 
 
 
