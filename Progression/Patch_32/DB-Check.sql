@@ -87,10 +87,9 @@ SELECT * From creature_loot_template where entry in (2723, 2727, 4301, 5844, 619
 Select * From creature_template WHERE entry = 10819 and lootid <> 0;
 Select * From reference_loot_template WHERE entry = 2043;
 
-
--- Previusly placed il creature_movement_template (14527) Simone the Inconspicuous at 29 & 23 with WaitTime of 7000 & 5000
--- Select * from creature_movement_template WHERE entry = 14527 and ScriptId IN (1006, 1011); -- missing
-
-
-/*Weegli Blastfuse use Goblin Land Mine that need target, 15 = no target, reset to 1 = TARGET_T_HOSTILE	*/
--- SELECT * FROM creature_ai_scripts WHERE id = 760704 and ACTION1_param2 = 15;
+/*Remove inexistent spell*/
+SELECT * FROM spell_group_spell WHERE spellid IN (27094, 27089, 28170, 27143, 30910) AND spellid NOT IN (SELECT id FROM spell_template);
+/*Remove not first rank spell*/
+SELECT * FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431, 12574, 12577, 12575, 12812, 12576, 12815, 12813, 12814, 13961, 13964, 13962, 13963, 14071, 16280, 16277, 16278, 14070, 16279, 19308, 19312, 19309, 19311, 19310, 20920, 20918, 20915, 20919, 29446, 29075, 29076, 29444, 29445, 29447);
+/*Update broadcast_text_id to 0 in script_texts for non existent broadcast_text_id*/
+SELECT * FROM script_texts where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
