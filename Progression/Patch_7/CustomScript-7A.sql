@@ -25,6 +25,10 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6
 
 
 
+/*Phytoblade*/
+UPDATE quest_template SET RewChoiceItemId3 = 2263, RewChoiceItemCount3 = 1 WHERE entry = 275;
+
+
 /*Zardeth's Minion*/
 Update creature_template set lootid = entry where entry = 1733;
 

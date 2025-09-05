@@ -46,6 +46,10 @@ Delete FROM waypoint_path WHERE pathid = 19981;
 
 
 
+/*Phytoblade*/
+UPDATE quest_template SET RewChoiceItemId3 = 0, RewChoiceItemCount3 = 0 WHERE entry = 275;
+
+
 /*Zardeth's Minion*/
 Update creature_template set lootid = 0 where entry = 1733;
 

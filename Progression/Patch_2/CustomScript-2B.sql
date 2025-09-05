@@ -8,16 +8,11 @@ SELECT * FROM petcreateinfo_spell WHERE entry = 1863 INTO OUTFILE "C:/mangos/run
 SELECT * FROM creature_questrelation WHERE id = 3657 and quest = 1684 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_creature_questrelation_3657_1684.csv" fields terminated by ',' lines terminated by '\n';
 
 
-/*event_purify_food*/
-SELECT * from scripted_event_id WHERE id = 3938 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_scripted_event_id_3938.csv" fields terminated by ',' lines terminated by '\n';
-
-
 /*waypoint_path*/
-SELECT * from waypoint_path WHERE pathid in (2917, 3693, 19018) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * from waypoint_path WHERE pathid in (2917, 19018) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
+/*waypoint_path_name*/
+SELECT * from waypoint_path_name WHERE pathid in (2917, 19018) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_waypoint_path_name_custom.csv" fields terminated by ',' lines terminated by '\n';
 
-
-/*Xabraxxis*/
-SELECT * from dbscripts_on_event WHERE id = 3938 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-2B_dbscripts_on_event_3938.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*gameobject_loot_template*/
@@ -61,16 +56,11 @@ Delete FROM petcreateinfo_spell WHERE entry = 1863;
 Delete FROM creature_questrelation WHERE id = 3657 and quest = 1684;
 
 
-/*event_purify_food*/
-Delete from scripted_event_id WHERE id = 3938;
-
-
 /*waypoint_path*/
-Delete from waypoint_path WHERE pathid in (2917, 3693, 19018);
+Delete from waypoint_path WHERE pathid in (2917, 19018);
+/*waypoint_path_name*/
+Delete from waypoint_path_name WHERE pathid in (2917, 19018);
 
-
-/*Xabraxxis*/
-Delete from dbscripts_on_event WHERE id = 3938;
 
 
 /*gameobject_loot_template*/
