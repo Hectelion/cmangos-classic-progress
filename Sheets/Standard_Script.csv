@@ -80,7 +80,7 @@ ObjectList;gameobject;gameobject_spawn_entry;;guid;4;2;guid in (Select guid FROM
 ObjectList;game_event_gameobject;gameobject;;guid;4;1;guid in (SELECT a.guid FROM (SELECT guid FROM gameobject WHERE id IN %OBJECTLIST%) as a) and guid not in (SELECT b.guid FROM (select guid from game_event_gameobject where abs(event) IN %EVENTLIST%) as b);
 CreatureList;pet_levelstats;;;;3;28;creature_entry IN %CREATURELIST%;
 CreatureList;script_waypoint;;;;3;27;entry IN %CREATURELIST%;
-CreatureList;dbscripts_on_event;;;cre;3;26;id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN %CREATURELIST%) temporarytable);
+CreatureList;dbscripts_on_event;;;cre;3;26;id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN %CREATURELIST% and command in (8, 10, 31)) temporarytable);
 CreatureList;instance_encounters;;;;3;25;creditentry IN %CREATURELIST%;
 CreatureList;trainer_greeting;;;;3;24;entry IN %CREATURELIST%;
 CreatureList;questgiver_greeting;;;;3;23;entry IN %CREATURELIST%;

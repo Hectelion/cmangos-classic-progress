@@ -20,8 +20,20 @@ SpellList;Name;Patch
 18045;Increase Healing 75;30
 21477;Increased Block 3;30
 24196;Increase Spell Dam 47;30
+27892;spell_to_anchor_one;30
+27893;spell_to_anchor_two;30
+27896;spell_choose_random_skull_pile;30
+27928;spell_to_anchor_one;30
+27929;spell_to_anchor_two;30
+27930;spell_choose_random_skull_pile;30
+27935;spell_to_anchor_one;30
+27936;spell_to_anchor_two;30
+27938;spell_choose_random_skull_pile;30
 27995;Unholy Frenzy;30
 28006;Arcane Cloaking;30
+28007;Summon Trainee;30
+28009;Summon Knight;30
+28011;Summon Mounted Knight;30
 28144;Power of the Guardian;30
 28145;Power of the Guardian;30
 28205;Glacial Gloves;30
@@ -1175,7 +1187,6 @@ SpellList;Name;Patch
 23007;Plans: Sulfuron Hammer;18
 25067;Increase Healing 30;18
 9335;Attack Power 28;17
-10847;Artisan First Aid;17
 13881;Increase Spell Dam 29;17
 14056;Attack Power 50;17
 15748;Freeze Rookery Egg;17
@@ -1209,8 +1220,6 @@ SpellList;Name;Patch
 17642;Recipe: Flask of the Titans;17
 17645;Recipe: Flask of Chromatic Resistance;17
 18110;Transform Viewing Room Students;17
-18249;Artisan Fishing;17
-18261;Artisan Cook;17
 19054;Red Dragonscale Breastplate;17
 19059;Volcanic Leggings;17
 19062;Ironfeather Shoulders;17
@@ -1621,6 +1630,8 @@ SpellList;Name;Patch
 10058;Replenish Mana;14
 10844;Powerful Smelling Salts;14
 10845;Powerful Smelling Salts;14
+10846;First Aid;14
+10847;Artisan First Aid;14
 10850;Powerful Smelling Salts;14
 11340;Instant Poison VI;14
 11343;Instant Poison VI;14
@@ -1895,6 +1906,10 @@ SpellList;Name;Patch
 18112;Firebolt;14
 18185;Increased Defense;14
 18203;Poison;14
+18248;Fishing;14
+18249;Artisan Fishing;14
+18260;Cooking;14
+18261;Artisan Cook;14
 18382;Increased Critical Spell;14
 18400;Piccolo of the Flaming Fire;14
 18787;Heaven's Blessing;14
@@ -2477,6 +2492,8 @@ SpellList;Name;Patch
 9778;Proc Self Heal 22;11
 9781;Mithril Shield Spike;11
 9783;Mithril Spurs;11
+9785;Blacksmithing;11
+9786;Artisan Blacksmith;11
 9787;Weaponsmith;11
 9788;Armorsmith;11
 9789;Artisan Weaponsmith;11
@@ -2526,6 +2543,8 @@ SpellList;Name;Patch
 10142;Conjure Water;11
 10145;Conjure Food;11
 10147;Conjure Food;11
+10248;Mining;11
+10249;Artisan Miner;11
 10344;Armor +32;11
 10351;Basilisk Skin;11
 10370;Lacerations;11
@@ -2577,6 +2596,8 @@ SpellList;Name;Patch
 10659;Elemental Leatherworking;11
 10660;Tribal Leatherworking;11
 10661;Tribal Leatherworking;11
+10662;Leatherworking;11
+10663;Artisan Leatherworking;11
 10673;Summon Bombay;11
 10674;Summon Cornish Rex;11
 10676;Summon Orange Tabby;11
@@ -2591,6 +2612,8 @@ SpellList;Name;Patch
 10714;Summon Black Kingsnake;11
 10716;Summon Brown Snake;11
 10717;Summon Crimson Snake;11
+10768;Skinning;11
+10769;Artisan Skinning;11
 10787;Panther;11
 10788;Leopard;11
 10789;Spotted Frostsaber;11
@@ -2647,6 +2670,8 @@ SpellList;Name;Patch
 11537;Charge Stave of Equinex;11
 11547;Drive Nimboya's Laden Pike;11
 11610;Gammerita Turtle Camera;11
+11611;Alchemy;11
+11612;Artisan Alchemist;11
 11629;Potent Alcohol;11
 11637;Empty Heavy Phial;11
 11643;Golden Scale Gauntlets;11
@@ -2658,6 +2683,8 @@ SpellList;Name;Patch
 11761;Scorpid Sample;11
 11826;Electromagnetic Gigaflux Reactivator;11
 11992;Detect Gahz'ridian;11
+11993;Herb Gathering;11
+11994;Artisan Herbalist;11
 12048;Black Mageweave Vest;11
 12049;Black Mageweave Leggings;11
 12050;Black Mageweave Robe;11
@@ -2700,6 +2727,8 @@ SpellList;Name;Patch
 12148;Pattern: Red Mageweave Headband;11
 12172;Pattern: Lavender Mageweave Shirt;11
 12173;Pattern: Pink Mageweave Shirt;11
+12180;Tailoring;11
+12181;Artisan Tailor;11
 12183;Pattern: Tuxedo Shirt;11
 12184;Pattern: Tuxedo Pants;11
 12185;Pattern: White Wedding Dress;11
@@ -2714,6 +2743,8 @@ SpellList;Name;Patch
 12647;Schematic: Catseye Ultra Goggles;11
 12649;Schematic: Spellpower Goggles Xtreme;11
 12652;Schematic: Sniper Scope;11
+12656;Engineering;11
+12657;Artisan Engineer;11
 12709;Collecting Fallout;11
 12802;Getting Tide Pool Sample #1;11
 12805;Getting Tide Pool Sample #2;11
@@ -2753,6 +2784,8 @@ SpellList;Name;Patch
 13850;Formula: Enchant Bracer - Greater Spirit;11
 13882;Enchant Cloak - Lesser Agility;11
 13883;Formula: Enchant Cloak - Lesser Agility;11
+13920;Enchanting;11
+13921;Artisan Enchanting;11
 13931;Enchant Bracer - Deflection;11
 13932;Formula: Enchant Bracer - Deflection;11
 13933;Enchant Shield - Frost Resistance;11
@@ -2831,6 +2864,7 @@ SpellList;Name;Patch
 33388;Riding;11
 33389;Apprentice Riding;11
 33391;Riding;11
+33392;Journeyman Riding;11
 128;Spellstone;10
 481;Water Elemental;10
 495;Polymorph: Sheep;10
@@ -2886,7 +2920,6 @@ SpellList;Name;Patch
 3379;Recipe: Curiously Tasty Omelet;10
 3399;Tasty Lion Steak;10
 3403;Recipe: Tasty Lion Steak;10
-3413;Cooking;10
 3474;Holy Light;10
 3496;Moonsteel Broadsword;10
 3498;Massive Iron Axe;10
@@ -2983,7 +3016,6 @@ SpellList;Name;Patch
 7699;Increase Frost Dam 4;10
 7701;Increase Frost Dam 7;10
 7710;Increase Shadow Dam 9;10
-7732;Fishing;10
 7896;Exploding Shot;10
 7898;Pattern: Dark Silk Shirt;10
 7914;Capture Spirit;10
@@ -3181,8 +3213,6 @@ SpellList;Name;Patch
 18664;Pattern: Bright Yellow Shirt;10
 18762;Hand of Iruxos;10
 19470;Gem of the Serpent;10
-19886;Expert Cook;10
-19889;Expert Fishing;10
 21431;Attack Power Ranged 14;10
 21560;zzOLDPrayer of Fortitude;10
 21567;zzOLDPrayer of Fortitude;10
@@ -3454,6 +3484,7 @@ SpellList;Name;Patch
 2545;Cooked Crab Claw;8
 2547;Redridge Goulash;8
 2549;Seasoned Wolf Kabob;8
+2552;Expert Cook;8
 2555;Recipe: Cooked Crab Claw;8
 2556;Recipe: Redridge Goulash;8
 2558;Recipe: Seasoned Wolf Kabob;8
@@ -3466,6 +3497,7 @@ SpellList;Name;Patch
 2829;Sharpen Blade II;8
 2964;Bolt of Woolen Cloth;8
 2966;Bolt of Woolen Cloth;8
+3102;Cooking;8
 3113;Enhance Blunt Weapon II;8
 3116;Coarse Weightstone;8
 3118;Coarse Weightstone;8
@@ -3473,13 +3505,17 @@ SpellList;Name;Patch
 3187;Recipe: Elixir of Lesser Agility;8
 3188;Elixir of Ogre's Strength;8
 3189;Recipe: Elixir of Ogre's Strength;8
+3274;First Aid;8
 3277;Wool Bandage;8
 3278;Heavy Wool Bandage;8
+3280;Journeyman First Aid;8
 3282;Wool Bandage;8
 3283;Heavy Wool Bandage;8
 3370;Crocolisk Steak;8
 3372;Murloc Fin Soup;8
 3381;Recipe: Murloc Fin Soup;8
+3412;Journeyman Cook;8
+3413;Cooking;8
 3757;Woolen Bag;8
 3758;Green Woolen Bag;8
 3769;Dark Leather Shoulders;8
@@ -3559,6 +3595,10 @@ SpellList;Name;Patch
 7678;Increase Healing 9;8
 7686;Increase Fire Dam 6;8
 7688;Increase Fire Dam 9;8
+7731;Fishing;8
+7732;Fishing;8
+7734;Journeyman Fishing;8
+7736;Expert Fishing;8
 7755;Bristle Whisker Catfish;8
 7760;Recipe: Bristle Whisker Catfish;8
 7836;Blackmouth Oil;8
@@ -3574,6 +3614,8 @@ SpellList;Name;Patch
 7893;Stylish Green Shirt;8
 7894;Pattern: Stylish Blue Shirt;8
 7895;Pattern: Stylish Green Shirt;8
+7924;First Aid;8
+7925;Expert First Aid;8
 8089;Aquadynamic Fish Attractor;8
 8331;Ez-Thro Dynamite;8
 8339;EZ-Thro Dynamite;8
@@ -3623,6 +3665,11 @@ SpellList;Name;Patch
 18205;Shadow Bolt;8
 18217;Shadow Bolt;8
 18669;Schematic: Minor Recombobulator;8
+19886;Expert Cook;8
+19889;Expert Fishing;8
+19903;Expert First Aid;8
+2021;Journeyman Blacksmith;7
+2154;Journeyman Leatherworking;7
 2158;Fine Leather Boots;7
 2165;Medium Armor Kit;7
 2166;Toughened Leather Armor;7
@@ -3634,6 +3681,7 @@ SpellList;Name;Patch
 2179;Dark Leather Cloak;7
 2180;Toughened Leather Armor;7
 2181;Dark Leather Boots;7
+2280;Journeyman Alchemist;7
 2331;Minor Mana Potion;7
 2332;Minor Rejuvenation Potion;7
 2335;Swiftness Potion;7
@@ -3645,11 +3693,15 @@ SpellList;Name;Patch
 2342;Recipe: Elixir of Minor Agility;7
 2364;Recipe: Swiftness Potion;7
 2365;Recipe: Elixir of Tongues;7
+2368;Herb Gathering;7
 2370;Rejuvenation Potion;7
+2373;Journeyman Herbalist;7
 2396;Green Linen Shirt;7
 2418;Green Linen Shirt;7
 2543;Westfall Stew;7
 2554;Recipe: Westfall Stew;7
+2576;Mining;7
+2582;Journeyman Miner;7
 2658;Smelt Silver;7
 2659;Smelt Bronze;7
 2667;Runed Copper Breastplate;7
@@ -3673,6 +3725,9 @@ SpellList;Name;Patch
 2835;Deadly Poison;7
 2843;Deadly Poison;7
 2884;Medium Armor Kit;7
+3100;Blacksmithing;7
+3101;Alchemy;7
+3104;Leatherworking;7
 3171;Elixir of Wisdom;7
 3174;Elixir of Poison Resistance;7
 3176;Strong Troll's Blood Potion;7
@@ -3706,8 +3761,16 @@ SpellList;Name;Patch
 3382;Recipe: Blood Sausage;7
 3447;Healing Potion;7
 3458;Healing Potion;7
+3464;Alchemy;7
+3465;Expert Alchemist;7
 3491;Big Bronze Knife;7
 3516;Big Bronze Knife;7
+3538;Blacksmithing;7
+3539;Expert Blacksmith;7
+3564;Mining;7
+3568;Expert Miner;7
+3570;Herb Gathering;7
+3571;Expert Herbalist;7
 3762;Hillman's Leather Vest;7
 3764;Hillman's Leather Gloves;7
 3765;Dark Leather Gloves;7
@@ -3719,10 +3782,16 @@ SpellList;Name;Patch
 3793;Hillman's Shoulders;7
 3800;Pattern: Hillman's Leather Vest;7
 3802;Pattern: Hillman's Belt;7
+3811;Leatherworking;7
+3812;Expert Leatherworking;7
 3817;Cured Medium Hide;7
 3819;Cured Medium Hide;7
 3841;Green Linen Bracers;7
 3877;Green Linen Bracers;7
+3909;Tailoring;7
+3910;Tailoring;7
+3912;Journeyman Tailor;7
+3913;Expert Tailor;7
 3929;Coarse Blasting Powder;7
 3930;Crafted Heavy Shot;7
 3931;Coarse Dynamite;7
@@ -3747,6 +3816,10 @@ SpellList;Name;Patch
 4014;Green Tinted Goggles;7
 4027;Schematic: Small Seaforium Charge;7
 4028;Schematic: Shadow Goggles;7
+4037;Engineering;7
+4038;Engineering;7
+4040;Journeyman Engineer;7
+4041;Expert Engineer;7
 4056;Small Seaforium Charge;7
 4065;Large Copper Bomb;7
 6513;Resist Poison;7
@@ -3766,6 +3839,10 @@ SpellList;Name;Patch
 7146;Dark Leather Pants;7
 7255;Holy Protection Potion;7
 7260;Recipe: Holy Protection Potion;7
+7412;Enchanting;7
+7413;Enchanting;7
+7415;Journeyman Enchanting;7
+7416;Expert Enchanting;7
 7461;Enchant Cloak - Minor Protection;7
 7771;Enchant Cloak - Minor Protection;7
 7772;Formula: Enchant Cloak - Minor Protection;7
@@ -3793,6 +3870,10 @@ SpellList;Name;Patch
 8336;Practice Lock;7
 8367;Ironforge Breastplate;7
 8370;Ironforge Breastplate;7
+8617;Skinning;7
+8618;Skinning;7
+8619;Journeyman Skinning;7
+8620;Expert Skinning;7
 8686;Instant Poison II;7
 8687;Instant Poison II;7
 8701;Instant Poison;7
@@ -3971,7 +4052,6 @@ SpellList;Name;Patch
 7830;Recipe: Rainbow Fin Albacore;6
 7863;Enchant Boots - Minor Stamina;6
 7864;Formula: Enchant Boots - Minor Stamina;6
-7924;First Aid;6
 8063;Deviate Fish;6
 8213;Cooked Deviate Fish;6
 8238;Savory Deviate Delight;6
@@ -4012,7 +4092,6 @@ SpellList;Name;Patch
 19512;Apply Salve;6
 19564;Draw Water Sample;6
 19634;Mana Rejuvenation;6
-19903;Expert First Aid;6
 246;Slow;5
 487;Slow;5
 492;zzOLDMana Totem;5
