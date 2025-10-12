@@ -7,7 +7,7 @@ SELECT * FROM areatrigger_teleport WHERE id IN (242, 244) INTO OUTFILE "C:/mango
 -- SELECT * FROM gameobject_loot_template WHERE entry IN (1506, 17521, 17538, 17939) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 /*dbscripts_on_event*/ -- Trelane's quest
--- SELECT * FROM dbscripts_on_event WHERE id IN (415, 416, 417) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (415, 416, 417) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*dbscripts_on_creature_movement*/ -- John Turner
