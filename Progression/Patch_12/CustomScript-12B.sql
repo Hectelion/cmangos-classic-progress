@@ -31,7 +31,7 @@ SELECT * FROM dbscripts_on_relay WHERE id IN (9006, 9996, 9997, 9998) INTO OUTFI
 
 
 /*dbscripts_on_event*/
-SELECT * FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3938, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (293, 383, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-12B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*dbscripts_on_creature_movement*/
@@ -119,7 +119,7 @@ Delete FROM dbscripts_on_relay WHERE id IN (9006, 9996, 9997, 9998);
 
 
 /*dbscripts_on_event*/
-Delete FROM dbscripts_on_event WHERE id IN (293, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3938, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288);
+Delete FROM dbscripts_on_event WHERE id IN (293, 383, 384, 385, 691, 692, 693, 694, 3201, 3202, 3203, 3204, 3361, 3561, 3980, 4059, 4079, 4083, 4102, 4118, 4178, 4185, 4192, 4193, 4194, 4195, 4196, 4197, 4215, 4216, 4217, 4218, 4219, 4234, 4235, 4236, 4237, 4247, 4260, 4265, 4276, 4280, 4284, 4288);
 
 
 /*dbscripts_on_creature_movement*/
