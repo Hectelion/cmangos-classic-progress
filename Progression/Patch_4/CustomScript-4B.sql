@@ -22,6 +22,10 @@ SELECT * FROM gossip_menu_option WHERE menu_id IN (682, 685, 688, 692, 694) INTO
 SELECT * FROM npc_vendor_template WHERE entry = 220 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_npc_vendor_template_220.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*The Binding*/
+SELECT * from dbscripts_on_event WHERE id = 1428 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_dbscripts_on_event_1428.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -74,6 +78,10 @@ Delete FROM gossip_menu_option WHERE menu_id IN (682, 685, 688, 692, 694);
 
 /*npc_vendor_template*/
 Delete FROM npc_vendor_template WHERE entry = 220;
+
+
+/*The Binding*/
+Delete from dbscripts_on_event WHERE id = 1428;
 
 
 
