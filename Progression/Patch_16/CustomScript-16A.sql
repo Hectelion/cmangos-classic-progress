@@ -49,10 +49,21 @@ Update creature_template set skinninglootid = entry WHERE entry in (6498, 6499, 
 
 /*BFD Entrance*/
 UPDATE areatrigger_teleport SET target_position_x = 4246.68, target_position_y = 743.402, target_position_z = -24.8573, target_orientation = 4.71239 WHERE id = 259;
-
+/*
 DELETE FROM gameobject_template WHERE entry = 277193;
 DELETE from gameobject where guid = 23000 and id = 277193;
 DELETE FROM dbscripts_on_go_template_use WHERE id = 277193;
+*/
+DELETE FROM creature WHERE guid=32354;
+UPDATE creature_template SET gossipmenuid = 0, npcflags = 0, NAME = "UNUSED Grund Drokda", subname = "Reuse Me" WHERE entry = 2756;
+
+
+DELETE FROM broadcast_text WHERE Id = 19860;
+DELETE FROM npc_text_broadcast_text WHERE Id = 1960;
+DELETE FROM gossip_menu WHERE entry = 1960;
+DELETE FROM gossip_menu_option WHERE menu_id = 1960;
+DELETE FROM dbscripts_on_gossip WHERE id = 196001;
+
 
 
 /*Recipe World Drop*/

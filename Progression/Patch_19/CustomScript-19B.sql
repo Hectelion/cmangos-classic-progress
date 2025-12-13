@@ -36,6 +36,10 @@ SELECT * FROM dbscripts_on_relay WHERE FLOOR(id/100) = 11625 INTO OUTFILE "c:/ma
 SELECT * FROM npc_vendor_template WHERE entry = 451 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-19B_npc_vendor_template_451.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*spell_chain*/
+Select * from spell_chain WHERE spell_id = 21849 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-19B_spell_chain_21849.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -74,6 +78,10 @@ Delete FROM dbscripts_on_relay WHERE FLOOR(id/100) = 11625;
 Delete FROM npc_vendor_template WHERE entry = 451;
 
 
+/*spell_chain*/
+Delete from spell_chain WHERE spell_id = 21849;
+
+
 
 /*Pattern: Onyxia Scale Cloak*/
 DELETE FROM creature_loot_template WHERE entry = 10317 AND item = 15769;
@@ -109,6 +117,8 @@ Update quest_template set rewitemid1 = 0, rewitemcount1 = 0, rewitemid2 = 0, rew
 /*Gossip Menu*/
 Update creature_template set GossipMenuId = 0 WHERE gossipmenuid IN (435, 721, 1951, 2121, 2849, 10265, 12850, 12851, 12852, 12853, 12854, 12855, 12856, 12857, 12858, 12859, 12863, 12868, 12869, 12872, 12873, 12875);
 
+/*Prayer of Fortitude-Spirit-Shadow Protection*/
+Update spell_template set Reagent1 = 0, ReagentCount1 = 0 where id in (21562, 21564, 27681, 27683);
 
 
 

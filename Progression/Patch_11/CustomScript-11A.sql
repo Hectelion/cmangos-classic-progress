@@ -47,6 +47,10 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-10B_transports_177233.csv" REPLACE INTO TABLE `classicmangos`.`transports` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
+/*Nature Protection Potion*/
+LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-10B_creature_template_spells_6035.csv" REPLACE INTO TABLE `classicmangos`.`creature_template_spells` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+
 
 
 
@@ -64,7 +68,7 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-1
 
 
 /*creature loot*/
-Update creature_template set lootid = entry WHERE entry IN (466, 7999);
+Update creature_template set lootid = entry WHERE entry IN (1, 466, 7999);
 
 
 

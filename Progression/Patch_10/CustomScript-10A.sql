@@ -87,12 +87,32 @@ Update creature_template set lootid = entry where entry in (382, 468, 488, 933, 
 
 
 /*BFD Entrance*/
+/*
 DELETE FROM gameobject_template WHERE entry = 277193;
-INSERT INTO gameobject_template VALUES (277193, 0, 402, 'Portal of the Deeps', 0, 0, 0, 1, 0, 0, 65536, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+INSERT INTO gameobject_template VALUES (277193, 0, 402, 'Portal of the Deeps', '', 0, 0, 0, 1, 0, 0, 65536, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 DELETE FROM gameobject WHERE guid = 23000 and id = 277193;
 INSERT INTO gameobject VALUES (23000, 277193, 1, 1, 7373.75, -938.90, -6.514992, 1.00, 0.0, 0.0, 0.0, 0.0, 7200, 7200);
 DELETE FROM dbscripts_on_go_template_use WHERE id = 277193;
 INSERT INTO dbscripts_on_go_template_use VALUES (277193, 1000, 0, 6, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -150.234, 106.594, -39.779, 0, 0, 107, 'Teleport to Blackfathom Deeps');
+*/
+DELETE FROM creature WHERE guid=32354;
+INSERT INTO creature VALUES (32354, 2756, 1, 1, 7344.77000000000000000000, -922.20700000000000000000, 7.20399000000000000000, 3.19578000000000000000, 25, 25, 0, 0);
+
+UPDATE creature_template SET gossipmenuid = 1960, npcflags = 1, NAME = "Grund Drokda", subname = "" WHERE entry = 2756;
+
+
+DELETE FROM broadcast_text WHERE Id = 19860;
+DELETE FROM npc_text_broadcast_text WHERE Id = 1960;
+DELETE FROM gossip_menu WHERE entry = 1960;
+DELETE FROM gossip_menu_option WHERE menu_id = 1960;
+DELETE FROM dbscripts_on_gossip WHERE id = 196001;
+
+INSERT INTO broadcast_text VALUES (19860, 'Do you want adventure into Blackfathom Deeps?', 'Do you want adventure into Blackfathom Deeps?', 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO npc_text_broadcast_text VALUES (1960, 1, 0, 0, 0, 0, 0, 0, 0, 19860, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO gossip_menu VALUES (1960, 1960, 0, 0);
+INSERT INTO gossip_menu_option VALUES (1960, 0, 0, 'Yes, take me into Blackfathom Deeps please.', 0, 1, 1, -1, 0, 196001, 0, 0, NULL, 0, 0);
+INSERT INTO dbscripts_on_gossip VALUES (196001, 0, 0, 6, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -150.234, 106.594, -39.779, 0, 0, 0, 'Teleport player to Blackfathom Deeps');
+
 
 
 /*Hearthstone*/

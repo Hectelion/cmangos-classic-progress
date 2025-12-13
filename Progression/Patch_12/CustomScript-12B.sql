@@ -224,6 +224,7 @@ UPDATE creature_template SET gossipmenuid = 1956, npcflags = 1 WHERE entry = 389
 UPDATE creature_template SET gossipmenuid = 1957, npcflags = 1 WHERE entry = 3151;
 UPDATE creature_template SET gossipmenuid = 1958, npcflags = 1 WHERE entry = 3152;
 UPDATE creature_template SET gossipmenuid = 1959, npcflags = 1, NAME = "Torc the Orc" WHERE entry = 3148;
+UPDATE creature_template SET gossipmenuid = 0, npcflags = 2 WHERE entry = 7783;
 
 DELETE FROM broadcast_text WHERE Id in (19836, 19840, 19844, 19848, 19852);
 DELETE FROM npc_text_broadcast_text WHERE Id in (2628, 2629, 2630, 2631, 2632);
