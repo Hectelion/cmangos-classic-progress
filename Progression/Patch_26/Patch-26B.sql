@@ -103,7 +103,7 @@ SELECT * FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList) INTO OU
 SELECT * FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_questgiver_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_trainer_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_instance_encounters.csv" fields terminated by ',' lines terminated by '\n';
-SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_script_waypoint.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-26B_pet_levelstats.csv" fields terminated by ',' lines terminated by '\n';
 
@@ -252,6 +252,10 @@ SELECT * FROM gossip_menu_option WHERE menu_id = 15000 and condition_id in (60, 
 SELECT * from petcreateinfo_spell WHERE entry = 15429 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-26B_petcreateinfo_spell_15429.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Doctor Weavil*/
+SELECT * from dbscripts_on_event WHERE id = 9527 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-26B_dbscripts_on_event_9527.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 /*Disenchant Item Template*/
 SELECT * FROM item_template WHERE entry in (647, 811, 833, 944, 1168, 1263, 1443, 1728, 2099, 2243, 2244, 2245, 2246, 2801, 3475, 10847, 11684, 11726, 11808, 12590, 12592, 12639, 12640, 12641, 12752, 12756, 12757, 12895, 12903, 12945, 13143, 13314, 13353, 13505, 13937, 14146, 14152, 14153, 14154, 14553, 14554, 14555, 14557, 14558, 16795, 16796, 16797, 16798, 16799, 16800, 16801, 16802, 16803, 16804, 16805, 16806, 16807, 16808, 16809, 16810, 16811, 16812, 16813, 16814, 16815, 16816, 16817, 16818, 16819, 16820, 16821, 16822, 16823, 16824, 16825, 16826, 16827, 16828, 16829, 16830, 16831, 16832, 16833, 16834, 16835, 16836, 16837, 16838, 16839, 16840, 16841, 16842, 16843, 16844, 16845, 16846, 16847, 16848, 16849, 16850, 16851, 16852, 16853, 16854, 16855, 16856, 16857, 16858, 16859, 16860, 16861, 16862, 16863, 16864, 16865, 16866, 16867, 16868, 16897, 16898, 16899, 16900, 16901, 16902, 16903, 16904, 16905, 16906, 16907, 16908, 16909, 16910, 16911, 16912, 16913, 16914, 16915, 16916, 16917, 16918, 16919, 16920, 16921, 16922, 16923, 16924, 16925, 16926, 16927, 16928, 16929, 16930, 16931, 16932, 16933, 16934, 16935, 16936, 16937, 16938, 16939, 16940, 16941, 16942, 16943, 16944, 16945, 16946, 16947, 16948, 16949, 16950, 16951, 16952, 16953, 16954, 16955, 16956, 16957, 16958, 16959, 16960, 16961, 16962, 16963, 16964, 16965, 16966, 16979, 16980, 16982, 16983, 16984, 16988, 16989, 17013, 17014, 17063, 17064, 17065, 17066, 17067, 17068, 17069, 17070, 17071, 17072, 17073, 17074, 17075, 17076, 17077, 17078, 17082, 17102, 17103, 17104, 17105, 17106, 17107, 17109, 17110, 17111, 17112, 17113, 17193, 17223, 18168, 18202, 18203, 18204, 18205, 18208, 18263, 18282, 18403, 18404, 18405, 18406, 18509, 18510, 18511, 18538, 18541, 18542, 18543, 18544, 18545, 18546, 18547, 18803, 18805, 18806, 18808, 18809, 18810, 18811, 18812, 18813, 18814, 18815, 18816, 18817, 18820, 18821, 18822, 18823, 18824, 18829, 18832, 18842, 18861, 18870, 18872, 18875, 18878, 18879, 18970, 19130, 19131, 19132, 19133, 19134, 19135, 19136, 19137, 19138, 19139, 19140, 19142, 19143, 19144, 19145, 19146, 19147, 19148, 19149, 19156, 19157, 19162, 19163, 19164, 19165, 19166, 19167, 19168, 19169, 19170, 19287, 19288, 19289, 19290, 19334, 19335, 19336, 19337, 19339, 19340, 19341, 19342, 19343, 19344, 19345, 19346, 19347, 19348, 19349, 19350, 19351, 19352, 19353, 19354, 19355, 19356, 19357, 19358, 19360, 19361, 19362, 19363, 19364, 19365, 19366, 19367, 19368, 19369, 19370, 19371, 19372, 19373, 19374, 19375, 19376, 19377, 19378, 19379, 19380, 19381, 19382, 19383, 19384, 19385, 19386, 19387, 19388, 19389, 19390, 19391, 19392, 19393, 19394, 19395, 19396, 19397, 19398, 19399, 19400, 19401, 19402, 19403, 19405, 19406, 19407, 19426, 19430, 19431, 19432, 19433, 19434, 19435, 19436, 19437, 19438, 19439, 19491, 19852, 19853, 19854, 19855, 19856, 19857, 19859, 19861, 19862, 19863, 19864, 19865, 19866, 19867, 19869, 19870, 19873, 19874, 19875, 19876, 19877, 19878, 19879, 19884, 19885, 19886, 19887, 19888, 19889, 19890, 19891, 19892, 19893, 19894, 19895, 19896, 19897, 19903, 19904, 19909, 19910, 19918, 19927, 19929, 19944, 19945, 19948, 19949, 19950, 20032, 20038, 20039, 20134, 20257, 20264, 20380, 20487, 20488, 20577, 20578, 20579, 20580, 20581, 20582, 20599, 20600, 20615, 20616, 20617, 20618, 20619, 20621, 20622, 20623, 20624, 20625, 20626, 20627, 20628, 20629, 20630, 20631, 20632, 20633, 20634, 20635, 20636, 20637, 20638, 20639, 20682, 20685, 20688, 20691, 20698, 15141) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-26B_item_template_disenchant.csv" fields terminated by ',' lines terminated by '\n';
@@ -294,6 +298,9 @@ Delete FROM gossip_menu_option WHERE menu_id = 15000 and condition_id in (60, 62
 
 /*1.9.0 petcreateinfo_spell*/
 Delete from petcreateinfo_spell WHERE entry = 15429;
+
+/*Doctor Weavil*/
+Delete from dbscripts_on_event WHERE id = 9527;
 
 
 
@@ -541,7 +548,7 @@ DELETE FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
-DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList);
 

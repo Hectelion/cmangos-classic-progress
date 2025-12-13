@@ -36,7 +36,7 @@ INSERT INTO GossipList Values (5602), (5667), (5668), (5708), (5709), (5715), (5
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (5249), (7711), (7712), (9306), (9358), (13597), (13601), (15693), (17871), (18013), (18032), (18035), (20886), (21442), (21445), (22480), (22481), (22639), (22640), (22700), (22704), (22705), (22711), (22712), (22736), (22761), (22762), (22789), (22790), (22792), (22803), (22836), (22840), (22844), (22846), (22849), (22850), (22855), (22863), (22866), (22867), (22868), (22869), (22870), (22871), (22872), (22873), (22874), (22875), (22877), (22902), (22903), (22905), (22906), (22921), (22922), (22923), (22925), (22926), (22927), (22928), (22929), (22930), (22931), (22932), (22933), (22934), (22949), (23065), (28871);
+INSERT INTO SpellList Values (5249), (7711), (7712), (9306), (9358), (13597), (13601), (15693), (17871), (18013), (18032), (18035), (20886), (21442), (21445), (22480), (22481), (22639), (22640), (22700), (22704), (22705), (22711), (22712), (22736), (22761), (22762), (22789), (22790), (22792), (22803), (22813), (22815), (22836), (22840), (22844), (22846), (22849), (22850), (22855), (22863), (22866), (22867), (22868), (22869), (22870), (22871), (22872), (22873), (22874), (22875), (22877), (22902), (22903), (22905), (22906), (22921), (22922), (22923), (22925), (22926), (22927), (22928), (22929), (22930), (22931), (22932), (22933), (22934), (22949), (23065), (27057), (27058), (27059), (28871);
  
 DROP TEMPORARY TABLE IF EXISTS ConditionsList;
 CREATE TEMPORARY TABLE ConditionsList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -90,7 +90,7 @@ SELECT * FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList) INTO OU
 SELECT * FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_questgiver_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_trainer_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_instance_encounters.csv" fields terminated by ',' lines terminated by '\n';
-SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_script_waypoint.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_pet_levelstats.csv" fields terminated by ',' lines terminated by '\n';
 
@@ -270,7 +270,7 @@ INSERT INTO creature_loot_template VALUES (10819, 16999, 60, 0, 1, 1, 0, 'Royal 
 Update gameobject_template set TYPE = 5, flags = 4, data2 = 0 WHERE entry IN (177211, 177212, 177213, 177215) and TYPE = 0 AND flags = 0 AND DATA2 = 196608;
 Update gameobject_template set TYPE = 5, flags = 4, data0 = 0 WHERE entry = 179469 and TYPE = 0 AND flags = 32 AND DATA0 = 1;
 DELETE FROM gameobject_template WHERE entry = 177214;
-INSERT INTO gameobject_template VALUES (177214, 5, 4653, 'Dire Maul Door', 0, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+INSERT INTO gameobject_template VALUES (177214, 5, 4653, 'Dire Maul Door', ' ', 0, 4, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 DELETE FROM gameobject WHERE guid = 49890 AND id = 177214;
 INSERT INTO gameobject VALUES (49890, 177214, 1, 1, -4279.8452, 1330.4796, 161.2134, 0.02199, 0.0, 0.0, 0.01010, 0.9999, 25, 25);
 
@@ -283,7 +283,7 @@ UPDATE spell_template SET durationindex = 31 WHERE id = 16104;
 /*Call of the Grave*/
 UPDATE spell_template SET EffectRealPointsPerLevel1 = 20 WHERE id = 12020;
 /*Bottomless Bag*/
-UPDATE spell_template SET ReagentCount2 = 4, Reagent4 = 14341, Reagent5 = 0, ReagentCount5 = 0 WHERE id = 14156;
+UPDATE spell_template SET ReagentCount2 = 4, Reagent4 = 14341, Reagent5 = 0, ReagentCount5 = 0 WHERE id = 18455;
 
 /*Decrepit Guardian*/
 Update creature_template set rank = 1 WHERE entry = 10943;
@@ -380,7 +380,7 @@ DELETE FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
-DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList);
 

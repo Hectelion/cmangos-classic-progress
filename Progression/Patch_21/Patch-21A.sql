@@ -55,7 +55,7 @@ INSERT INTO GossipList Values (5602), (5667), (5668), (5708), (5709), (5715), (5
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (5249), (7711), (7712), (9306), (9358), (13597), (13601), (15693), (17871), (18013), (18032), (18035), (20886), (21442), (21445), (22480), (22481), (22639), (22640), (22700), (22704), (22705), (22711), (22712), (22736), (22761), (22762), (22789), (22790), (22792), (22803), (22836), (22840), (22844), (22846), (22849), (22850), (22855), (22863), (22866), (22867), (22868), (22869), (22870), (22871), (22872), (22873), (22874), (22875), (22877), (22902), (22903), (22905), (22906), (22921), (22922), (22923), (22925), (22926), (22927), (22928), (22929), (22930), (22931), (22932), (22933), (22934), (22949), (23065), (28871);
+INSERT INTO SpellList Values (5249), (7711), (7712), (9306), (9358), (13597), (13601), (15693), (17871), (18013), (18032), (18035), (20886), (21442), (21445), (22480), (22481), (22639), (22640), (22700), (22704), (22705), (22711), (22712), (22736), (22761), (22762), (22789), (22790), (22792), (22803), (22813), (22815), (22836), (22840), (22844), (22846), (22849), (22850), (22855), (22863), (22866), (22867), (22868), (22869), (22870), (22871), (22872), (22873), (22874), (22875), (22877), (22902), (22903), (22905), (22906), (22921), (22922), (22923), (22925), (22926), (22927), (22928), (22929), (22930), (22931), (22932), (22933), (22934), (22949), (23065), (27057), (27058), (27059), (28871);
  
 DROP TEMPORARY TABLE IF EXISTS ConditionsList;
 CREATE TEMPORARY TABLE ConditionsList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -237,7 +237,7 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-2
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_pet_levelstats.csv" REPLACE INTO TABLE `classicmangos`.`pet_levelstats` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_script_waypoint.csv" REPLACE INTO TABLE `classicmangos`.`script_waypoint` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
--- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+-- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_dbscripts_on_event_cre.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-20B_instance_encounters.csv" REPLACE INTO TABLE `classicmangos`.`instance_encounters` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
@@ -364,7 +364,7 @@ UPDATE spell_template SET durationindex = 32 WHERE id = 16104;
 /*Call of the Grave*/
 UPDATE spell_template SET EffectRealPointsPerLevel1 = 10 WHERE id = 12020;
 /*Bottomless Bag*/
-UPDATE spell_template SET ReagentCount2 = 12, Reagent4 = 17012, Reagent5 = 14341, ReagentCount5 = 2 WHERE id = 14156;
+UPDATE spell_template SET ReagentCount2 = 12, Reagent4 = 17012, Reagent5 = 14341, ReagentCount5 = 2 WHERE id = 18455;
 
 /*Decrepit Guardian*/
 Update creature_template set rank = 0 WHERE entry = 10943;

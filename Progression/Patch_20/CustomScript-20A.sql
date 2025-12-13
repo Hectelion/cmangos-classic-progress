@@ -37,6 +37,10 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-1
 LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-19B_npc_vendor_template_451.csv" REPLACE INTO TABLE `classicmangos`.`npc_vendor_template` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
+/*spell_chain*/
+LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-19B_spell_chain_21849.csv" REPLACE INTO TABLE `classicmangos`.`spell_chain` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+
 
 
 
@@ -58,6 +62,10 @@ Update quest_template set reqitemcount1 = 2, objectives = 'Talk to Jinar\'Zillen
 Update quest_template set rewitemid4 = 0, rewitemcount4 = 0 where entry = 338;
 /*When Smokey Sings, I Get Violent*/
 Update quest_template set rewitemid1 = 5951, rewitemcount1 = 10, rewitemid2 = 17523, rewitemcount2 = 1 where entry = 6041;
+/*Prayer of Fortitude-Spirit-Shadow Protection*/
+Update spell_template set Reagent1 = 17028, ReagentCount1 = 1 where id = 21562;
+Update spell_template set Reagent1 = 17029, ReagentCount1 = 1 where id in (21564, 27681, 27683);
+
 
 
 /*Pattern: Onyxia Scale Cloak*/

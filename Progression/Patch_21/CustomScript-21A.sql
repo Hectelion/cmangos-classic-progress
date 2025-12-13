@@ -42,7 +42,7 @@ UPDATE spell_template SET durationindex = 32 WHERE id = 16104;
 /*Call of the Grave*/
 UPDATE spell_template SET EffectRealPointsPerLevel1 = 10 WHERE id = 12020;
 /*Bottomless Bag*/
-UPDATE spell_template SET ReagentCount2 = 12, Reagent4 = 17012, Reagent5 = 14341, ReagentCount5 = 2 WHERE id = 14156;
+UPDATE spell_template SET ReagentCount2 = 12, Reagent4 = 17012, Reagent5 = 14341, ReagentCount5 = 2 WHERE id = 18455;
 
 /*Decrepit Guardian*/
 Update creature_template set rank = 0 WHERE entry = 10943;

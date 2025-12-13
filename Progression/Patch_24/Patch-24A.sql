@@ -59,7 +59,7 @@ INSERT INTO GossipList Values (5675), (5687), (5688), (5689), (5701), (5702), (5
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (6465), (16728), (19869), (22247), (23361), (23628), (23629), (23632), (23633), (23636), (23637), (23638), (23639), (23650), (23652), (23653), (23662), (23663), (23664), (23665), (23666), (23667), (23682), (23684), (23687), (23703), (23704), (23705), (23706), (23707), (23708), (23709), (23710), (23722), (23787), (23799), (23800), (23801), (23803), (23804), (23853);
+INSERT INTO SpellList Values (6465), (16728), (19869), (22247), (22967), (23361), (23628), (23629), (23632), (23633), (23636), (23637), (23638), (23639), (23650), (23652), (23653), (23662), (23663), (23664), (23665), (23666), (23667), (23677), (23678), (23679), (23680), (23682), (23684), (23687), (23703), (23704), (23705), (23706), (23707), (23708), (23709), (23710), (23722), (23787), (23799), (23800), (23801), (23803), (23804), (23853);
  
 DROP TEMPORARY TABLE IF EXISTS ConditionsList;
 CREATE TEMPORARY TABLE ConditionsList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -255,7 +255,7 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-2
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_pet_levelstats.csv" REPLACE INTO TABLE `classicmangos`.`pet_levelstats` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_script_waypoint.csv" REPLACE INTO TABLE `classicmangos`.`script_waypoint` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
--- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+-- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_dbscripts_on_event_cre.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_instance_encounters.csv" REPLACE INTO TABLE `classicmangos`.`instance_encounters` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
