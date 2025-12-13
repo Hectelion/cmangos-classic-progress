@@ -375,6 +375,11 @@ Delete FROM spell_group_spell WHERE spellid IN (27094, 27089, 28170, 27143, 3091
 Delete FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431, 12574, 12577, 12575, 12812, 12576, 12815, 12813, 12814, 13961, 13964, 13962, 13963, 14071, 16280, 16277, 16278, 14070, 16279, 19308, 19312, 19309, 19311, 19310, 20920, 20918, 20915, 20919, 29446, 29075, 29076, 29444, 29445, 29447);
 /*Update broadcast_text_id to 0 in script_texts for non existent broadcast_text_id*/
 Update script_texts Set broadcast_text_id = 0 where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
+/*Remove non existent spellid*/
+-- Delete FROM creature_spell_list WHERE id IN (1601102, 1606501) AND spellid IN (55593, 57374, 57381) AND spellid not IN (SELECT id FROM spell_template);
+Delete FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
+/*Remove non existent entry*/
+-- Delete FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
 
 
 

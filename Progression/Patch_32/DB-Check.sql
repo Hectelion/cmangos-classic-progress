@@ -94,6 +94,7 @@ SELECT * FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431
 /*Update broadcast_text_id to 0 in script_texts for non existent broadcast_text_id*/
 SELECT * FROM script_texts where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
 /*Remove non existent spellid*/
-SELECT * FROM creature_spell_list WHERE id IN (1601102, 1606501) AND spellid IN (55593, 57374, 57381) AND spellid not IN (SELECT id FROM spell_template);
+-- SELECT * FROM creature_spell_list WHERE id IN (1601102, 1606501) AND spellid IN (55593, 57374, 57381) AND spellid not IN (SELECT id FROM spell_template);
+SELECT * FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
 /*Remove non existent entry*/
-SELECT * FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
+-- SELECT * FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
