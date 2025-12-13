@@ -54,7 +54,7 @@ INSERT INTO GossipList Values (21), (704), (1281), (1621), (1622), (1781), (1882
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (94), (488), (490), (491), (493), (504), (540), (558), (561), (566), (575), (620), (654), (708), (719), (733), (784), (795), (833), (864), (874), (900), (906), (922), (990), (1037), (1039), (1052), (1066), (1076), (1150), (1251), (1446), (2075), (2616), (3067), (3079), (3087), (3141), (3210), (3229), (3713), (3723), (3727), (3733), (3734), (3742), (3748), (4960), (5107), (5166), (5305), (5316), (5320), (5321), (5325), (5396), (5506), (5566), (5718), (5809), (6084), (6134), (6589), (6629), (7178), (7325), (7327), (7687), (7707), (7737), (8001), (8199), (8200), (8898), (8899), (9437), (9583), (9584), (9586), (11642), (12189), (12199), (12684), (13714), (14199), (15303), (18397), (19331), (19337), (19719), (19720);
+INSERT INTO SpellList Values (94), (488), (490), (493), (504), (540), (558), (561), (566), (575), (620), (654), (708), (719), (733), (784), (795), (833), (864), (874), (898), (900), (906), (922), (990), (1037), (1039), (1052), (1066), (1076), (1150), (1251), (1446), (2075), (2616), (3011), (3067), (3079), (3087), (3141), (3210), (3229), (3713), (3723), (3727), (3733), (3734), (3742), (3748), (4960), (5107), (5166), (5305), (5316), (5320), (5321), (5325), (5396), (5506), (5566), (5718), (5809), (6084), (6134), (6589), (6629), (6685), (6979), (6980), (7178), (7325), (7327), (7687), (7707), (7737), (8001), (8199), (8200), (8898), (8899), (9437), (9583), (9584), (9586), (11642), (12189), (12199), (12684), (13714), (14199), (15303), (15304), (18397), (19331), (19337), (19719), (19720), (20688);
  
 DROP TEMPORARY TABLE IF EXISTS ConditionsList;
 CREATE TEMPORARY TABLE ConditionsList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -236,7 +236,7 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_pet_levelstats.csv" REPLACE INTO TABLE `classicmangos`.`pet_levelstats` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_script_waypoint.csv" REPLACE INTO TABLE `classicmangos`.`script_waypoint` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
--- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+-- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_dbscripts_on_event_cre.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_instance_encounters.csv" REPLACE INTO TABLE `classicmangos`.`instance_encounters` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
@@ -360,6 +360,9 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_gossip_menu_option_custom.csv" REPLACE INTO TABLE `classicmangos`.`gossip_menu_option` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
+/*Tyrande - Searing Arrow*/
+LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_creature_ai_scripts_7999.csv" REPLACE INTO TABLE `classicmangos`.`creature_ai_scripts` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+Update creature_template set AIName = "EventAI" where entry = 7999;
 
 
 

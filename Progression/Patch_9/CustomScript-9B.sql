@@ -168,9 +168,20 @@ Update item_template set spellid_1 = 0 where entry = 6948;
 
 
 /*BFD Entrance*/
+/*
 DELETE FROM gameobject_template WHERE entry = 277193;
 DELETE FROM gameobject WHERE guid = 23000 and id = 277193;
 DELETE FROM dbscripts_on_go_template_use WHERE id = 277193;
+*/
+DELETE FROM creature WHERE guid=32354;
+UPDATE creature_template SET gossipmenuid = 0, npcflags = 0, NAME = "UNUSED Grund Drokda", subname = "Reuse Me" WHERE entry = 2756;
+
+
+DELETE FROM broadcast_text WHERE Id = 19860;
+DELETE FROM npc_text_broadcast_text WHERE Id = 1960;
+DELETE FROM gossip_menu WHERE entry = 1960;
+DELETE FROM gossip_menu_option WHERE menu_id = 1960;
+DELETE FROM dbscripts_on_gossip WHERE id = 196001;
 
 
 

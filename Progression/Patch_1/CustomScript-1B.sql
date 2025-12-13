@@ -37,6 +37,10 @@ SELECT * FROM npc_vendor_template WHERE entry IN (201, 218) INTO OUTFILE "C:/man
 SELECT * FROM gossip_menu_option WHERE option_text LIKE "Show me %fly%" or option_text LIKE "%handler%" or option_text LIKE "%gryph%" or option_text LIKE "%rider%" INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Tyrande - Searing Arrow*/
+SELECT * FROM creature_ai_scripts WHERE creature_id = 7999 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_creature_ai_scripts_7999.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -97,6 +101,11 @@ Delete FROM npc_vendor_template WHERE entry IN (201, 218);
 
 /*Fly*/
 Delete FROM gossip_menu_option WHERE option_text LIKE "Show me %fly%" or option_text LIKE "%handler%" or option_text LIKE "%gryph%" or option_text LIKE "%rider%";
+
+
+/*Tyrande - Searing Arrow*/
+Delete FROM creature_ai_scripts WHERE creature_id = 7999;
+Update creature_template set AIName = "" where entry = 7999;
 
 
 /*Trial of the Sea Lion*/

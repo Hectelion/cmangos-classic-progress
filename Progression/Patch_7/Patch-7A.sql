@@ -54,8 +54,9 @@ INSERT INTO SpawnGroupList Values (67), (68), (69), (70), (71), (72), (121), (12
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (2158), (2165), (2166), (2167), (2168), (2169), (2173), (2176), (2179), (2180), (2181), (2331), (2332), (2335), (2336), (2337), (2339), (2340), (2341), (2342), (2364), (2365), (2370), (2396), (2418), (2543), (2554), (2658), (2659), (2667), (2668), (2670), (2671), (2672), (2740), (2741), (2742), (2749), (2750), (2751), (2757), (2758), (2759), (2760), (2761), (2823), (2832), (2835), (2843), (2884), (3171), (3174), (3176), (3179), (3182), (3185), (3230), (3292), (3294), (3295), (3296), (3298), (3300), (3301), (3302), (3304), (3313), (3314), (3317), (3326), (3328), (3330), (3331), (3333), (3344), (3345), (3346), (3347), (3351), (3371), (3382), (3447), (3458), (3491), (3516), (3762), (3764), (3765), (3766), (3767), (3768), (3790), (3792), (3793), (3800), (3802), (3817), (3819), (3841), (3877);
-INSERT INTO SpellList Values (3929), (3930), (3931), (3933), (3936), (3937), (3938), (3939), (3940), (3956), (3973), (3975), (3978), (3990), (3992), (3993), (3994), (3998), (3999), (4000), (4001), (4014), (4027), (4028), (4056), (4065), (6513), (6517), (6520), (6614), (6617), (6619), (6621), (6623), (6650), (6702), (6703), (6706), (6707), (7135), (7146), (7255), (7260), (7461), (7771), (7772), (7776), (7777), (7782), (7783), (7786), (7787), (7793), (7798), (7817), (7819), (7953), (7954), (7955), (7956), (7957), (7958), (8240), (8241), (8322), (8325), (8334), (8336), (8367), (8370), (8686), (8687), (8701), (9074), (9075), (9133), (9145), (9150), (9155), (9985), (9986), (9987), (9988), (9989), (9990), (13220), (13221), (13491), (17433);
+INSERT INTO SpellList Values (491), (2021), (2154), (2158), (2165), (2166), (2167), (2168), (2169), (2173), (2176), (2179), (2180), (2181), (2280), (2331), (2332), (2335), (2336), (2337), (2339), (2340), (2341), (2342), (2364), (2365), (2368), (2370), (2373), (2396), (2418), (2543), (2554), (2576), (2582), (2658), (2659), (2667), (2668), (2670), (2671), (2672), (2740), (2741), (2742), (2749), (2750), (2751), (2757), (2758), (2759), (2760), (2761), (2823), (2832), (2835), (2840), (2843), (2884), (3100), (3101), (3104), (3171), (3174), (3176), (3179), (3182), (3185), (3230), (3292), (3294), (3295), (3296), (3298), (3300), (3301), (3302), (3304), (3313), (3314), (3317), (3326), (3328), (3330), (3331), (3333), (3344), (3345), (3346), (3347), (3351), (3371), (3382), (3447), (3458), (3464), (3465), (3491), (3516), (3538);
+INSERT INTO SpellList Values (3539), (3564), (3568), (3570), (3571), (3762), (3764), (3765), (3766), (3767), (3768), (3790), (3792), (3793), (3800), (3802), (3811), (3812), (3817), (3819), (3841), (3877), (3909), (3910), (3912), (3913), (3929), (3930), (3931), (3933), (3936), (3937), (3938), (3939), (3940), (3956), (3973), (3975), (3978), (3990), (3992), (3993), (3994), (3998), (3999), (4000), (4001), (4014), (4027), (4028), (4037), (4038), (4040), (4041), (4056), (4065), (5333), (6441), (6470), (6513), (6517), (6520), (6614), (6617), (6619), (6621), (6623), (6650), (6651), (6702), (6703), (6706), (6707), (6996), (7135), (7146), (7255), (7260), (7412), (7413), (7415), (7416), (7461), (7769), (7771), (7772), (7776), (7777), (7782), (7783), (7786), (7787), (7793), (7798), (7817), (7819), (7853), (7855), (7865), (7953);
+INSERT INTO SpellList Values (7954), (7955), (7956), (7957), (7958), (8240), (8241), (8322), (8325), (8334), (8336), (8367), (8370), (8617), (8618), (8619), (8620), (8686), (8687), (8701), (9074), (9075), (9133), (9145), (9150), (9155), (9985), (9986), (9987), (9988), (9989), (9990), (13220), (13221), (13491), (17433), (26416), (26417), (26418);
  
  
 DROP TEMPORARY TABLE IF EXISTS ItemListClone;
@@ -205,7 +206,7 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_pet_levelstats.csv" REPLACE INTO TABLE `classicmangos`.`pet_levelstats` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_script_waypoint.csv" REPLACE INTO TABLE `classicmangos`.`script_waypoint` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
--- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+-- DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_dbscripts_on_event_cre.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 -- DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_instance_encounters.csv" REPLACE INTO TABLE `classicmangos`.`instance_encounters` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
@@ -350,6 +351,7 @@ DROP TEMPORARY TABLE IF EXISTS SpellList;
  
  
 DROP TEMPORARY TABLE IF EXISTS ItemListClone;
+
 
 
 

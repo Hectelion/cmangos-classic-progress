@@ -41,7 +41,7 @@ INSERT INTO GossipList Values (181), (691), (693), (700), (701), (702), (703), (
  
 DROP TEMPORARY TABLE IF EXISTS SpellList;
 CREATE TEMPORARY TABLE SpellList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpellList Values (246), (487), (492), (496), (519), (625), (632), (648), (691), (765), (766), (792), (857), (870), (876), (901), (902), (924), (928), (962), (973), (1007), (1025), (1373), (2458), (2609), (2893), (2897), (3066), (3068), (3078), (3089), (3093), (3099), (3213), (3694), (3724), (3728), (5310), (5388), (5601), (6358), (6376), (6639), (6805), (7680), (7709), (7801), (7805), (7810), (7815), (8616), (8699), (8712), (8716), (8913), (9176), (14548), (14550), (14553), (14590), (14628), (14630), (14635), (14673), (14677), (14710), (14712), (14716), (17850), (18091), (20407);
+INSERT INTO SpellList Values (246), (487), (492), (496), (519), (625), (632), (648), (691), (765), (766), (792), (870), (876), (901), (902), (924), (928), (962), (973), (1007), (1025), (1373), (2458), (2609), (2893), (2897), (3066), (3068), (3078), (3089), (3093), (3099), (3213), (3694), (3724), (3728), (5310), (5388), (5601), (6358), (6376), (6639), (6805), (7680), (7709), (7801), (7805), (7810), (7815), (8616), (8699), (8712), (8716), (8913), (9176), (14548), (14550), (14553), (14590), (14628), (14630), (14635), (14673), (14677), (14710), (14712), (14716), (17850), (18091), (20407);
  
 DROP TEMPORARY TABLE IF EXISTS ConditionsList;
 CREATE TEMPORARY TABLE ConditionsList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -95,7 +95,7 @@ SELECT * FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList) INTO OU
 SELECT * FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_questgiver_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_trainer_greeting.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_instance_encounters.csv" fields terminated by ',' lines terminated by '\n';
-SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_dbscripts_on_event_cre.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_script_waypoint.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_pet_levelstats.csv" fields terminated by ',' lines terminated by '\n';
 
@@ -216,6 +216,10 @@ SELECT * FROM gossip_menu_option WHERE menu_id IN (682, 685, 688, 692, 694) INTO
 SELECT * FROM npc_vendor_template WHERE entry = 220 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_npc_vendor_template_220.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*The Binding*/
+SELECT * from dbscripts_on_event WHERE id = 1428 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-4B_dbscripts_on_event_1428.csv" fields terminated by ',' lines terminated by '\n';
+
+
 
 
 
@@ -270,6 +274,10 @@ Delete FROM gossip_menu_option WHERE menu_id IN (682, 685, 688, 692, 694);
 Delete FROM npc_vendor_template WHERE entry = 220;
 
 
+/*The Binding*/
+Delete from dbscripts_on_event WHERE id = 1428;
+
+
 
 
 
@@ -314,7 +322,7 @@ DELETE FROM npc_vendor WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM questgiver_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM trainer_greeting WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM instance_encounters WHERE creditentry IN (SELECT entry FROM CreatureList);
-DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList)) temporarytable);
+DELETE FROM dbscripts_on_event WHERE id IN (SELECT temporarytable.id FROM (select id from dbscripts_on_event where datalong IN (SELECT entry FROM CreatureList) and command in (8, 10, 31)) temporarytable);
 DELETE FROM script_waypoint WHERE entry IN (SELECT entry FROM CreatureList);
 DELETE FROM pet_levelstats WHERE creature_entry IN (SELECT entry FROM CreatureList);
 
