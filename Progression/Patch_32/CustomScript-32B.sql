@@ -372,5 +372,12 @@ Delete FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 573
 /*Remove non existent entry*/
 -- Delete FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
 
+/*Remove script playing not existent text*/
+Update creature_ai_scripts set ACTION2_type = 0, ACTION2_param1 = 0 WHERE id = 185401 AND ACTION2_type = 1 AND ACTION2_param1 = 13611 AND ACTION2_param1 NOT IN (SELECT id FROM broadcast_text WHERE id = 13611);
+/*Remove not existent gameobject*/
+Delete FROM gameobject WHERE guid IN (18117, 18118, 18119) AND id NOT IN (SELECT entry FROM gameobject_template);
+/*correct script conditions*/
+Update dbscripts_on_quest_start set datalong = 317 WHERE id = 1090 and command = 34 AND datalong = 944;
+Update dbscripts_on_quest_start set datalong = 318 WHERE id = 1090 and command = 34 AND datalong = 945;
 
 

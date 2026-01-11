@@ -57,6 +57,9 @@ SELECT * FROM creature_template where entry = 10216 INTO OUTFILE "C:/mangos/run/
 SELECT * FROM gossip_menu_option WHERE option_text LIKE "%Profession%" INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_gossip_menu_option_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*Yellow aura, very tall column*/
+SELECT * FROM dbscripts_on_go_template_use WHERE id = 103661 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-5B_dbscripts_on_go_template_use_103661.csv" fields terminated by ',' lines terminated by '\n';
+
 
 
 
@@ -132,6 +135,10 @@ Delete from gameobject_loot_template where entry in (1711, 1735, 2284, 17441, 17
 
 /*Profession*/
 Delete FROM gossip_menu_option WHERE option_text LIKE "%Profession%";
+
+
+/*Yellow aura, very tall column*/
+Delete FROM dbscripts_on_go_template_use WHERE id = 103661;
 
 
 

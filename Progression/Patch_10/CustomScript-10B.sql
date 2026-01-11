@@ -46,6 +46,13 @@ SELECT * FROM transports WHERE entry = 177233 INTO OUTFILE "C:/mangos/run/Progre
 SELECT * FROM creature_template_spells WHERE entry = 6035 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-10B_creature_template_spells_6035.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*waypoint_path_name*/ -- stranglethorn fever
+SELECT * FROM waypoint_path_name WHERE pathid IN (18011, 18012, 18013) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-10B_waypoint_path_name_custom.csv" fields terminated by ',' lines terminated by '\n';
+/*waypoint_path*/ -- -- stranglethorn fever
+SELECT * FROM waypoint_path WHERE pathid IN (18011, 18012, 18013) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-10B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
+
+
+
 
 /*item_template disenchant loot*/
 SELECT * FROM item_template WHERE disenchantid IN (45) and entry not in (SELECT entry FROM ItemList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-10B_item_template_disenchant.csv" fields terminated by ',' lines terminated by '\n';
@@ -124,6 +131,12 @@ Delete FROM transports WHERE entry = 177233;
 
 /*Nature Protection Potion*/
 Delete FROM creature_template_spells WHERE entry = 6035;
+
+
+/*waypoint_path_name*/ -- stranglethorn fever
+Delete FROM waypoint_path_name WHERE pathid IN (18011, 18012, 18013);
+/*waypoint_path*/ -- -- stranglethorn fever
+Delete FROM waypoint_path WHERE pathid IN (18011, 18012, 18013);
 
 
 

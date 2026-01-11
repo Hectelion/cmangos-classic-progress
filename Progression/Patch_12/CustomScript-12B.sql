@@ -207,7 +207,7 @@ INSERT INTO reference_loot_template VALUES (50545, 10324, 0, 1, 1, 1, 0, 'Patter
 
 
 /*Blump Family Fishing Pole*/
-update quest_template set ReWItemId1 = 12221 WHERE entry = 1141;
+-- update quest_template set ReWItemId1 = 12221 WHERE entry = 1141;
 
 
 /*Teleporter*/

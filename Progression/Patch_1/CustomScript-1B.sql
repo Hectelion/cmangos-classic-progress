@@ -7,8 +7,10 @@ SELECT * FROM gameobject_loot_template WHERE entry IN (441, 3318) INTO OUTFILE "
 SELECT * from dbscripts_on_relay WHERE id in (15, 9004, 9005, 17950, 17953, 589501, 700701) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_dbscripts_on_relay_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
+/*waypoint_path_name*/
+SELECT * FROM waypoint_path_name WHERE pathid in (8, 11, 19888, 19889, 19890, 19981, 19996) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_waypoint_path_name_custom.csv" fields terminated by ',' lines terminated by '\n';
 /*waypoint_path*/
-SELECT * FROM waypoint_path WHERE pathid in (8, 11, 19981, 19996) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM waypoint_path WHERE pathid in (8, 11, 19888, 19889, 19890, 19981, 19996) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-1B_waypoint_path_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Call of Water, Trial of the Sea Lion*/
@@ -97,6 +99,13 @@ Delete FROM creature_linking WHERE guid IN (36692, 60816);
 
 /*npc_vendor_template*/
 Delete FROM npc_vendor_template WHERE entry IN (201, 218);
+
+
+/*waypoint_path_name*/
+Delete from waypoint_path_name WHERE pathid in (8, 11, 19888, 19889, 19890, 19981, 19996);
+/*waypoint_path*/
+Delete FROM waypoint_path WHERE pathid in (8, 11, 19888, 19889, 19890, 19981, 19996);
+
 
 
 /*Fly*/

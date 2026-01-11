@@ -140,7 +140,7 @@ DELETE From reference_loot_template WHERE entry = 50545 and item in (10303, 1030
 
 
 /*Blump Family Fishing Pole*/
-update quest_template set ReWItemId1 = 12225 WHERE entry = 1141;
+-- update quest_template set ReWItemId1 = 12225 WHERE entry = 1141;
 
 
 /*Teleporter*/

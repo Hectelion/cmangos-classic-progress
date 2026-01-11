@@ -98,3 +98,11 @@ SELECT * FROM script_texts where entry IN (-1000196, -1000197, -1000340, -100034
 SELECT * FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
 /*Remove non existent entry*/
 -- SELECT * FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
+
+/*Remove script playing not existent text*/
+SELECT * FROM creature_ai_scripts WHERE id = 185401 AND ACTION2_type = 1 AND ACTION2_param1 = 13611 AND ACTION2_param1 NOT IN (SELECT id FROM broadcast_text WHERE id = 13611);
+/*Remove not existent gameobject*/
+SELECT * FROM gameobject WHERE guid IN (18117, 18118, 18119) AND id NOT IN (SELECT entry FROM gameobject_template);
+/*correct script conditions*/
+SELECT * FROM dbscripts_on_quest_start WHERE id = 1090 and command = 34 AND datalong = 944; -- datalong must be 317
+SELECT * FROM dbscripts_on_quest_start WHERE id = 1090 and command = 34 AND datalong = 945; -- datalong must be 318
