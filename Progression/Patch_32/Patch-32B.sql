@@ -144,7 +144,7 @@ Delete FROM creature_loot_template WHERE entry IN (13419, 13256) and item in (19
 
 
 /*Alliance Brigadier General & Horde Warbringer*/
-Update creature_template set npcflags = 3, gossipmenuid = 0 WHERE entry in (15350, 15351);
+Update creature_template SET gossipmenuid = 0 WHERE entry in (15350, 15351);
 Delete FROM gossip_menu WHERE entry IN (6597, 6598);
 Delete FROM gossip_menu_option WHERE menu_id IN (6597, 6598);
 
@@ -374,12 +374,23 @@ Delete FROM spell_group_spell WHERE spellid IN (27094, 27089, 28170, 27143, 3091
 /*Remove not first rank spell*/
 Delete FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431, 12574, 12577, 12575, 12812, 12576, 12815, 12813, 12814, 13961, 13964, 13962, 13963, 14071, 16280, 16277, 16278, 14070, 16279, 19308, 19312, 19309, 19311, 19310, 20920, 20918, 20915, 20919, 29446, 29075, 29076, 29444, 29445, 29447);
 /*Update broadcast_text_id to 0 in script_texts for non existent broadcast_text_id*/
-Update script_texts Set broadcast_text_id = 0 where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
+-- Update script_texts Set broadcast_text_id = 0 where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
 /*Remove non existent spellid*/
--- Delete FROM creature_spell_list WHERE id IN (1601102, 1606501) AND spellid IN (55593, 57374, 57381) AND spellid not IN (SELECT id FROM spell_template);
 Delete FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
-/*Remove non existent entry*/
--- Delete FROM creature_spell_list WHERE id not IN (SELECT id FROM creature_spell_list_entry);
+
+/*Remove script playing not existent text*/
+Update creature_ai_scripts set ACTION2_type = 0, ACTION2_param1 = 0 WHERE id = 185401 AND ACTION2_type = 1 AND ACTION2_param1 = 13611 AND ACTION2_param1 NOT IN (SELECT id FROM broadcast_text WHERE id = 13611);
+/*Remove not existent gameobject*/
+Delete FROM gameobject WHERE guid IN (18117, 18118, 18119) AND id NOT IN (SELECT entry FROM gameobject_template);
+/*correct script conditions*/
+Update dbscripts_on_quest_start set datalong = 317 WHERE id = 1090 and command = 34 AND datalong = 944;
+-- Update dbscripts_on_quest_start set datalong = 318 WHERE id = 1090 and command = 34 AND datalong = 945;
+
+/*Removed wrong condition from undead horse vendor*/
+-- UPDATE conditions SET VALUE1 = 821 WHERE condition_entry = 831 AND VALUE1 = 812;
+
+/* not existing text*/
+Delete FROM script_texts WHERE broadcast_text_id > 0 and broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
 
 
 
