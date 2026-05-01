@@ -79,10 +79,6 @@ update item_template set dmg_min2 = 1, dmg_max2 = 4, dmg_type2 = 3, spellid_1 = 
 
 
 
-/*conditions*/
--- Delete FROM conditions WHERE condition_entry = 1399;
-
-
 
 /*Set Antu'sul's Sul'lithuz Broodlings summoned to 5*/
 delete from classicmangos.creature_ai_summons where id between 12 and 16;
