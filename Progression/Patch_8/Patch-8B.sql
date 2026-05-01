@@ -34,7 +34,7 @@ INSERT INTO PoolList Values (5691), (5695), (5696), (5697), (5698), (5699), (571
  
 DROP TEMPORARY TABLE IF EXISTS SpawnGroupList;
 CREATE TEMPORARY TABLE SpawnGroupList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
-INSERT INTO SpawnGroupList Values (55), (56), (57), (58), (9019), (9037), (10096), (10097), (10262), (19926), (19927), (19928), (4700000), (4700001), (4700002), (4700003), (4700006), (4700007), (4700008), (4700009), (4700010), (4700011), (4700012), (4700013), (4700021);
+INSERT INTO SpawnGroupList Values (55), (56), (57), (58), (9019), (9037), (10096), (10097), (10262), (19061), (19062), (19926), (19927), (19928), (4700000), (4700001), (4700002), (4700003), (4700006), (4700007), (4700008), (4700009), (4700010), (4700011), (4700012), (4700013), (4700021);
  
 DROP TEMPORARY TABLE IF EXISTS ReferenceList;
 CREATE TEMPORARY TABLE ReferenceList (Entry MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0');
@@ -222,9 +222,6 @@ Select * from gameobject where map in (47) AND ID = 0 INTO OUTFILE "C:/mangos/ru
 /*areatrigger_teleport*/
 SELECT * FROM areatrigger_teleport WHERE id IN (242, 244) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_areatrigger_teleport.csv" fields terminated by ',' lines terminated by '\n';
 
-
-/*gameobject_loot_template*/ 
--- SELECT * FROM gameobject_loot_template WHERE entry IN (1506, 17521, 17538, 17939) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 /*dbscripts_on_event*/ -- Trelane's quest
 SELECT * FROM dbscripts_on_event WHERE id IN (415, 416, 417) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-8B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';

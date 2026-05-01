@@ -217,10 +217,6 @@ SELECT * FROM creature_addon WHERE guid IN (4300301, 4300302, 4300303, 4300304) 
 SELECT * FROM creature_linking WHERE guid = 3600117 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-3B_creature_linking_3600117.csv" fields terminated by ',' lines terminated by '\n';
 
 
-/*Defias Companion*/
--- SELECT * FROM pet_levelstats WHERE creature_entry = 3450 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-3B_pet_levelstats_3450.csv" fields terminated by ',' lines terminated by '\n';
-
-
 /*gameobject_loot_template*/
 SELECT * FROM gameobject_loot_template WHERE entry = 4073 INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-3B_gameobject_loot_template_4073.csv" fields terminated by ',' lines terminated by '\n';
 
@@ -254,10 +250,6 @@ Delete FROM creature_addon WHERE guid IN (4300301, 4300302, 4300303, 4300304);
 
 /*Rats linked to Rhahk'Zor <The Foreman>*/
 Delete FROM creature_linking WHERE guid = 3600117;
-
-
-/*Defias Companion*/
--- Delete FROM pet_levelstats WHERE creature_entry = 3450;
 
 
 /*gameobject_loot_template*/
