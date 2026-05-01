@@ -1,21 +1,17 @@
 
 /*areatrigger_teleport*/
--- Delete from areatrigger_teleport WHERE id in (3726, 3728);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_areatrigger_teleport.csv" REPLACE INTO TABLE `classicmangos`.`areatrigger_teleport` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 /*disenchant from orb/amulet of the darkmoon*/
--- Delete FROM disenchant_loot_template WHERE entry = 49;
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_disenchant_loot_template_49.csv" REPLACE INTO TABLE `classicmangos`.`disenchant_loot_template` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 /*Blackwing Orb - Razorgore*/
--- Delete FROM dbscripts_on_event WHERE id = 8302;
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_dbscripts_on_event_8302.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 /*Jubjub and Blackwing Spellbinder*/
--- Delete FROM dbscripts_on_creature_movement WHERE id IN (1243001, 1243002, 1243003, 1247101);
 LOAD DATA LOW_PRIORITY LOCAL INFILE "C:/mangos/run/Progression/DataSaved/Patch-23B_dbscripts_on_creature_movement_custom.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_creature_movement` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 

@@ -1,16 +1,13 @@
 
 /*1.8.0 Flamekin drop elemental fire*/ 
--- Delete FROM creature_loot_template WHERE entry IN (9776, 9777, 9779) AND item = 7068;
 LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-25B_creature_loot_template_item_7068.csv" REPLACE INTO TABLE `classicmangos`.`creature_loot_template` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 /*1.8.0 areatrigger_tavern*/
--- Delete FROM areatrigger_tavern WHERE id = 3985;
 LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-25B_areatrigger_tavern_3985.csv" REPLACE INTO TABLE `classicmangos`.`areatrigger_tavern` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 /*Eleanor Rusk*/
--- Delete FROM npc_vendor WHERE entry = 4555 and item = 8766;
 LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-25B_npc_vendor_4555.csv" REPLACE INTO TABLE `classicmangos`.`npc_vendor` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 

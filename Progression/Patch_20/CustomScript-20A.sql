@@ -74,8 +74,6 @@ DELETE FROM creature_loot_template WHERE entry = 10317 AND item = 15769;
 DELETE FROM creature_loot_template WHERE entry = 10319 AND item = 15780;
 
 
-/*Stormwind City Guard*/
--- Update creature_template set GossipMenuId = 435 where entry = 68 and GossipMenuId = 0;
 
 
 
