@@ -247,15 +247,6 @@ SELECT * FROM areatrigger_teleport WHERE id IN (1468, 1470, 2068, 2166, 2171, 21
 SELECT * FROM transports WHERE entry IN (176231, 176310, 176244) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_transports.csv" fields terminated by ',' lines terminated by '\n';
 
 
-/*Elders removed*/
--- SELECT * FROM gossip_menu_option WHERE menu_id in (6816, 6819, 6823, 6832, 6841, 6848, 6855, 6856, 6861, 6890, 6899) and condition_id IN (1040, 1041, 1042, 1043, 1049, 1059, 1061) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_gossip_menu_option_custom2.csv" fields terminated by ',' lines terminated by '\n';
-
-
-/*pet_levelstats*/
--- SELECT * FROM pet_levelstats WHERE creature_entry IN (8477, 10979, 11614) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_pet_levelstats_custom.csv" fields terminated by ',' lines terminated by '\n';
-
-
-
 /*gameobject_loot_template*/
 SELECT * FROM gameobject_loot_template WHERE entry IN (9597, 9935, 9936, 9957, 12883, 13646, 13960, 13967, 13968, 13969, 13971, 16467) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_gameobject_loot_template_custom.csv" fields terminated by ',' lines terminated by '\n';
 
@@ -303,13 +294,9 @@ SELECT * FROM pickpocketing_loot_template WHERE entry IN (7667, 9019) INTO OUTFI
 
 /*Downlevel creature*/
 
--- SELECT * FROM creature_template WHERE entry IN (8836, 15304, 15466, 15694, 15719, 15723, 15905, 15906, 15907, 15908, 16781, 17038, 17041, 17048, 17049, 17050, 17051, 15982, 15983, 16889, 16890, 16892, 16893, 16894, 16895) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_creature_template_Downlevel_0.csv" fields terminated by ',' lines terminated by '\n';
--- SELECT * FROM creature_template WHERE entry IN (331, 332, 376, 417, 461, 466, 469, 510, 914, 918, 928, 996, 1141, 1284, 1316, 1435, 1442, 1443, 1498, 1748, 1749, 1751, 1752, 1756, 1775, 1964, 2041, 2215, 2276, 2425, 2464, 2487, 2496, 2784, 2787, 3032, 3034, 3039, 3042, 3046, 3047, 3057, 3148, 3151, 3230, 3338, 3344, 3352, 3353, 3391, 3401, 3441, 3516, 3691, 3895, 3936, 4046, 4047, 4087, 4088, 4090, 4138, 4161, 4214, 4217, 4497, 4563, 4566, 4584, 4593, 4606, 4949, 4968, 5115, 5130, 5141, 5146, 5147, 5164, 5165, 5173, 5387, 5515, 5694, 5769, 5882, 5994, 6134, 6171, 6179, 6236, 6251, 6382, 6491, 6546, 6560, 6584, 6707, 6768, 6777, 7172, 7230, 7231, 7232, 7363, 7364, 7572, 7623, 7664, 7667, 7734, 7772, 7773, 7783, 7802, 7846, 7884, 7918, 7937, 7999, 8026, 8197, 8379, 8716, 8717, 8718, 8888, 8976, 8979, 9019, 9077, 9117, 9465, 9528, 9529, 9538, 9542, 9836, 10119, 10181, 10922, 10923, 10924, 10988, 11256, 11401, 11406, 11624, 11699, 11701, 11702, 11707, 11798, 11799, 11800, 11801, 11802, 11817, 11832, 11859, 11863, 11956, 11957, 12034, 12180, 12396, 12477, 12478, 12479, 12496, 12497, 12904, 12956, 13283, 13839, 15113, 15115, 15164, 15193, 15197, 15199, 15362, 15384, 15467, 15549, 15557, 15558, 15559, 15561, 15562, 15563, 15564, 15565, 15567, 15568, 15569, 15570, 15572, 15573, 15575, 15576, 15577, 15579, 15580, 15581, 15582, 15583, 15584, 15585, 15586, 15587, 15588, 15593, 15595, 15596, 15597, 15598, 15599, 15600, 15601, 15603, 15604, 15605, 15626, 15631, 15712, 15730, 15773, 15775, 15776, 15796, 15871, 15882, 15883, 15893, 15894, 15897, 15902, 15909, 15918, 15961, 16006, 16084, 16119, 16120, 16474, 16697, 16788, 16817, 16818, 16979, 16985, 16986, 17249, 18039, 18153) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_creature_template_Downlevel_2.csv" fields terminated by ',' lines terminated by '\n';
 SELECT * FROM creature_template WHERE MaxLevel > 58 AND entry NOT IN (SELECT entry FROM CreatureList) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-13B_creature_template_Downlevel.csv" fields terminated by ',' lines terminated by '\n';
 
 
--- Update creature_template set MinLevel = Case WHEN MinLevel <= 5 then 1 else MinLevel - 5 end, MaxLevel = MaxLevel - 5, PickpocketLootId = 0, SkinningLootId = 0 WHERE entry IN (8836, 15304, 15466, 15694, 15719, 15723, 15905, 15906, 15907, 15908, 16781, 17038, 17041, 17048, 17049, 17050, 17051, 15982, 15983, 16889, 16890, 16892, 16893, 16894, 16895);
--- Update creature_template set MinLevel = Case WHEN MinLevel <= 5 then 1 else MinLevel - 5 end, MaxLevel = MaxLevel - 5, PickpocketLootId = 0, SkinningLootId = 0 WHERE entry IN (331, 332, 376, 417, 461, 466, 469, 510, 914, 918, 928, 996, 1141, 1284, 1316, 1435, 1442, 1443, 1498, 1748, 1749, 1751, 1752, 1756, 1775, 1964, 2041, 2215, 2276, 2425, 2464, 2487, 2496, 2784, 2787, 3032, 3034, 3039, 3042, 3046, 3047, 3057, 3148, 3151, 3230, 3338, 3344, 3352, 3353, 3391, 3401, 3441, 3516, 3691, 3895, 3936, 4046, 4047, 4087, 4088, 4090, 4138, 4161, 4214, 4217, 4497, 4563, 4566, 4584, 4593, 4606, 4949, 4968, 5115, 5130, 5141, 5146, 5147, 5164, 5165, 5173, 5387, 5515, 5694, 5769, 5882, 5994, 6134, 6171, 6179, 6236, 6251, 6382, 6491, 6546, 6560, 6584, 6707, 6768, 6777, 7172, 7230, 7231, 7232, 7363, 7364, 7572, 7623, 7664, 7667, 7734, 7772, 7773, 7783, 7802, 7846, 7884, 7918, 7937, 7999, 8026, 8197, 8379, 8716, 8717, 8718, 8888, 8976, 8979, 9019, 9077, 9117, 9465, 9528, 9529, 9538, 9542, 9836, 10119, 10181, 10922, 10923, 10924, 10988, 11256, 11401, 11406, 11624, 11699, 11701, 11702, 11707, 11798, 11799, 11800, 11801, 11802, 11817, 11832, 11859, 11863, 11956, 11957, 12034, 12180, 12396, 12477, 12478, 12479, 12496, 12497, 12904, 12956, 13283, 13839, 15113, 15115, 15164, 15193, 15197, 15199, 15362, 15384, 15467, 15549, 15557, 15558, 15559, 15561, 15562, 15563, 15564, 15565, 15567, 15568, 15569, 15570, 15572, 15573, 15575, 15576, 15577, 15579, 15580, 15581, 15582, 15583, 15584, 15585, 15586, 15587, 15588, 15593, 15595, 15596, 15597, 15598, 15599, 15600, 15601, 15603, 15604, 15605, 15626, 15631, 15712, 15730, 15773, 15775, 15776, 15796, 15871, 15882, 15883, 15893, 15894, 15897, 15902, 15909, 15918, 15961, 16006, 16084, 16119, 16120, 16474, 16697, 16788, 16817, 16818, 16979, 16985, 16986, 17249, 18039, 18153);
 Update creature_template set MinLevel = Case WHEN MinLevel <= 5 then 1 else MinLevel - 5 end, MaxLevel = MaxLevel - 5, PickpocketLootId = 0, SkinningLootId = 0 WHERE entry IN (SELECT entry FROM (select entry FROM creature_template WHERE MaxLevel > 58 AND entry NOT IN (SELECT entry FROM CreatureList)) temporarytable);
 
 
@@ -332,14 +319,6 @@ Delete FROM areatrigger_teleport WHERE id IN (1468, 1470, 2068, 2166, 2171, 2173
 
 /*transports*/
 Delete FROM transports WHERE entry IN (176231, 176310, 176244);
-
-
-/*Elders removed*/
--- Delete FROM gossip_menu_option WHERE menu_id in (6816, 6819, 6823, 6832, 6841, 6848, 6855, 6856, 6861, 6890, 6899) and condition_id IN (1040, 1041, 1042, 1043, 1049, 1059, 1061);
-
-
-/*pet_levelstats*/
--- Delete FROM pet_levelstats WHERE creature_entry IN (8477, 10979, 11614);
 
 
 /*gameobject_loot_template*/

@@ -12,8 +12,11 @@ SELECT * FROM gameobject_loot_template WHERE entry IN (14180) INTO OUTFILE "c:/m
 SELECT * from dbscripts_on_event WHERE id IN (5438, 5439) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_dbscripts_on_event_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
-/*Innkeepers gossip for queue Ragefire Chasm and Scholomance*/
--- SELECT * FROM dbscripts_on_gossip WHERE id in (2000, 2018) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_dbscripts_on_gossip_2000_2018.csv" fields terminated by ',' lines terminated by '\n';
+/*npc_gossip*/ -- should be any student in Scholomance
+SELECT * FROM npc_gossip WHERE npc_guid = 755 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_npc_gossip_755.csv" fields terminated by ',' lines terminated by '\n';
+
+
+
 
 
 
@@ -33,8 +36,11 @@ Delete FROM gameobject_loot_template WHERE entry IN (14180);
 Delete from dbscripts_on_event WHERE id IN (5438, 5439);
 
 
-/*Innkeepers gossip for queue Ragefire Chasm and Scholomance*/
--- Delete FROM dbscripts_on_gossip WHERE id in (2000, 2018);
+/*npc_gossip*/ -- should be any student in Scholomance
+Delete FROM npc_gossip WHERE npc_guid = 755;
+
+
+
 
 
 
@@ -73,14 +79,6 @@ Update item_template set disenchantId = 47 WHERE entry IN (1973, 4696, 5267, 662
 
 
 /*BFD Entrance*/
-/*
-DELETE FROM gameobject_template WHERE entry = 277193;
-INSERT INTO gameobject_template VALUES (277193, 0, 402, 'Portal of the Deeps', '', 0, 0, 0, 1, 0, 0, 65536, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
-DELETE FROM gameobject WHERE guid = 23000 and id = 277193;
-INSERT INTO gameobject VALUES (23000, 277193, 1, 1, 7373.75, -938.90, -6.514992, 1.00, 0.0, 0.0, 0.0, 0.0, 7200, 7200);
-DELETE FROM dbscripts_on_go_template_use WHERE id = 277193;
-INSERT INTO dbscripts_on_go_template_use VALUES (277193, 1000, 0, 6, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -150.234, 106.594, -39.779, 0, 0, 107, 'Teleport to Blackfathom Deeps');
-*/
 UPDATE areatrigger_teleport SET target_position_x = 7347.409, target_position_y = -940.669, target_position_z = -4.217, target_orientation = 4.5937 WHERE id = 259;
 
 DELETE FROM creature WHERE guid=32354;

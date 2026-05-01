@@ -213,8 +213,6 @@ SELECT * FROM dbscripts_on_relay WHERE id = 3 INTO OUTFILE "c:/mangos/run/Progre
 SELECT * from creature_ai_summons where id IN (12, 13, 14, 15, 16, 22, 23, 24, 25) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-14B_creature_ai_summons_custom.csv" fields terminated by ',' lines terminated by '\n';
 
 
-/*Innkeepers gossip for queue Zul'Farrak*/
--- SELECT * FROM dbscripts_on_gossip WHERE id = 2012 INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-14B_dbscripts_on_gossip_2012.csv" fields terminated by ',' lines terminated by '\n';
 
 
 
@@ -243,8 +241,6 @@ Delete FROM dbscripts_on_relay WHERE id = 3;
 Delete from creature_ai_summons where id IN (12, 13, 14, 15, 16, 22, 23, 24, 25);
 
 
-/*Innkeepers gossip for queue Zul'Farrak*/
--- Delete FROM dbscripts_on_gossip WHERE id = 2012;
 
 
 /*Formula: Powerful Smelling Salts*/

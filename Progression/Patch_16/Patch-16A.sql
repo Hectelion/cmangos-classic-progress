@@ -339,8 +339,11 @@ LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-1
 LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_dbscripts_on_event_custom.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_event` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
-/*Innkeepers gossip for queue Ragefire Chasm and Scholomance*/
--- LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_dbscripts_on_gossip_2000_2018.csv" REPLACE INTO TABLE `classicmangos`.`dbscripts_on_gossip` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+/*npc_gossip*/ -- should be any student in Scholomance
+LOAD DATA LOW_PRIORITY LOCAL INFILE "c:/mangos/run/Progression/DataSaved/Patch-15B_npc_gossip_755.csv" REPLACE INTO TABLE `classicmangos`.`npc_gossip` CHARACTER SET latin1 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+
+
 
 
 
@@ -374,11 +377,7 @@ Update creature_template set skinninglootid = entry WHERE entry in (6498, 6499, 
 
 /*BFD Entrance*/
 UPDATE areatrigger_teleport SET target_position_x = 4246.68, target_position_y = 743.402, target_position_z = -24.8573, target_orientation = 4.71239 WHERE id = 259;
-/*
-DELETE FROM gameobject_template WHERE entry = 277193;
-DELETE from gameobject where guid = 23000 and id = 277193;
-DELETE FROM dbscripts_on_go_template_use WHERE id = 277193;
-*/
+
 DELETE FROM creature WHERE guid=32354;
 UPDATE creature_template SET gossipmenuid = 0, npcflags = 0, NAME = "UNUSED Grund Drokda", subname = "Reuse Me" WHERE entry = 2756;
 
