@@ -135,9 +135,9 @@ Delete FROM creature_loot_template WHERE entry IN (13419, 13256) and item in (19
 
 
 /*Alliance Brigadier General & Horde Warbringer*/
-Update creature_template set npcflags = 3, gossipmenuid = 0 WHERE entry in (15350, 15351);
-Delete FROM gossip_menu WHERE entry IN (6597, 6598);
-Delete FROM gossip_menu_option WHERE menu_id IN (6597, 6598);
+-- Update creature_template set npcflags = 3, gossipmenuid = 0 WHERE entry in (15350, 15351);
+-- Delete FROM gossip_menu WHERE entry IN (6597, 6598);
+-- Delete FROM gossip_menu_option WHERE menu_id IN (6597, 6598);
 
 
 /*Baron Bloodbane Loot*/
@@ -369,12 +369,7 @@ Update script_texts Set broadcast_text_id = 0 where entry IN (-1000196, -1000197
 /*Remove non existent spellid*/
 Delete FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
 
-/*Remove script playing not existent text*/
--- Update creature_ai_scripts set ACTION2_type = 0, ACTION2_param1 = 0 WHERE id = 185401 AND ACTION2_type = 1 AND ACTION2_param1 = 13611 AND ACTION2_param1 NOT IN (SELECT id FROM broadcast_text WHERE id = 13611);
-/*Remove not existent gameobject*/
--- Delete FROM gameobject WHERE guid IN (18117, 18118, 18119) AND id NOT IN (SELECT entry FROM gameobject_template);
-/*correct script conditions*/
--- Update dbscripts_on_quest_start set datalong = 317 WHERE id = 1090 and command = 34 AND datalong = 944;
--- Update dbscripts_on_quest_start set datalong = 318 WHERE id = 1090 and command = 34 AND datalong = 945;
+/*Remove creature movement for guid 23120*/
+Delete FROM creature_movement WHERE id = 23120;
 
 

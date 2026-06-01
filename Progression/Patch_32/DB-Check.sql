@@ -66,7 +66,7 @@ Select * from creature_loot_template where item in (18563, 18564) and chanceorqu
 
 
 /*Alliance Brigadier General & Horde Warbringer*/
-Select * from  creature_template WHERE entry in (15350, 15351) and npcflags <> 3; -- must be 3 instead of 7 (no vendor in vanilla)
+-- Select * from  creature_template WHERE entry in (15350, 15351) and npcflags <> 3; -- must be 3 instead of 7 (no vendor in vanilla)
 
 
 /*Bandages inside Arathi Basin Packages*/
@@ -96,10 +96,5 @@ SELECT * FROM script_texts where entry IN (-1000196, -1000197, -1000340, -100034
 /*Remove non existent spellid*/
 SELECT * FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
 
-/*Remove script playing not existent text*/
--- SELECT * FROM creature_ai_scripts WHERE id = 185401 AND ACTION2_type = 1 AND ACTION2_param1 = 13611 AND ACTION2_param1 NOT IN (SELECT id FROM broadcast_text WHERE id = 13611);
-/*Remove not existent gameobject*/
--- SELECT * FROM gameobject WHERE guid IN (18117, 18118, 18119) AND id NOT IN (SELECT entry FROM gameobject_template);
-/*correct script conditions*/
--- SELECT * FROM dbscripts_on_quest_start WHERE id = 1090 and command = 34 AND datalong = 944; -- datalong must be 317
--- SELECT * FROM dbscripts_on_quest_start WHERE id = 1090 and command = 34 AND datalong = 945; -- datalong must be 318
+/*Remove movement for creature 23120 - MovementType 2 is only for 23119 in creature*/
+Select * FROM creature_movement WHERE id = 23120;
