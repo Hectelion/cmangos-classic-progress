@@ -1,0 +1,9 @@
+Clear 			: Remove all DataSaved, all Patch builded and all dump saved.
+Disable_OutdoorPvP 	: Disable flags in mangosd.conf
+Dump - Account_Character: Save Account and Characters for Porting
+DumpServer		: Dump actual server patch (current patch = select length from game_event.entry = 200)
+Enable_OutdoorPvP	: Enable flags in mangosd.conf
+Load-Account_Character	: Load Account and Characters (need existing dump)
+LoadOriginal		: Load server to original patch (need an existing original server dump)
+LoadServer		: Load server patch from an existing dump (es. WoWPatch = 32 in mangosd.conf)
+PatchAny		: Patch server to WoWPatch = patch-number in mangosd.conf
