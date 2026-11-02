@@ -13,7 +13,7 @@ SELECT * FROM gameobject_loot_template WHERE entry IN (1417, 1418, 1736, 4074) I
 
 
 /*Creature skinning loot*/
-Select * from creature_template where SkinningLootId in (205, 206, 533, 920, 1023, 2385, 2406, 2407, 2559, 2560, 3476, 3674, 4017, 4041, 4066, 4142, 4143, 4144, 4147, 4150, 4151, 100006) and entry not in (Select entry from CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_creature_template_skin.csv" fields terminated by ',' lines terminated by '\n';
+Select * from creature_template where SkinningLootId in (205, 206, 533, 920, 1023, 2385, 2406, 2407, 2559, 2560, 3476, 3674, 4017, 4041, 4066, 4142, 4143, 4144, 4147, 4150, 4151, 6071, 100006) and entry not in (Select entry from CreatureList) INTO OUTFILE "C:/mangos/run/Progression/DataSaved/Patch-6B_creature_template_skin.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Stormwind - Defias Rioter 5043 x4 - RP*/
@@ -55,7 +55,7 @@ Update creature_template set lootid = 0 where entry = 1733;
 
 
 /*Creature skinning loot*/
-Update creature_template set SkinningLootId = 0 where SkinningLootId in (205, 206, 533, 920, 1023, 2385, 2406, 2407, 2559, 2560, 3476, 3674, 4017, 4041, 4066, 4142, 4143, 4144, 4147, 4150, 4151, 100006) and entry not in (Select entry from CreatureList);
+Update creature_template set SkinningLootId = 0 where SkinningLootId in (205, 206, 533, 920, 1023, 2385, 2406, 2407, 2559, 2560, 3476, 3674, 4017, 4041, 4066, 4142, 4143, 4144, 4147, 4150, 4151, 6071, 100006) and entry not in (Select entry from CreatureList);
 
 
 /*Recipe/Formula/Plans*/
