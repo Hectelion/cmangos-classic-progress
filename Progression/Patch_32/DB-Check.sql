@@ -65,10 +65,6 @@ Select * from creature_template WHERE entry = 12128 AND equipmenttemplateid <> 1
 Select * from creature_loot_template where item in (18563, 18564) and chanceorquestchance <> 1; -- surely not 4% (VMANGOS says 1%)
 
 
-/*Alliance Brigadier General & Horde Warbringer*/
--- Select * from  creature_template WHERE entry in (15350, 15351) and npcflags <> 3; -- must be 3 instead of 7 (no vendor in vanilla)
-
-
 /*Bandages inside Arathi Basin Packages*/
 SELECT * FROM item_loot_template WHERE entry IN (20228, 20229, 20230, 20231, 20233, 20236) and item in (20065, 20066, 20067); -- missing
 
@@ -88,13 +84,11 @@ Select * From creature_template WHERE entry = 10819 and lootid <> 0;
 Select * From reference_loot_template WHERE entry = 2043;
 
 /*Remove inexistent spell*/
-SELECT * FROM spell_group_spell WHERE spellid IN (27094, 27089, 28170, 27143, 30910) AND spellid NOT IN (SELECT id FROM spell_template);
+-- SELECT * FROM spell_group_spell WHERE spellid IN (27094, 27089, 28170, 27143, 30910) AND spellid NOT IN (SELECT id FROM spell_template);
 /*Remove not first rank spell*/
-SELECT * FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431, 12574, 12577, 12575, 12812, 12576, 12815, 12813, 12814, 13961, 13964, 13962, 13963, 14071, 16280, 16277, 16278, 14070, 16279, 19308, 19312, 19309, 19311, 19310, 20920, 20918, 20915, 20919, 29446, 29075, 29076, 29444, 29445, 29447);
+-- SELECT * FROM spell_proc_event WHERE entry IN (905, 945, 325, 8134, 10432, 10431, 12574, 12577, 12575, 12812, 12576, 12815, 12813, 12814, 13961, 13964, 13962, 13963, 14071, 16280, 16277, 16278, 14070, 16279, 19308, 19312, 19309, 19311, 19310, 20920, 20918, 20915, 20919, 29446, 29075, 29076, 29444, 29445, 29447);
 /*Update broadcast_text_id to 0 in script_texts for non existent broadcast_text_id*/
 SELECT * FROM script_texts where entry IN (-1000196, -1000197, -1000340, -1000341, -1000342, -1000771) AND broadcast_text_id > 0 AND broadcast_text_id NOT IN (SELECT id FROM broadcast_text);
-/*Remove non existent spellid*/
-SELECT * FROM creature_spell_list WHERE id IN (1606302) AND spellid IN (57376, 57377) AND spellid not IN (SELECT id FROM spell_template);
 
 /*Remove movement for creature 23120 - MovementType 2 is only for 23119 in creature*/
 Select * FROM creature_movement WHERE id = 23120;
