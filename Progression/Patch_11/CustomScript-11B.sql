@@ -37,7 +37,7 @@ SELECT * FROM dbscripts_on_creature_movement WHERE id = 9 INTO OUTFILE "c:/mango
 
 
 SELECT * FROM pickpocketing_loot_template WHERE entry IN (2644, 2645, 2646, 2647, 2648, 7995, 7996, 8214, 8636, 10802, 12046) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-11B_pickpocketing_loot_template_Downlevel.csv" fields terminated by ',' lines terminated by '\n';
-SELECT * FROM skinning_loot_template WHERE entry IN (1559, 2681, 5349, 8198, 8213) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-11B_skinning_loot_template_Downlevel.csv" fields terminated by ',' lines terminated by '\n';
+SELECT * FROM skinning_loot_template WHERE entry IN (1559, 2681, 5349, 8198, 8213, 100001) INTO OUTFILE "c:/mangos/run/Progression/DataSaved/Patch-11B_skinning_loot_template_Downlevel.csv" fields terminated by ',' lines terminated by '\n';
 
 
 /*Downlevel creature*/
@@ -48,7 +48,7 @@ Update creature_template set MinLevel = Case WHEN MinLevel <= 5 then 1 else MinL
 
 
 Delete FROM pickpocketing_loot_template WHERE entry IN (2644, 2645, 2646, 2647, 2648, 7995, 7996, 8214, 8636, 10802, 12046);
-Delete FROM skinning_loot_template WHERE entry IN (1559, 2681, 5349, 8198, 8213);
+Delete FROM skinning_loot_template WHERE entry IN (1559, 2681, 5349, 8198, 8213, 100001);
 
 
 
